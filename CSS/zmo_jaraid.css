@@ -3,12 +3,12 @@
 /* @import url("pseudoDE.css"); */ 
 
 /* normal content*/
-
-.ja-hidden {
+/* toggle hidden content */
+/* .ja-hidden {
     display:none;
     content:none;
 }
-    
+     */
 table.ja, th.ja, td.ja, td.ja-no {
     border:1px solid black;
 }
