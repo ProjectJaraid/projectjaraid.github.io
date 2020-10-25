@@ -1,5 +1,5 @@
 # projectjaraid.github.io
-This repository contains the elements of the Project Jarāʾid - Edition 2020 website.
+This repository contains the elements of the Project Jarāʾid - 2020 Edition website.
 
 <p> Jara'id
 A Chronology of Arabic Periodicals (1800-1929): A Research Tool
