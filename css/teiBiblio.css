@@ -1,0 +1,140 @@
+
+body#biblio {
+  margin: 30px 30px 10px 30px;
+  padding-bottom: 20px;
+  font-family: Georgia,serif;
+  background-color: #EFEFEF;
+}
+
+body#biblio tei-div#dRef, tei-div#t1head, tei-div#dAgleg, tei-div#dAgen, tei-div#dAppendix, tei-div#dTrans, tei-div#dTables, tei-div#dPer, tei-div#dAvail, tei-div#dFut, tei-div#dDef, tei-div#dCopyright, tei-div#dCetei, tei-div#dIntro, tei-div#dVersionHist, tei-div#dAgLeg, tei-div#dLinks, tei-div#dTitle {display: none;}
+
+body#biblio::after {
+  background: url("../img/HadiqatAlAkhbar.jpg");
+  content: "";
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  bottom: -180%;
+  right: 0;
+  left: 0;
+  height: auto;
+  z-index: -1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#h1 {
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+tei-div {
+  display: block;
+}
+tei-p {
+  display: block;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+tei-hi[rend=italic] {
+  font-style: italic;
+}
+tei-table {
+
+border-top:
+thin solid
+black;
+
+border-left:
+thin solid
+black;
+
+font-size:
+85%;
+
+}
+
+tei-row {
+
+display:
+grid;
+
+grid-auto-flow:
+column;
+
+grid-auto-columns:
+1fr;
+
+}
+
+tei-row[role=label] {
+
+font-weight:
+bold;
+
+}
+
+tei-row:nth-child(even) {
+
+background-color:
+silver;
+
+}
+
+tei-row:nth-child(odd) {
+
+background-color:
+#eeeeee;
+
+}
+
+tei-cell {
+
+border-right:
+thin solid
+black;
+
+border-bottom:
+thin solid
+black;
+
+padding:
+2px;
+
+}
+
+tei-div#dBibl tei-head {
+  font-size: 20px;
+  font-weight:bold;
+  text-align:center;
+}
+
+tei-div#dBibl {
+  position: relative;
+  display: block;
+margin-top: 30px;
+margin-bottom: 30px;
+margin-left: 60px;
+margin-right: 60px;
+  font-size: 15px;
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+tei-div#sourcesNote {
+  position: relative;
+  display: block;
+}
+
+tei-head {
+  display: block;
+  top: 30px;
+  bottom: 30px;
+}

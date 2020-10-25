@@ -1,0 +1,185 @@
+body#indexes {
+  margin: 30px 30px 10px 30px;
+  padding-bottom: 20px;
+  font-family: Georgia,serif;
+  background-color: #EFEFEF;
+}
+
+body#indexes tei-div#dRef, tei-div#t1head, tei-div#dAgen, tei-div#dAppendix, tei-div#dTrans, tei-div#dTables, tei-div#dPer, tei-div#dAvail, tei-div#dFut, tei-div#dDef, tei-div#dCopyright, tei-div#dCetei, tei-div#dIntro, tei-div#dVersionHist, tei-div#dBibl, tei-div#dAgLeg, tei-div#dLinks, tei-div#dTitle {display: none;}
+
+body#indexes::after {
+  background: url("../img/HadiqatAlAkhbar.jpg");
+  content: "";
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  bottom: -10000%;
+  right: 0;
+  left: 0;
+  height: auto;
+  z-index: -1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+#h1 {
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+
+#indexesBar {
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+  margin: auto;
+  width: 500px;
+}
+
+/* Navbar links */
+#indexesBar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+#indexesBar.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+#indexesBar.sticky {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 500px;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+#indexesBar.sticky + .content {
+  padding-top: 60px;
+}
+
+/* tei-rs:hover .tip {
+  display: block;
+}
+
+.tip {
+  position:absolute;
+  z-index: 1;
+  display: none;
+  width: 120px;
+  background-color: black;
+  padding: 5px 0;
+} */
+
+/* tei-body {
+  margin-left: 60px;
+  margin-right: 60px;
+} */
+
+tei-div {
+  display: block;
+}
+
+tei-p {
+  display: block;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+
+tei-list[type=firstList]>tei-item {
+  list-style-type:disc;
+  display: list-item;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-size: 15px;
+}
+
+
+tei-head {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+tei-placeName {
+  font-weight: bold;
+  text-align: left;
+}
+
+tei-placeName::after {
+  content: "     ";
+  white-space: pre;
+}
+
+tei-persName {
+  font-weight: bold;
+  text-align: left;
+}
+
+tei-persName::after {
+  content: "     ";
+  white-space: pre;
+}
+
+tei-orgName {
+  font-weight: bold;
+  text-align: left;
+}
+
+tei-orgName::after {
+  content: "     ";
+  white-space: pre;
+}
+
+#institutions tei-orgName {
+  color: #FF3B3F;
+}
+
+#institutions {
+  margin-top: 50px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 30px;
+  display:block;
+}
+
+#locations {
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+#persons {
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+#organizations {
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+tei-hi[rend=italic] {
+  font-style: italic;
+}

@@ -1,0 +1,171 @@
+body#chrono {
+  margin: 30px 30px 10px 30px;
+  padding-bottom: 20px;
+  font-family: Georgia,serif;
+  background-color: #EFEFEF;
+
+}
+
+body#chrono tei-div#dRef, tei-div#t1head, tei-table#t2, tei-div#dTrans, tei-div#dPer, tei-div#dAvail, tei-div#dFut, tei-div#dDef, tei-div#dCopyright, tei-div#dCetei, tei-div#dIntro, tei-div#dVersionHist, tei-div#dAgen, tei-div#dBibl, tei-div#dAppendix, tei-div#dAgLeg, tei-div#dLinks, tei-div#dTitle {display: none;}
+
+body#chrono::after {
+  background: url("../img/HadiqatAlAkhbar.jpg");
+  content: "";
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  bottom: -24000%;
+  right: 0;
+  left: 0;
+  height: auto;
+  z-index: -1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+#h1 {
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+#indexesBar {
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+/* Navbar links */
+#indexesBar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+#indexesBar.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+#indexesBar.sticky {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 50%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+#indexesBar.sticky + .content {
+  padding-top: 60px;
+}
+
+
+.sidenav {
+  width: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 200px;
+  left: 10px;
+  background-color: black;
+  overflow-x: hidden;
+  padding: 5px 0;
+}
+
+.sidenav a {
+  padding: 5px 7px 5px 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #CAEBF2;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 12px;}
+  .sidenav a {font-size: 10px;}
+}
+
+tei-rs:hover .tip {
+  display: block;
+}
+
+.tip {
+  position:absolute;
+  z-index: 1;
+  display: none;
+  width: 120px;
+  background-color: black;
+  padding: 5px 0;
+}
+
+
+tei-table#t1 {
+  margin-top: 30px;
+  display:table;
+  border-collapse:separate;
+  border-spacing: 60px;
+  font-size: 12px;
+}
+
+
+td {
+  border-bottom: thin solid black;
+}
+
+th {
+  position: sticky;
+  top: 0;
+}
+
+tr[role="label"] {
+  cursor: pointer;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: black;
+  font-style: oblique;
+}
+
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+tr[role="data"]:hover {background-color: #A9A9A9;}
+
+td[type=tei-name] {
+  color: black;
+  font-style: oblique;
+}
+
+td:nth-child(4) {
+  color: black;
+  font-style: oblique;
+  font-weight:bold;
+}
+
+tei-rs {
+  position: relative;
+  color: #FF3B3F;
+  border-bottom: 1px dotted black;
+}
+
+#divOnChrono {
+  margin-top: 30px;
+  display: block;
+  margin-left: 60px;
+  margin-right: 60px;
+}

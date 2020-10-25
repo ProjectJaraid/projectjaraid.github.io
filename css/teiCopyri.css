@@ -1,0 +1,60 @@
+
+
+body#copyri {
+  margin: 30px 30px 10px 30px;
+  padding-bottom: 20px;
+  font-family: Georgia,serif;
+  background-color: #EFEFEF;
+}
+
+body#copyri tei-div#dRef, tei-div#t1head, tei-div#dAgen, tei-div#dAppendix, tei-div#dTrans, tei-div#dTables, tei-div#dPer, tei-div#dAvail, tei-div#dFut, tei-div#dDef, tei-div#dCetei, tei-div#dIntro, tei-div#dVersionHist, tei-div#dBibl, tei-div#dAgLeg, tei-div#dLinks, tei-div#dTitle {display: none;}
+
+#h1 {
+  text-align: center;
+}
+
+body#copyri::after {
+  background: url("../img/HadiqatAlAkhbar.jpg");
+  content: "";
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  bottom: -30%;
+  right: 0;
+  left: 0;
+  height: auto;
+  z-index: -1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+.navbar {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+
+tei-div {
+  display: block;
+}
+tei-p {
+  display: block;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+tei-hi[rend=italic] {
+  font-style: italic;
+}
+
+
+tei-div#dCopyright {
+    margin-top: 200px;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}

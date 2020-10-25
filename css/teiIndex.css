@@ -1,0 +1,123 @@
+body#home {
+  margin: 30px 30px 10px 30px;
+  padding-bottom: 20px;
+  font-family: Georgia,serif;
+  background-color: #EFEFEF;
+}
+
+body#home tei-div#t1head, tei-div#dTables, tei-div#dTrans, tei-div#dAgen, tei-div#dBibl, tei-div#dAppendix, tei-div#dAgLeg, tei-div#dLinks {display: none;}
+
+body#home::after {
+  background: url("../img/HadiqatAlAkhbar.jpg");
+  content: "";
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  bottom: -150%;
+  right: 0;
+  left: 0;
+  height: auto;
+  z-index: -1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#h1 {
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+tei-div {
+  display: block;
+}
+
+tei-p {
+  display: block;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+tei-hi[rend=italic] {
+  font-style: italic;
+}
+
+tei-div#dTitle {
+  text-align: center;
+  display: block;
+margin-top: 1.33em;
+margin-bottom: 1.33em;
+margin-left: 60px;
+margin-right: 60px;
+font-weight: bold;
+font-family: serif;
+word-wrap: break-word;
+}
+
+#hJaraid {
+  font-size: 30px;
+  text-align: center;
+  display: block;
+  font-family: serif;
+}
+
+tei-div#dTitle tei-head {
+  font-size: 25px;
+}
+
+
+tei-div#dTitle tei-p#p1 {
+  font-size: 25px;
+}
+
+
+tei-div#dCopyright {
+  text-align: center;
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-weight: bold;
+  font-family: serif;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+
+tei-div#dCetei {
+  text-align: center;
+  display: block;
+margin-top: 1.33em;
+margin-bottom: 1.33em;
+margin-left: 60px;
+margin-right: 60px;
+font-weight: bold;
+font-family: serif;
+font-size: 15px;
+word-wrap: break-word;
+}
+
+tei-div#dIntro tei-head {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+tei-div#dIntro, tei-div#dVersionHist, tei-div#dTrans, tei-div#dPer, tei-div#dDef, tei-div#dAvail, tei-div#dFut, tei-div#dRef {
+  position: relative;
+  display: block;
+margin-top: 30px;
+margin-bottom: 30px;
+margin-left: 60px;
+margin-right: 60px;
+  font-size: 15px;
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
+}

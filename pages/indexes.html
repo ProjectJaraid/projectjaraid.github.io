@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../img/lisanalhal.jpg">
+  <title>Jara'id: A Chronology Of Arabic Periodicals (1800-1929)</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/teiIndexes.css">
+  <script src="../js/CETEI.js"></script>
+  <script>
+    let c = new CETEI();
+    c.getHTML5('../INDEXEDLOCATIONSPERSONSORGANIZATIONSHOLDINGINSTITUTIONS.xml', function(data) {
+      document.getElementsByTagName("body")[0].appendChild(data);
+    });</script>
+  <script src="../js/behaviors.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+</head>
+<body id="indexes">
+<h1 id="h1">Jara'id: A Chronology of Arabic Periodicals (1800-1929)</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="chrono.html">Chronology</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fihris.html">الفهرس الزمني</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="indexes.html">Indexes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="maps.html">Maps</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="abbrev.html">Abbreviations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="biblio.html">Bibliography</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="remarks.html">Remarks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="copyri.html">Copyright</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="indexesBar">
+    <a href="#institutions">Holding Institutions</a>
+    <a href="#locations">Locations</a>
+    <a href="#persons">Persons</a>
+    <a href="#organizations">Organizations</a>
+  </div>
+
+
+
+<script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {makeStickyMenu()};
+
+    // Get the indexesbar
+    var indexesBar = document.getElementById("indexesBar");
+
+    // Get the offset position of the indexesbar
+    var sticky = indexesBar.offsetTop;
+
+    // Add the sticky class to the indexesbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function makeStickyMenu() {
+      if (window.pageYOffset >= sticky) {
+        indexesBar.classList.add("sticky")
+      } else {
+        indexesBar.classList.remove("sticky");
+      }
+    }
+    </script>
+
+<!-- <script>
+function showLocations() {
+  var x = document.getElementById("locations");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+<script>
+function showPersons() {
+  var x = document.getElementById("persons");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+<script>
+function showOrganizations() {
+  var x = document.getElementById("organizations");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+<script>
+function showInstitutions() {
+  var x = document.getElementById("institutions");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script> -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>

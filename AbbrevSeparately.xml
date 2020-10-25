@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI xml:lang="en" xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p> helper file for jaraid</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    
+    <text>
+<body>
+<div type="prose" xml:id="dAppendix" xml:lang="en">
+            <head xml:lang="en">Appendix / Legend</head>
+            <div type="abbr" xml:id="dAbbr" xml:lang="en">
+               <head xml:lang="en">Abbreviations of collections and libraries</head>
+               <p xml:id="hAEK" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">AEK</abbr>
+                  <expan xml:lang="en">Atıf Effendi (Yazma Eser) Kütüphanesi, Istanbul</expan>
+                  </choice> </p>
+               <p xml:id="hAH" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">AʿH</abbr>
+                  <expan xml:lang="en">Arshīf ʿĀmm al-Ḥukūma, Tunis</expan>
+                  </choice> </p>
+               <p xml:id="hAKI" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">AKI</abbr>
+                  <expan xml:lang="en">Atatürk Kitapliği, Istanbul</expan>
+                  </choice> </p>
+               <p xml:id="hAKID" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">AKID</abbr>
+                  <expan xml:lang="en">Atatürk Kitapliği, Digital Collection (available only at computers in
+                        the AKI), Istanbul</expan>
+                  </choice> </p>
+               <p xml:id="hAM" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Alex Mun</abbr>
+                  <expan xml:lang="en">Municipality Library, Alexandria</expan>
+                  </choice> </p>
+               <p xml:id="hFUAS" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">FUAS</abbr>
+                  <expan xml:lang="en">Freie Universität Berlin, Library of the Seminar für Semitistik und
+                        Arabistik</expan>
+                  </choice> </p>
+               <p xml:id="hAUB" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">AUB</abbr>
+                  <expan xml:lang="en">The Library of the American University in Beirut</expan>
+                  </choice> </p>
+               <p xml:id="hAUC" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">AUC</abbr>
+                  <expan xml:lang="en">The Library of the American University in Cairo</expan>
+                  </choice> </p>
+               <p xml:id="hAYN" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Ayn</abbr>
+                  <expan xml:lang="en">Maktabat Sāmī al-ʿAyntābī, <placeName xml:lang="en">Aleppo</placeName> </expan>
+                  </choice> </p>
+               <p xml:id="hBDK" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">BDK</abbr>
+                  <expan xml:lang="en">Beyazit Kütüphanesi, Istanbul</expan>
+                  </choice> </p>
+               <p xml:id="hBL" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">BL</abbr>
+                  <expan xml:lang="en">British Library, London</expan>
+                  </choice> </p>
+               <p xml:id="hBOA" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">BOA</abbr>
+                  <expan xml:lang="en">T.C. Başbakanlık – Osmanlı Arşıvı, İstanbul</expan>
+                  </choice> <note xml:lang="en">no entries in the table match this holding</note> </p>
+               <p xml:id="hBOSJ" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">BOSJ</abbr>
+                  <expan xml:lang="en">Bibliothèque Orientale, Université de Saint Joseph, Beirut</expan>
+                  </choice> </p>
+               <p xml:id="hBNA" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">BnA</abbr>
+                  <expan xml:lang="en">Bibliothèque nationale d’Algerie, Algiers</expan>
+                  </choice> </p>
+               <p xml:id="hBNF" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">BnF</abbr>
+                  <expan xml:lang="en">Bibliothèque national de France, Paris</expan>
+                  </choice> </p>
+               <p xml:id="hBOD" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Bod</abbr>
+                  <expan xml:lang="en">Bodleian Library, Oxford</expan>
+                  </choice> </p>
+               <p xml:id="hBS" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">BS</abbr>
+                  <expan xml:lang="en">Bayerische Staatsbibliothek, München</expan>
+                  </choice> </p>
+               <p xml:id="hCAM" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Cam</abbr>
+                  <expan xml:lang="en">Libraries of the University of Cambridge</expan>
+                  </choice> </p>
+               <p xml:id="hCEAL" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">CEALEX</abbr>
+                  <expan xml:lang="en">Centre d'Études Alexandrines, Alexandria</expan>
+                  </choice> </p>
+               <p xml:id="hCORN" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Cornell</abbr>
+                  <expan xml:lang="en">Cornell University Library, Cornell University</expan>
+                  </choice> </p>
+               <p xml:id="hDM" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Dayr al-Mukh</abbr>
+                  <expan xml:lang="en">Dayr al-Mukhlis, Lebanon</expan>
+                  </choice> </p>
+               <p xml:id="hDKQ" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">DKQ</abbr>
+                  <expan xml:lang="en">Dār al-Kutub al-Qawmiyya (Egyptian National Library), Cairo</expan>
+                  </choice> </p>
+               <p xml:id="hDKQM" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">DKQM</abbr>
+                  <expan xml:lang="en">Dār al-Kutub al-Qawmiyya Microfilm Collection (Egyptian National
+                        Library), Cairo</expan>
+                  </choice> </p>
+               <p xml:id="hDKW" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">DKW</abbr>
+                  <expan xml:lang="en">Dār al-Kutub al-Waṭaniyya (Lebanese National Library), Beirut (closed,
+                        its collections moved)</expan>
+                  </choice> </p>
+               <p xml:id="hFUI" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">FUI</abbr>
+                  <expan xml:lang="en">Freie Universität Berlin, Library of the Institut für
+                        Islamwissenschaft</expan>
+                  </choice> </p>
+               <p xml:id="hHARV" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Harv</abbr>
+                  <expan xml:lang="en">Libraries of Harvard University, Cambridge, MA, USA</expan>
+                  </choice> </p>
+               <p xml:id="hHTU" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">HTU</abbr>
+                  <expan xml:lang="en">Hakkı Tarık Us Collection of Beyazit State Library, Istanbul</expan>
+                  </choice>. The collection of periodicals was digitized by the Beyazit State
+                  Library and the Tokyo University of Foreign Studies and is available <ref
+                  target="http://www.tufs.ac.jp/common/fs/asw/tur/htu/" xml:lang="en">online</ref>.</p>
+               <p xml:id="hIDEO" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">IDEO</abbr>
+                  <expan xml:lang="en">Institut Dominicain d’Études Orientales au Caire, Cairo</expan>
+                  </choice> </p>
+               <p xml:id="hIE" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">IE</abbr>
+                  <expan xml:lang="en">Institut Egyptien, Cairo</expan>
+                  </choice> </p>
+               <p xml:id="hIMA" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">IMA</abbr>
+                  <expan xml:lang="en">Institut du Monde Arabe, Paris</expan>
+                  </choice> </p>
+               <p xml:id="hIM" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Ir Mus</abbr>
+                  <expan xml:lang="en">Iraq Museum, Baghdād, Iraq</expan>
+                  </choice> </p>
+               <p xml:id="hINA" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">INALCO</abbr>
+                  <expan xml:lang="en">Bibliothèque interuniversitaire des langues orientales, INALCO (Institut
+                        National des Langues et Civilisations Orientales, Paris)</expan>
+                  </choice> </p>
+               <p xml:id="hIO" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Ind Off</abbr>
+                  <expan xml:lang="en">India Office Library, London</expan>
+                  </choice> </p>
+               <p xml:id="hIU" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">IÜ</abbr>
+                  <expan xml:lang="en">Istanbul Üniversitesi Merkez Kütüphanesi, Istanbul</expan>
+                  </choice> </p>
+               <p xml:id="hKEW" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Kew</abbr>
+                  <expan xml:lang="en">Kew Library, Royal Botanic Gardens, Kew</expan>
+                  </choice> </p>
+               <!--<p xml:id="hLAH"><choice>
+                     <abbr>Lah</abbr>
+                  <expan>Maktabat Kulliyyat al-Lāhu­t li’l-Sharq al-Adnā (Near East School of Theology, Beirut)</expan>
+                  </choice></p>
+                  <p xml:id="hMKL"><choice>
+                     <abbr>Mak Kull Lah</abbr>
+                     <expan>Maktabat Kulliyyat al-Lāhūt, Beirut</expan>
+                  </choice></p>-->
+               <p xml:id="hNEST" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">NEST</abbr>
+                  <expan xml:lang="en">Near East School of Theology / Maktabat Kulliyyat al-Lāhu­t li’l-Sharq
+                        al-Adnā, Beirut</expan>
+                  </choice> </p>
+               <p xml:id="hLEN" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Len</abbr>
+                  <expan xml:lang="en">Institute of Oriental Manuscripts, Russian Academy of Sciences, St.
+                        Petersburg</expan>
+                  </choice> </p>
+               <p xml:id="hLOC" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">LoC</abbr>
+                  <expan xml:lang="en">Library of Congress, Washington, DC</expan>
+                  </choice> </p>
+               <p xml:id="hMB" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Mak al-Bulisiyya</abbr>
+                  <expan xml:lang="en">Maktabat al-Būlīsiyya, Lebanon</expan>
+                  </choice> </p>
+                <p xml:id="hMJU">
+                    <choice>
+                        <abbr xml:lang="en">MJU</abbr>
+                        <expan xml:lang="ar-Latn-x-ijmes">Maktabt al-Jāmiʿa al-Urduniyya, ʿAmmān, Jordan</expan>
+                    </choice>
+                </p>
+               <p xml:id="hMEC" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">MEC</abbr>
+                  <expan xml:lang="en">Middle East Centre Library, St Antony’s College, Oxford</expan>
+                  </choice> </p>
+               <p xml:id="hMK" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">MK</abbr>
+                  <expan xml:lang="en">Millet (Yazma Eser) Kütüphanesi, Istanbul</expan>
+                  </choice> </p>
+               <p xml:id="hMKAD" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">MKAD</abbr>
+                  <expan xml:lang="en">Milli Kütüphanesi (National Library of Turkey), Digital Periodical
+                        Collection (available online), Ankara</expan>
+                  </choice> <note xml:lang="en">no entries in the table match this holding</note> </p>
+               <p xml:id="hMTQ" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">MTQ</abbr>
+                  <expan xml:lang="en">Markaz al-Tawthīq al-Qawmī, Tunis</expan>
+                  </choice> </p>
+               <p xml:id="hNYPL" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">NYPL</abbr>
+                  <expan xml:lang="en">Public Library of New York</expan>
+                  </choice> </p>
+               <p xml:id="hOIB" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">OIB</abbr>
+                  <expan xml:lang="en">Orient Institut Beirut</expan>
+                  </choice> </p>
+               <p xml:id="hPUL" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Prin</abbr>
+                  <expan xml:lang="en">Princeton University Library, Princeton</expan>
+                  </choice> </p>
+               <p xml:id="hSBB" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">SBB</abbr>
+                  <expan xml:lang="en">Staatsbibliothek zu Berlin, Preußischer Kulturbesitz, Berlin</expan>
+                  </choice> </p>
+               <p xml:id="hSK" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">SK</abbr>
+                  <expan xml:lang="en">Süleymaniye Kütüphanesi, Istanbul</expan>
+                  </choice> </p>
+               <p xml:id="hSOAS" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">SOAS</abbr>
+                  <expan xml:lang="en">School of Oriental and African Studies Library, University of
+                        London</expan>
+                  </choice> </p>
+               <p xml:id="hTUB" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">TUB</abbr>
+                  <expan xml:lang="en">Library of Tübingen University, Tübingen</expan>
+                  </choice> </p>
+               <p xml:id="hUH" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">UH</abbr>
+                  <expan xml:lang="en">University of Haifa</expan>
+                  </choice> </p>
+               <p xml:id="hZAH" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Zāh</abbr>
+                  <expan xml:lang="en">al-Maktaba al-Ẓāhiriyya, Damascus</expan>
+                  </choice> </p>
+               <p xml:id="hZAGH" xml:lang="en"> <choice xml:lang="en">
+                  <abbr xml:lang="en">Zagh</abbr>
+                  <expan xml:lang="en">Matḥaf Saʿd Zaghl­l (Bayt al-Umma), Cairo</expan>
+                  </choice> </p>
+               <div type="abbr" xml:lang="en">
+                  <note xml:lang="en"> <date when="2012-04-10"/>abbreviations not yet accounted for in the
+                     table</note>
+                  <p xml:id="hDKWT" xml:lang="en"> <choice xml:lang="en">
+                     <abbr xml:lang="en">DKWT</abbr>
+                     <expan xml:lang="en">Dār al-Kutub al-Waṭaniyya, Tunis</expan>
+                     </choice> </p>
+                  <p xml:id="hBU" xml:lang="en"> <choice xml:lang="en">
+                     <abbr xml:lang="en">UBagh</abbr>
+                     <expan xml:lang="en">University of Baghdad</expan>
+                     </choice> </p>
+                  <p xml:id="hCU" xml:lang="en"> <choice xml:lang="en">
+                     <abbr xml:lang="en">CU</abbr>
+                     <expan xml:lang="en">Library of Cairo University</expan>
+                     </choice> <note xml:lang="en">this is our guess</note> </p>
+                  <p xml:id="hDUR" xml:lang="en"> <choice xml:lang="en">
+                     <abbr xml:lang="en">Dur</abbr>
+                     <expan xml:lang="en">Durham University Library</expan>
+                     </choice> </p>
+                  <p xml:id="hNLI" xml:lang="en"> <choice xml:lang="en">
+                     <abbr xml:lang="en">NLoI</abbr>
+                     <expan xml:lang="en">National Library of Israel</expan>
+                     </choice> </p>
+                  <p xml:id="hTET" xml:lang="en"> <choice xml:lang="en">
+                     <abbr xml:lang="en">Tet</abbr>
+                     <expan xml:lang="en">Bibliothèque Générale et Archives de Tétouan, Tetouan,
+                           Morocco</expan>
+                     </choice> </p>
+                   <p xml:id="hMJA" xml:lang="en"> <choice xml:lang="en">
+                       <abbr xml:lang="en">MJA</abbr>
+                       <expan xml:lang="en">Maktabat Jāmiʿat al-Azhar, Cairo</expan>
+                   </choice> </p>
+               </div>
+               <div type="abbr" xml:lang="en">
+                  <note xml:lang="en"> <date when="2012-07-26"/>added repositories</note>
+                  <p xml:id="hEAP119" xml:lang="en"> <choice xml:lang="en">
+                     <abbr xml:lang="en">Aqṣā</abbr>
+                     <expan xml:lang="en">Periodical collections at the Al-Aqṣā Mosque Library in East
+                           Jerusalem</expan>
+                     </choice>. The collection was digitized by the "Endangered Archives Program" of
+                     the British Library and is available <ref
+                     target="http://eap.bl.uk/database/overview_project.a4d?projID=EAP119" xml:lang="en">online</ref>. </p>
+                  <p xml:id="hCOL" xml:lang="en"> <note xml:lang="en"> <date when="2012-10-10"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">Col</abbr>
+                     <expan xml:lang="en">Columbia University Library</expan>
+                     </choice> </p>
+                  <p xml:id="hUPEN" xml:lang="en"> <note xml:lang="en"> <date when="2012-10-10"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">UPenn</abbr>
+                     <expan xml:lang="en">University of Pennsylvania Libraries</expan>
+                     </choice> </p>
+                  <p xml:id="hSTAN" xml:lang="en"> <note xml:lang="en"> <date when="2012-10-10"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">Stan</abbr>
+                     <expan xml:lang="en">Standford University, Hoover Library</expan>
+                     </choice> </p>
+                  <p xml:id="hUUL" xml:lang="en"> <note xml:lang="en"> <date when="2012-11-21"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">Utah</abbr>
+                     <expan xml:lang="en">University of Utah Library</expan>
+                     </choice> </p>
+                  <p xml:id="hSPL" xml:lang="en"> <note xml:lang="en"> <date when="2013-04-14"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">StPL</abbr>
+                     <expan xml:lang="en">St. Petersburg University Library, Russia</expan>
+                     </choice> </p>
+                  <p xml:id="hYL" xml:lang="en"> <note xml:lang="en"> <date when="2013-04-14"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">Yale</abbr>
+                     <expan xml:lang="en">Yale University Libraries</expan>
+                     </choice> </p>
+                  <p xml:id="hINL" xml:lang="en"> <note xml:lang="en"> <date when="2013-04-16"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">INL</abbr>
+                     <expan xml:lang="en">Iraqi National Library and Archives</expan>
+                     </choice>. Some of its holdings were digitized and are available through the
+                        <ref
+                     target="http://www.wdl.org/en/search/?institution=iraqi-national-library-and-archives" xml:lang="en">World Digital Library</ref>. </p>
+                  <p xml:id="hBIBAL" xml:lang="en"> <note xml:lang="en"> <date when="2014-04-15" xml:lang="en">added</date> </note> <choice xml:lang="en">
+                     <abbr xml:lang="en">BibAlex</abbr>
+                     <expan xml:lang="en">Bibliotheca Alexandrina</expan>
+                     </choice>. Some holdings are currently in the process of digitization and are
+                     made availabe through the <ref
+                     target="http://dar.bibalex.org/webpages/advancedsearch.jsf" xml:lang="en">Digital Assets
+                        Repository</ref>.</p>
+                  <p xml:id="hBONN" xml:lang="en"> <note xml:lang="en"> <date when="2014-05-09" xml:lang="en">added</date> </note> <choice xml:lang="en">
+                     <abbr xml:lang="en">Bonn</abbr>
+                     <expan xml:lang="en">Translatio, Universität Bonn, Germany</expan>
+                     </choice>. Holdings are constantly digitized and made publicly available <ref target="http://www.translatio.uni-bonn.de" xml:lang="en">online</ref>.</p>
+                  <p xml:id="hCRL" xml:lang="en"> <note xml:lang="en"> <date when="2015-05-21"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">CRL</abbr>
+                     <expan xml:lang="en">Center for Research Libraries</expan>
+                     </choice>. Provides access to inter-library loan of microfilms as well as
+                     digital collections. Access to the <ref target="http://catalog.crl.edu/search~S3"
+                     xml:lang="en">collection</ref> is restricted to
+                     member institutions.</p>
+                  <p xml:id="hUJ" xml:lang="en"> <note xml:lang="en"> <date when="2017-12-30"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">UJ</abbr>
+                     <expan xml:lang="en">University of Jordan Main Library</expan>
+                     </choice> </p>
+                  <p xml:id="hDMW" xml:lang="en"> <note xml:lang="en"> <date when="2017-12-31"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">DMW</abbr>
+                     <expan xml:lang="en">Dāʾirat al-Maktaba al-Waṭaniyya, al-Urdun (Administration of National Library, Jordan)</expan>
+                     </choice> </p>
+                  <p xml:id="hLONA" xml:lang="en"> <note xml:lang="en"> <date when="2020-09-06"/>added</note> <choice xml:lang="en">
+                     <abbr xml:lang="en">LONA</abbr>
+                     <expan xml:lang="en">League of Nations Archives (Geneva, Switzerland)</expan>
+                  </choice> </p>
+               </div>
+            </div>
+</div>
+</body>
+    </text>
+  
+</TEI>
