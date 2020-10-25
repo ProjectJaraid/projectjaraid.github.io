@@ -36,6 +36,8 @@
                <persName xml:lang="en">Nicole Khayat</persName>
                <persName xml:lang="en">Sinai Rusinek</persName>
                <persName xml:lang="en">Peter Magierski</persName>
+               <persName xml:lang="en">Leyla von Mende</persName>
+               <persName xml:lang="en">Stacy Fahrenthold</persName>
             </respStmt>
          </titleStmt>
          <editionStmt xml:lang="en">
@@ -112,6 +114,14 @@
                   <forename xml:lang="en">Peter</forename>
                   <surname xml:lang="en">Magierski</surname>
                </persName>
+               <persName xml:id="pLM" xml:lang="en">
+                  <forename xml:lang="en">Leyla</forename>
+                  <surname xml:lang="en">von Mende</surname>
+               </persName>
+               <persName xml:id="pSF" xml:lang="en">
+                  <forename xml:lang="en">Stacy</forename>
+                  <surname xml:lang="en">Fahrenthold</surname>
+               </persName>
                <!-- all contributors should be included here and their contributions should be marked with the @resp attributed
                   and a reference to the contributor's xml:id -->
             </respStmt>
@@ -127,6 +137,7 @@
                <resp xml:lang="en">The 2020 edition's digital production: XML mark-up, corrections and additions</resp>
                <persName resp="#pAM" xml:lang="en">Adam Mestyan</persName>
                <persName resp="#pHC" xml:lang="en">Hugh Cayless</persName>
+               <persName resp="#pTG" xml:lang="en">Till Grallert</persName>
             </respStmt>
             <respStmt xml:lang="en">
                <resp>The 2020 edition's XSLT-coding and Javascript-coding</resp>
@@ -175,7 +186,7 @@
                   <item xml:lang="en">t1r12: seems to be faulty</item>
                </list>
             </p>
-            <p xml:lang="en" part="N">2020 Edition is using <ref target="https://github.com/TEIC/CETEIcean" xml:lang="en">CETEICean</ref> transformation from TEI XML to HTML </p>
+            <p xml:lang="en" part="N">2020 Edition is using <ref target="https://github.com/TEIC/CETEIcean" xml:lang="en">CETEICean</ref> transformation from TEI XML to HTML</p>
          </editorialDecl>
       </encodingDesc>
       <profileDesc>
@@ -202,8 +213,8 @@
          <change when="2018-11-21" who="#pTG" status="draft">Deleted duplicate entry for <title level="j">al-Mishkāt</title> in row t1r114.</change>
          <change when="2018-01-04" who="#pAM" xml:lang="en" status="draft"> adds holdings to <ref target="#t1r375" xml:lang="en">Al-Hilāl</ref>, and <ref target="#t1r100" xml:lang="en"> al-Ahrām</ref>
          </change>
-         <change when="2017-12-31" who="#pAM" xml:lang="en" status="draft">adds holding institution DMW </change>
-         <change when="2017-12-30" who="#pAM" xml:lang="en" status="draft">adds holding institution UJ </change>
+         <change when="2017-12-31" who="#pAM" xml:lang="en" status="draft">adds holding institution DMW</change>
+         <change when="2017-12-30" who="#pAM" xml:lang="en" status="draft">adds holding institution UJ</change>
          <change when="2017-12-29" who="#pAM" xml:lang="en" status="draft">adds <ref target="#t1r861" xml:lang="en">t1r861</ref>
          </change>
          <change when="2017-12-10" who="#pAM" xml:lang="en" status="draft">adds HARV holdings for <ref target="#t1r100" xml:lang="en">t1r100</ref>
@@ -355,7 +366,7 @@
             Arabic with "lang"</change>
          <change when="2012-06-01" who="#pTG" xml:lang="en" status="draft"> incorporated some last abbreviations: EN (=BnF), IE,
             Ind Off, and omitted Beir</change>
-         <change when="2012-05-30" who="#pAM" xml:lang="en" status="draft"> corrected typos, changed Alg Lib to BnA and BM to BL </change>
+         <change when="2012-05-30" who="#pAM" xml:lang="en" status="draft"> corrected typos, changed Alg Lib to BnA and BM to BL</change>
          <change type="xml"
                  when="2012-05-30"
                  who="#pTG"
@@ -363,7 +374,7 @@
                  status="draft"> deleted "Cent Lib"; replace "Lan" and "Lan
             Or" with "INALCO"; marked TGK and THC as deleted; marked up the last place names; found
             another holding institution not yet accounted for: "EN"</change>
-         <change when="2012-05-29" who="#pAM" xml:lang="en" status="draft"> corrected typos, added some data, clarified L’Oranais </change>
+         <change when="2012-05-29" who="#pAM" xml:lang="en" status="draft"> corrected typos, added some data, clarified L’Oranais</change>
          <change when="2012-05-21" who="#pAM" xml:lang="en" status="draft"> corrected typos, added some data, added dots, added
             data, added Rana Issa</change>
          <change type="xml"
@@ -382,7 +393,7 @@
             paragraph.</change>
          <change when="2012-04-25" who="#pAM" xml:lang="en" status="draft"> finalised a first unification of personal
             names</change>
-         <change when="2012-04-18" who="#pTG #pAM" xml:lang="en" status="draft">Replaced DKQW with DWKT </change>
+         <change when="2012-04-18" who="#pTG #pAM" xml:lang="en" status="draft">Replaced DKQW with DWKT</change>
          <change type="xml"
                  when="2012-04-11"
                  who="#pTG"
@@ -402,7 +413,7 @@
             "OIB"</change>
          <change when="2012-04-10" who="#pTG" xml:lang="en" status="draft">Added missing values to the list of abbreviations:
             DKQW, "Baghdad Univ", "CU", "DKT", "Dur", "DWQ", "Lan", "National Library of Israel",
-            BM, Tet, Alg Lib </change>
+            BM, Tet, Alg Lib</change>
          <change type="xml"
                  when="2012-04-10"
                  who="#pTG"
@@ -565,8 +576,18 @@
                </orgName>
                <list type="holdings">
                   <item>
+                     <ref target="pages/chrono.html#t1r2225">
+                        <name xml:lang="en">Abū al-Hawl</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r31">
                         <name xml:lang="en">Akhbār ʿan Intishār al-Anjīl fi Amākin Mukhtalifa / Al-ʿĀlam</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2173">
+                        <name xml:lang="en">Al-Akhlāq</name>
                      </ref>
                   </item>
                   <item>
@@ -675,8 +696,18 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2335">
+                        <name xml:lang="en">Al-Majalla</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r810">
                         <name xml:lang="en">Al-Majalla al-Miṣriyya</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2172">
+                        <name xml:lang="en">Al-Majalla al-Tijāriyya al-Sūriyya al-Amīrkiyya</name>
                      </ref>
                   </item>
                   <item>
@@ -730,6 +761,10 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2590">
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Muqtabas</name> (jarīda) </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r104">
                         <name xml:lang="en">Al-Muqtaṭaf</name>
                      </ref>
@@ -741,7 +776,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r463">
-                        <name xml:lang="en">Al-Mushīr/ The Counsellor</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mushīr</name>/ <name xml:lang="en">The Counsellor</name>
                      </ref>
                   </item>
                   <item>
@@ -767,6 +802,11 @@
                   <item>
                      <ref target="pages/chrono.html#t1r508">
                         <name xml:lang="en">Al-Nibrās</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2620">
+                        <name xml:lang="en">Al-Qabas</name>
                      </ref>
                   </item>
                   <item>
@@ -840,6 +880,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r772">
+                        <name xml:lang="en">Al-Tamaddun</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r94">
                         <name xml:lang="en">Al-Taqaddum</name>
                      </ref>
@@ -864,6 +909,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r3157">
+                        <name xml:lang="en">Al-ʿArūs</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r161">
                         <name xml:lang="en">Al-ʿAṣr al-Jadīd</name>
                      </ref>
@@ -879,8 +929,18 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2167">
+                        <name xml:lang="en">Al-ʿĀlam al-Jadīd</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r868">
                         <name>Al-ʿĀṣima</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2634">
+                        <name xml:lang="en">Al-ʿĀṣima</name>
                      </ref>
                   </item>
                   <item>
@@ -1034,7 +1094,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r433">
-                        <name xml:lang="en">Ṭarābulus / then Ṭarābulus al-Shām</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Ṭarābulus</name>  then <name xml:lang="ar-Latn-x-ijmes">Ṭarābulus al-Shām</name>
                      </ref>
                   </item>
                </list>
@@ -1080,7 +1140,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r463">
-                        <name xml:lang="en">Al-Mushīr/ The Counsellor</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mushīr</name>/ <name xml:lang="en">The Counsellor</name>
                      </ref>
                   </item>
                   <item>
@@ -1152,8 +1212,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r97">
-                        <name xml:lang="en">Al-Mawṣil (Musul)</name>
-                     </ref>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mawṣil</name> (<name>Musul</name>) </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r191">
@@ -1285,6 +1344,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2113">
+                        <name xml:lang="en">Al-Bayān</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r730">
                         <name xml:lang="en">Al-Ghāzītiyya al-Sūdāniyya</name>
                      </ref>
@@ -1356,7 +1420,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r463">
-                        <name xml:lang="en">Al-Mushīr/ The Counsellor</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mushīr</name>/ <name xml:lang="en">The Counsellor</name>
                      </ref>
                   </item>
                   <item>
@@ -1430,13 +1494,19 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2890">
+                        <name xml:lang="en">Al-ʿArab</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r242">
                         <name xml:lang="en">Al-ʿUrwa al-Wuthqā</name>
                      </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r321">
-                        <name xml:lang="en">Al-Ḥaqāʾiq/The Arabic Quarterly Review</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Ḥaqāʾiq</name>
+                        <name xml:lang="en">The Arabic Quarterly Review</name>
                      </ref>
                   </item>
                   <item>
@@ -1670,8 +1740,8 @@
                   <item>
                      <ref target="pages/chrono.html#t1r202">
                         <name xml:lang="en">Abou-Naddara Zarka</name> - conceived as the continuation of
-                        <name xml:lang="en">Abou-Naddara/Abū Naẓẓāra/Abū Naẓẓāra Zarqā </name>from the sixth
-                     volume, no. 8 </ref>
+                        <name xml:lang="en">Abou-Naddara/Abū Naẓẓāra/Abū Naẓẓāra Zarqā</name>from the sixth
+                     volume, no. 8</ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r176">
@@ -2079,7 +2149,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r212">
-                        <name xml:lang="en">Najm al-Mashriq/L’Astre d’Orient</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Najm al-Mashriq</name> / <name xml:lang="fr">L’Astre d’Orient</name>
                      </ref>
                   </item>
                   <item>
@@ -2491,6 +2561,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r1101">
+                        <name xml:lang="en">Al-Kashkūl al-Muṣawwara</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r746">
                         <name xml:lang="en">Al-Kawthar</name>
                      </ref>
@@ -2592,7 +2667,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r463">
-                        <name xml:lang="en">Al-Mushīr/ The Counsellor</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mushīr</name>/ <name xml:lang="en">The Counsellor</name>
                      </ref>
                   </item>
                   <item>
@@ -2758,6 +2833,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r517">
                         <name xml:lang="en">Al-Sibāq</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1120">
+                        <name xml:lang="en">Al-Siyāsa</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1207">
+                        <name xml:lang="en">Al-Siyāsa al-Usbūʿiyya</name>
                      </ref>
                   </item>
                   <item>
@@ -3086,6 +3171,21 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r686">
+                        <name xml:lang="en">Miṣbāḥ al-Sharq</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r461">
+                        <name xml:lang="en">Miṣr</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1109">
+                        <name xml:lang="en">Qaṣr al-Nīl</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r93">
                         <name xml:lang="en">Rawḍat al-Akhbār</name>
                      </ref>
@@ -3117,7 +3217,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r432">
-                        <name xml:lang="en">Silsilat al-Fukāhāt (continuation of Beiruti edition 1884)</name>
+                        <name xml:lang="en">Silsilat al-Fukāhāt</name>
                      </ref>
                   </item>
                   <item>
@@ -3198,7 +3298,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r433">
-                        <name xml:lang="en">Ṭarābulus / then Ṭarābulus al-Shām</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Ṭarābulus</name>  then <name xml:lang="ar-Latn-x-ijmes">Ṭarābulus al-Shām</name>
                      </ref>
                   </item>
                </list>
@@ -3332,6 +3432,15 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2590">
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Muqtabas</name> (jarīda) </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2620">
+                        <name xml:lang="en">Al-Qabas</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r36">
                         <name xml:lang="en">Sūriyya</name>
                      </ref>
@@ -3354,8 +3463,18 @@
                </orgName>
                <list type="holdings">
                   <item>
+                     <ref target="pages/chrono.html#t1r2225">
+                        <name xml:lang="en">Abū al-Hawl</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r843">
                         <name xml:lang="en">Akhbār al-Qāṣid</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2224">
+                        <name xml:lang="en">Al-Afkār</name>
                      </ref>
                   </item>
                   <item>
@@ -3389,6 +3508,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2297">
+                        <name xml:lang="en">Al-Iṣlāḥ</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r61">
                         <name xml:lang="en">Al-Jinān</name>
                      </ref>
@@ -3396,6 +3520,11 @@
                   <item>
                      <ref target="pages/chrono.html#t1r263">
                         <name xml:lang="en">Al-Laṭāʾif</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1060">
+                        <name xml:lang="en">Al-Laṭāʾif al-Muṣawwara</name>
                      </ref>
                   </item>
                   <item>
@@ -3414,6 +3543,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2117">
+                        <name xml:lang="en">Al-Sāʾiḥ</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r1781">
                         <name xml:lang="en">Al-Zahrāʾ</name>
                      </ref>
@@ -3421,6 +3555,11 @@
                   <item>
                      <ref target="pages/chrono.html#t1r270">
                         <name xml:lang="en">Al-Ṣafāʾ</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3004">
+                        <name xml:lang="en">Barīd al-Ḥijāz</name>
                      </ref>
                   </item>
                   <item>
@@ -3453,6 +3592,11 @@
                         <name xml:lang="en">Yaʿsūb al-Ṭibb</name>
                      </ref>
                   </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2682">
+                        <name xml:lang="en">Ḥumṣ</name>
+                     </ref>
+                  </item>
                </list>
             </item>
             <item n="1institutions">
@@ -3472,8 +3616,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r97">
-                        <name xml:lang="en">Al-Mawṣil (Musul)</name>
-                     </ref>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mawṣil</name> (<name>Musul</name>) </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r75">
@@ -3603,8 +3746,8 @@
                   <item>
                      <ref target="pages/chrono.html#t1r202">
                         <name xml:lang="en">Abou-Naddara Zarka</name> - conceived as the continuation of
-                        <name xml:lang="en">Abou-Naddara/Abū Naẓẓāra/Abū Naẓẓāra Zarqā </name>from the sixth
-                     volume, no. 8 </ref>
+                        <name xml:lang="en">Abou-Naddara/Abū Naẓẓāra/Abū Naẓẓāra Zarqā</name>from the sixth
+                     volume, no. 8</ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r176">
@@ -3683,8 +3826,7 @@
                <list type="holdings">
                   <item>
                      <ref target="pages/chrono.html#t1r97">
-                        <name xml:lang="en">Al-Mawṣil (Musul)</name>
-                     </ref>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mawṣil</name> (<name>Musul</name>) </ref>
                   </item>
                </list>
             </item>
@@ -3902,6 +4044,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2173">
+                        <name xml:lang="en">Al-Akhlāq</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r247">
                         <name xml:lang="en">Al-Aʿlām</name>
                      </ref>
@@ -3917,8 +4064,18 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2172">
+                        <name xml:lang="en">Al-Majalla al-Tijāriyya al-Sūriyya al-Amīrkiyya</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r811">
                         <name xml:lang="en">Al-Majmūʿa al-Rasmiyya li’l-Maḥākim al-Ahliyya</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2119">
+                        <name xml:lang="en">Al-Nasr</name>
                      </ref>
                   </item>
                   <item>
@@ -3932,8 +4089,18 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2169">
+                        <name xml:lang="en">Al-̵ʿĀlam al-Jadīd al-Nisāʾī</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r642">
                         <name xml:lang="en">Anīs al-Jalīs</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r754">
+                        <name xml:lang="en">Mirʾāt al-Gharb</name>
                      </ref>
                   </item>
                </list>
@@ -3946,6 +4113,172 @@
                   <item>
                      <ref target="pages/chrono.html#t1r824">
                         <name xml:lang="en">Al-Raʾīs</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1institutions">
+               <orgName>
+                  <ref target="pages/abbrev.html#hMJU">MJU</ref>
+               </orgName>
+               <list type="holdings">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2394">
+                        <name xml:lang="en">Al-Balāgh</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r58">
+                        <name xml:lang="en">Al-Bashīr</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3214">
+                        <name xml:lang="en">Al-Fajr</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2999">
+                        <name xml:lang="en">Al-Fallāḥ</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1211">
+                        <name xml:lang="en">Al-Fatḥ</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2365">
+                        <name xml:lang="en">Al-Ittiḥād al-ʿUthmānī</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2580">
+                        <name xml:lang="en">Al-Jabal ʿĀmil</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3324">
+                        <name xml:lang="en">Al-Jarīda al-Rasmiyya</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2815">
+                        <name xml:lang="en">Al-Jāmiʿa al-ʿArabiyya</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2830">
+                        <name xml:lang="en">Al-Karmil</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2480">
+                        <name xml:lang="en">Al-Kashshāf al-Waṭanī</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1060">
+                        <name xml:lang="en">Al-Laṭāʾif al-Muṣawwara</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r679">
+                        <name xml:lang="en">Al-Mashriq</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2590">
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Muqtabas</name> (jarīda) </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3221">
+                        <name xml:lang="en">Al-Murshid al-ʿArabī</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1172">
+                        <name xml:lang="en">Al-Muṣawwar</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2622">
+                        <name xml:lang="en">Al-Sharq</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2779">
+                        <name xml:lang="en">Al-Sharq al-ʿArabī</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3290">
+                        <name xml:lang="en">Al-Tarbiyya wa-l-Taʿlīm</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2835">
+                        <name xml:lang="en">Al-Urdun</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3201">
+                        <name xml:lang="en">Al-Waḥy</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3157">
+                        <name xml:lang="en">Al-ʿArūs</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2588">
+                        <name xml:lang="en">Al-ʿAṣr al-Jadīd</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3169">
+                        <name xml:lang="en">Al-ʿUlūm</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2649">
+                        <name xml:lang="en">Al-ʿUmrān</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3121">
+                        <name xml:lang="en">Al-ʿUrfān</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3213">
+                        <name xml:lang="en">Al-Ḥadīth</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r861">
+                        <name>Al-Ḥaqq Yaʿlū</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3106">
+                        <name xml:lang="en">Alf Layla wa-Layla</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2648">
+                        <name xml:lang="en">Alif Bāʾ</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3241">
+                        <name xml:lang="en">Bayt Laḥm</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2822">
+                        <name xml:lang="en">Filasṭīn</name>
                      </ref>
                   </item>
                </list>
@@ -4073,7 +4406,8 @@
                <orgName>
                   <ref target="pages/abbrev.html#hMKAD">MKAD</ref>
                </orgName>
-                           </item>
+           
+            </item>
             <item n="1institutions">
                <orgName>
                   <ref target="pages/abbrev.html#hMTQ">MTQ</ref>
@@ -4108,7 +4442,7 @@
                <list type="holdings">
                   <item>
                      <ref target="pages/chrono.html#t1r463">
-                        <name xml:lang="en">Al-Mushīr/ The Counsellor</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mushīr</name>/ <name xml:lang="en">The Counsellor</name>
                      </ref>
                   </item>
                   <item>
@@ -4141,6 +4475,11 @@
                   <item>
                      <ref target="pages/chrono.html#t1r651">
                         <name xml:lang="en">Al-Ḍiyāʾ</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3156">
+                        <name xml:lang="en">Al-Ḥaqāʾiq</name>
                      </ref>
                   </item>
                   <item>
@@ -4243,7 +4582,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r213">
-                        <name xml:lang="en">Al-Nashra al-Sanawiyya ʿan al-Tijāra al-Khārijiyya / Le Commerce
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Nashra al-Sanawiyya ʿan al-Tijāra al-Khārijiyya</name> / <name xml:lang="fr">Le Commerce
                         Extérieur de l’Égypte</name>
                      </ref>
                   </item>
@@ -4409,6 +4748,21 @@
                   <ref target="pages/abbrev.html#hTUB">TUB</ref>
                </orgName>
                <list type="holdings">
+                  <item>
+                     <ref target="pages/chrono.html#t1r1245">
+                        <name xml:lang="en">Al-Dunyā al-Muṣawwara</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2031">
+                        <name xml:lang="en">Al-Fajr</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1843">
+                        <name xml:lang="en">Al-Fukāha</name>
+                     </ref>
+                  </item>
                   <item>
                      <ref target="pages/chrono.html#t1r342">
                         <name xml:lang="en">Al-Maḥākim</name>
@@ -4592,13 +4946,143 @@
                </orgName>
                <list type="holdings">
                   <item>
+                     <ref target="pages/chrono.html#t1r2819">
+                        <name xml:lang="en">Al-Akhbār</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3325">
+                        <name xml:lang="en">Al-Akhbār al-Kanasiyya</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2838">
+                        <name xml:lang="en">Al-Iqdām</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2842">
+                        <name xml:lang="en">Al-Ittiḥād al-ʿArabī</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2814">
+                        <name xml:lang="en">Al-Iʿlān</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2827">
+                        <name xml:lang="en">Al-Jazīra</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2815">
+                        <name xml:lang="en">Al-Jāmiʿa al-ʿArabiyya</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2830">
+                        <name xml:lang="en">Al-Karmil</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3239">
+                        <name xml:lang="en">Al-Majalla al-Tijāriyya</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r63">
                         <name xml:lang="en">Al-Mihmāz</name>
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r3233">
+                        <name xml:lang="en">Al-Nafāʾis</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2784">
+                        <name xml:lang="en">Al-Nafīr al-ʿUthmānī</name>, later <name xml:lang="en">al-Nafīr</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2840">
+                        <name xml:lang="en">Al-Nahḍa</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3244">
+                        <name xml:lang="en">Al-Nashra al-Tijāriyya</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2803">
+                        <name xml:lang="en">Al-Quds al-Sharīf</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2836">
+                        <name xml:lang="en">Al-Yarmūk</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2839">
+                        <name xml:lang="en">Al-Zuhūr</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3231">
+                        <name xml:lang="en">Al-Ḥikma</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3243">
+                        <name xml:lang="en">Al-Ḥuqūq</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2828">
+                        <name xml:lang="en">Al-Ṣirāṭ al-Mustaqīm</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2641">
+                        <name xml:lang="en">Al-Ṭabl</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2804">
+                        <name xml:lang="en">Barīd al-Yawm</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2802">
+                        <name xml:lang="en">Bayt al-Maqdis</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2822">
+                        <name xml:lang="en">Filasṭīn</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2813">
+                        <name xml:lang="en">Ittiḥād al-ʿUmmāl</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2810">
+                        <name xml:lang="en">Lisān al-ʿArab</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r1545">
                         <name xml:lang="en">Majallat al-Aḥkām al-Sharʿiyya</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2808">
+                        <name xml:lang="en">Raqīb Ṣihyawn</name>
                      </ref>
                   </item>
                   <item>
@@ -4622,17 +5106,102 @@
             </item>
             <item n="1institutions">
                <orgName>
+                  <ref target="pages/abbrev.html#hMJA">MJA</ref>
+               </orgName>
+               <list type="holdings">
+                  <item>
+                     <ref target="pages/chrono.html#t1r1882">
+                        <name xml:lang="en">Al-Azhar</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1institutions">
+               <orgName>
                   <ref target="pages/abbrev.html#hEAP119">Aqṣā</ref>
                </orgName>
                <list type="holdings">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2838">
+                        <name xml:lang="en">Al-Iqdām</name>
+                     </ref>
+                  </item>
                   <item>
                      <ref target="pages/chrono.html#t1r61">
                         <name xml:lang="en">Al-Jinān</name>
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2815">
+                        <name xml:lang="en">Al-Jāmiʿa al-ʿArabiyya</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3232">
+                        <name xml:lang="en">Al-Kulliyya al-ʿArabiyya</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r750">
                         <name xml:lang="en">Al-Maḥabba</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2590">
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Muqtabas</name> (jarīda) </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3154">
+                        <name xml:lang="en">Al-Muqtabas</name> (journal) </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2620">
+                        <name xml:lang="en">Al-Qabas</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3237">
+                        <name xml:lang="en">Al-Zahra</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3042">
+                        <name xml:lang="en">Al-Ḥasnāʾ</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3243">
+                        <name xml:lang="en">Al-Ḥuqūq</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2828">
+                        <name xml:lang="en">Al-Ṣirāṭ al-Mustaqīm</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2822">
+                        <name xml:lang="en">Filasṭīn</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2801">
+                        <name xml:lang="en">Mirʾāt al-Sharq</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3038">
+                        <name xml:lang="en">Rawḍat al-Maʿārif</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3229">
+                        <name xml:lang="en">Rawḍat al-Maʿārif</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2841">
+                        <name xml:lang="en">Ṣawt al-Shaʿb</name>
                      </ref>
                   </item>
                </list>
@@ -4780,8 +5349,8 @@
                      </ref>
                   </item>
                   <item>
-                     <ref target="pages/chrono.html#t1r1677">
-                        <name xml:lang="en">Al-Bayān</name>
+                     <ref target="pages/chrono.html#t1r1245">
+                        <name xml:lang="en">Al-Dunyā al-Muṣawwara</name>
                      </ref>
                   </item>
                   <item>
@@ -4857,25 +5426,63 @@
                </orgName>
                <list type="holdings">
                   <item>
+                     <ref target="pages/chrono.html#t1r2224">
+                        <name xml:lang="en">Al-Afkār</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2113">
+                        <name xml:lang="en">Al-Bayān</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2123">
+                        <name xml:lang="en">Al-Fatāt</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r660">
+                        <name xml:lang="en">Al-Hudā</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2110">
+                        <name xml:lang="en">Al-Kawn</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r328">
                         <name xml:lang="en">Al-Muʾayyad</name>
                      </ref>
                   </item>
-               </list>
-            </item>
-            <item n="1institutions">
-               <orgName>
-                  <ref target="pages/abbrev.html#hUJ">UJ</ref>
-               </orgName>
-               <list type="holdings">
                   <item>
-                     <ref target="pages/chrono.html#t1r2999">
-                        <name xml:lang="en">Al-Fallāḥ</name>
+                     <ref target="pages/chrono.html#t1r2119">
+                        <name xml:lang="en">Al-Nasr</name>
                      </ref>
                   </item>
                   <item>
-                     <ref target="pages/chrono.html#t1r861">
-                        <name>Al-Ḥaqq Yaʿlū</name>
+                     <ref target="pages/chrono.html#t1r2178">
+                        <name xml:lang="en">Al-Samīr</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2117">
+                        <name xml:lang="en">Al-Sāʾiḥ</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2182">
+                        <name xml:lang="en">Fatāt Būsṭun</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r379">
+                        <name xml:lang="en">Kawkab Amīrkā</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r754">
+                        <name xml:lang="en">Mirʾāt al-Gharb</name>
                      </ref>
                   </item>
                </list>
@@ -4905,6 +5512,117 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2060">
                         <name xml:lang="en">Minbar al-Sharq</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1institutions">
+               <orgName>
+                  <ref target="pages/abbrev.html#hMKHC">MKHC</ref>
+               </orgName>
+               <list type="holdings">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2173">
+                        <name xml:lang="en">Al-Akhlāq</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r725">
+                        <name xml:lang="en">Al-Ayyām</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2113">
+                        <name xml:lang="en">Al-Bayān</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2170">
+                        <name xml:lang="en">Al-Funūn</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2158">
+                        <name xml:lang="en">Al-Ghurbāl</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r660">
+                        <name xml:lang="en">Al-Hudā</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2110">
+                        <name xml:lang="en">Al-Kawn</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2172">
+                        <name xml:lang="en">Al-Majalla al-Tijāriyya al-Sūriyya al-Amīrkiyya</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2119">
+                        <name xml:lang="en">Al-Nasr</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2178">
+                        <name xml:lang="en">Al-Samīr</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2137">
+                        <name xml:lang="en">Al-Wafāʾ</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2128">
+                        <name xml:lang="en">Fatāt Būsṭun</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2182">
+                        <name xml:lang="en">Fatāt Būsṭun</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r379">
+                        <name xml:lang="en">Kawkab Amīrkā</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r754">
+                        <name xml:lang="en">Mirʾāt al-Gharb</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1institutions">
+               <orgName>
+                  <ref target="pages/abbrev.html#hIHRC">IHRC</ref>
+               </orgName>
+               <list type="holdings">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2178">
+                        <name xml:lang="en">Al-Samīr</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2167">
+                        <name xml:lang="en">Al-ʿĀlam al-Jadīd</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1institutions">
+               <orgName>
+                  <ref target="pages/abbrev.html#hMMWB">MMWB</ref>
+               </orgName>
+               <list type="holdings">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2270">
+                        <name xml:lang="en">Firansā wa-l-Sharq</name>
                      </ref>
                   </item>
                </list>
@@ -6023,7 +6741,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r463">
-                        <name xml:lang="en">Al-Mushīr/ The Counsellor</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mushīr</name>/ <name xml:lang="en">The Counsellor</name>
                      </ref>
                   </item>
                   <item>
@@ -6049,6 +6767,11 @@
                   <item>
                      <ref target="pages/chrono.html#t1r1953">
                         <name xml:lang="en">Al-Nadīm</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2784">
+                        <name xml:lang="en">Al-Nafīr al-ʿUthmānī</name>, later <name xml:lang="en">al-Nafīr</name>
                      </ref>
                   </item>
                   <item>
@@ -6874,6 +7597,11 @@
                <placeName>Amman</placeName>
                <list type="secondList">
                   <item>
+                     <ref target="pages/chrono.html#t1r3324">
+                        <name xml:lang="en">Al-Jarīda al-Rasmiyya</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r2779">
                         <name xml:lang="en">Al-Sharq al-ʿArabī</name>
                      </ref>
@@ -6881,6 +7609,11 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2781">
                         <name xml:lang="en">Al-Sharīʿa</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2835">
+                        <name xml:lang="en">Al-Urdun</name>
                      </ref>
                   </item>
                   <item>
@@ -9406,6 +10139,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r3042">
+                        <name xml:lang="en">Al-Ḥasnāʾ</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r2462">
                         <name xml:lang="en">Al-Ḥayāt al-Riyāḍiyya</name>
                      </ref>
@@ -9438,11 +10176,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2426">
                         <name xml:lang="en">Al-Ḥurriyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3042">
-                        <name xml:lang="en">Al-Ḥusnāʾ</name>
                      </ref>
                   </item>
                   <item>
@@ -10071,7 +10804,9 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r15">
-                        <name xml:lang="en">Doresh Tov le-ʿAmmo/ Ṭālib al-Khayr li-Qawmi-hi/The Hebrew Gazette</name>
+                        <name xml:lang="he-Latn">Doresh Tov le-ʿAmmo</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Ṭālib al-Khayr li-Qawmihi</name>
+                        <name xml:lang="en">The Hebrew Gazette</name>
                      </ref>
                   </item>
                   <item>
@@ -10510,17 +11245,17 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r1091">
-                        <name xml:lang="en">Abū al-Hūl</name>
+                        <name xml:lang="en">Abū al-Hawl</name>
                      </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r1720">
-                        <name xml:lang="en">Abū al-Hūl</name>
+                        <name xml:lang="en">Abū al-Hawl</name>
                      </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r1900">
-                        <name xml:lang="en">Abū al-Hūl</name>
+                        <name xml:lang="en">Abū al-Hawl</name>
                      </ref>
                   </item>
                   <item>
@@ -10580,7 +11315,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r1070">
-                        <name xml:lang="en">Al-Akhbār </name>
+                        <name xml:lang="en">Al-Akhbār</name>
                      </ref>
                   </item>
                   <item>
@@ -12459,7 +13194,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r463">
-                        <name xml:lang="en">Al-Mushīr/ The Counsellor</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mushīr</name>/ <name xml:lang="en">The Counsellor</name>
                      </ref>
                   </item>
                   <item>
@@ -12753,7 +13488,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r213">
-                        <name xml:lang="en">Al-Nashra al-Sanawiyya ʿan al-Tijāra al-Khārijiyya / Le Commerce
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Nashra al-Sanawiyya ʿan al-Tijāra al-Khārijiyya</name> / <name xml:lang="fr">Le Commerce
                         Extérieur de l’Égypte</name>
                      </ref>
                   </item>
@@ -14463,7 +15198,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r900">
-                        <name>Al-Ḥurrīya</name>
+                        <name>Al-Ḥurriyya</name>
                      </ref>
                   </item>
                   <item>
@@ -15708,7 +16443,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r432">
-                        <name xml:lang="en">Silsilat al-Fukāhāt (continuation of Beiruti edition 1884)</name>
+                        <name xml:lang="en">Silsilat al-Fukāhāt</name>
                      </ref>
                   </item>
                   <item>
@@ -16141,6 +16876,16 @@
                </list>
             </item>
             <item n="1place">
+               <placeName>Casablanca</placeName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r1527">
+                        <name xml:lang="en">Al-Akhbār al-Maghribiyya</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1place">
                <placeName>Cleveland, OH</placeName>
                <list type="secondList">
                   <item>
@@ -16455,13 +17200,11 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r2590">
-                        <name xml:lang="en">Al-Muqtabas</name>
-                     </ref>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Muqtabas</name> (jarīda) </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r3154">
-                        <name xml:lang="en">Al-Muqtabas</name>
-                     </ref>
+                        <name xml:lang="en">Al-Muqtabas</name> (journal) </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r2667">
@@ -16919,11 +17662,6 @@
                      </ref>
                   </item>
                   <item>
-                     <ref target="pages/chrono.html#t1r2616">
-                        <name xml:lang="en">Qabas</name>
-                     </ref>
-                  </item>
-                  <item>
                      <ref target="pages/chrono.html#t1r345">
                         <name xml:lang="en">Rawḍat al-Shām</name>
                      </ref>
@@ -16961,6 +17699,11 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2658">
                         <name xml:lang="en">Wādī Baradā</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2616">
+                        <name xml:lang="en" resp="#pTG">al-Qabas</name>
                      </ref>
                   </item>
                   <item>
@@ -17264,6 +18007,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2784">
+                        <name xml:lang="en">Al-Nafīr al-ʿUthmānī</name>, later <name xml:lang="en">al-Nafīr</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r2840">
                         <name xml:lang="en">Al-Nahḍa</name>
                      </ref>
@@ -17301,6 +18049,11 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2834">
                         <name xml:lang="en">Al-Ṣāʿiqa</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2641">
+                        <name xml:lang="en">Al-Ṭabl</name>
                      </ref>
                   </item>
                   <item>
@@ -17416,7 +18169,7 @@
                </list>
             </item>
             <item n="1place">
-               <placeName>Havanna</placeName>
+               <placeName>Havana</placeName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2269">
@@ -17431,6 +18184,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2270">
                         <name xml:lang="en">Firansā wa-l-Sharq</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1place">
+               <placeName>Hayfa</placeName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r3325">
+                        <name xml:lang="en">Al-Akhbār al-Kanasiyya</name>
                      </ref>
                   </item>
                </list>
@@ -18015,7 +18778,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r2784">
-                        <name xml:lang="en">Al-Nafīr al-ʿUthmānī</name>
+                        <name xml:lang="en">Al-Nafīr al-ʿUthmānī</name>, later <name xml:lang="en">al-Nafīr</name>
                      </ref>
                   </item>
                   <item>
@@ -18074,6 +18837,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r2641">
+                        <name xml:lang="en">Al-Ṭabl</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r2792">
                         <name xml:lang="en">Al-Ṭāʾir</name>
                      </ref>
@@ -18125,7 +18893,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r2801">
-                        <name xml:lang="en">Mirāt al-Sharq</name>
+                        <name xml:lang="en">Mirʾāt al-Sharq</name>
                      </ref>
                   </item>
                   <item>
@@ -18206,7 +18974,7 @@
                </list>
             </item>
             <item n="1place">
-               <placeName>Jounieh / Jūniyya</placeName>
+               <placeName>Jounieh</placeName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r484">
@@ -18219,13 +18987,18 @@
                      </ref>
                   </item>
                   <item>
-                     <ref target="pages/chrono.html#t1r870">
-                        <name>Ṣadā Lubnān</name>
-                     </ref>
-                  </item>
-                  <item>
                      <ref target="pages/chrono.html#t1r3147">
                         <name xml:lang="en">Ṣadā Lubnān</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1place">
+               <placeName>Jounieh / Jūniyya</placeName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r870">
+                        <name>Ṣadā Lubnān</name>
                      </ref>
                   </item>
                </list>
@@ -18236,6 +19009,26 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2530">
                         <name xml:lang="en">Al-Ḥikma</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1place">
+               <placeName>Jūniyya</placeName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r484">
+                        <name xml:lang="en">Al-Arz</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r824">
+                        <name xml:lang="en">Al-Raʾīs</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3147">
+                        <name xml:lang="en">Ṣadā Lubnān</name>
                      </ref>
                   </item>
                </list>
@@ -18875,7 +19668,7 @@
                </list>
             </item>
             <item n="1place">
-               <placeName>Maʿn</placeName>
+               <placeName>Maʿān</placeName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r861">
@@ -18964,7 +19757,7 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2158">
-                        <name xml:lang="en">Al-Ghirbāl</name>
+                        <name xml:lang="en">Al-Ghurbāl</name>
                      </ref>
                   </item>
                   <item>
@@ -19139,8 +19932,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r97">
-                        <name xml:lang="en">Al-Mawṣil (Musul)</name>
-                     </ref>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mawṣil</name> (<name>Musul</name>) </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r2985">
@@ -19384,7 +20176,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r2172">
-                        <name xml:lang="en">Al-Majalla al-Tijāriyya</name>
+                        <name xml:lang="en">Al-Majalla al-Tijāriyya al-Sūriyya al-Amīrkiyya</name>
                      </ref>
                   </item>
                   <item>
@@ -19409,7 +20201,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r463">
-                        <name xml:lang="en">Al-Mushīr/ The Counsellor</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mushīr</name>/ <name xml:lang="en">The Counsellor</name>
                      </ref>
                   </item>
                   <item>
@@ -19649,8 +20441,8 @@
                   <item>
                      <ref target="pages/chrono.html#t1r202">
                         <name xml:lang="en">Abou-Naddara Zarka</name> - conceived as the continuation of
-                        <name xml:lang="en">Abou-Naddara/Abū Naẓẓāra/Abū Naẓẓāra Zarqā </name>from the sixth
-                     volume, no. 8 </ref>
+                        <name xml:lang="en">Abou-Naddara/Abū Naẓẓāra/Abū Naẓẓāra Zarqā</name>from the sixth
+                     volume, no. 8</ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r176">
@@ -19897,7 +20689,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r212">
-                        <name xml:lang="en">Najm al-Mashriq/L’Astre d’Orient</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Najm al-Mashriq</name> / <name xml:lang="fr">L’Astre d’Orient</name>
                      </ref>
                   </item>
                   <item>
@@ -20577,7 +21369,7 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2225">
-                        <name xml:lang="en">Abū al-Hūl</name>
+                        <name xml:lang="en">Abū al-Hawl</name>
                      </ref>
                   </item>
                   <item>
@@ -21024,110 +21816,6 @@
                      <ref target="pages/chrono.html#t1r2187">
                         <name xml:lang="en">Al-Khālidāt</name>
                      </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1place">
-               <placeName>Tripoli (al-Gharb)</placeName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r1412">
-                        <name xml:lang="en">Abū Qashsha</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r1414">
-                        <name xml:lang="en">Al-Dardanīl</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r1416">
-                        <name xml:lang="en">Al-Liwāʾ al-Ṭarābulusī</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r1411">
-                        <name xml:lang="en">Al-Mirṣād</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r1413">
-                        <name xml:lang="en">Al-Raqīb</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r1419">
-                        <name xml:lang="en">Al-Raqīb al-ʿAtīd</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r632">
-                        <name xml:lang="en">Al-Taraqqī</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r1417">
-                        <name xml:lang="en">Al-Waqt</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r1418">
-                        <name xml:lang="en">Al-ʿAdl</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r1410">
-                        <name xml:lang="en">Al-ʿAṣr al-Jadīd</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r1415">
-                        <name xml:lang="en">Iṭāliyā al-Jadīda</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r41">
-                        <name xml:lang="en">Ṭarābulus al-Gharb</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1place">
-               <placeName>Tripoli (al-Shām)</placeName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r3118">
-                        <name xml:lang="en">Al-Bayān</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3117">
-                        <name xml:lang="en">Al-Jāmiʿat al-Funūn</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3116">
-                        <name xml:lang="en">Al-Mabāḥith</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3120">
-                        <name xml:lang="en">Al-Tamaddun al-Islāmī</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3119">
-                        <name xml:lang="en">Al-ʿAṣr al-Dhahabī</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r433">
-                        <name xml:lang="en">Ṭarābulus / then Ṭarābulus al-Shām</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r397">
-                        <name xml:lang="en">Ṭarābulus al-Shām</name>? </ref>
                   </item>
                </list>
             </item>
@@ -21861,7 +22549,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r326">
-                        <name xml:lang="en">Mālṭa Taghna </name>
+                        <name xml:lang="en">Mālṭa Taghna</name>
                      </ref>
                   </item>
                   <item>
@@ -21921,7 +22609,8 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r321">
-                        <name xml:lang="en">Al-Ḥaqāʾiq/The Arabic Quarterly Review</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Ḥaqāʾiq</name>
+                        <name xml:lang="en">The Arabic Quarterly Review</name>
                      </ref>
                   </item>
                </list>
@@ -22117,7 +22806,7 @@
                </list>
             </item>
             <item n="1place">
-               <placeName>al-Dār al-Bayḍāʾ (Casablanca)</placeName>
+               <placeName>al-Dār al-Bayḍāʾ</placeName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r1527">
@@ -22172,6 +22861,16 @@
                </list>
             </item>
             <item n="1place">
+               <placeName>ʿAbayeh</placeName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2563">
+                        <name xml:lang="en">Al-Farāʾid</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1place">
                <placeName>ʿAbayh</placeName>
                <list type="secondList">
                   <item>
@@ -22192,16 +22891,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r3126">
                         <name xml:lang="en">Majallat al-Madrasa al-Dāwudiyya</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1place">
-               <placeName>ʿAbayا</placeName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r2563">
-                        <name xml:lang="en">Al-Farāʾid</name>
                      </ref>
                   </item>
                </list>
@@ -22622,6 +23311,110 @@
                </list>
             </item>
             <item n="1place">
+               <placeName>Ṭarābulūs al-Gharb</placeName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r1412">
+                        <name xml:lang="en">Abū Qashsha</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1414">
+                        <name xml:lang="en">Al-Dardanīl</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1416">
+                        <name xml:lang="en">Al-Liwāʾ al-Ṭarābulusī</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1411">
+                        <name xml:lang="en">Al-Mirṣād</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1413">
+                        <name xml:lang="en">Al-Raqīb</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1419">
+                        <name xml:lang="en">Al-Raqīb al-ʿAtīd</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r632">
+                        <name xml:lang="en">Al-Taraqqī</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1417">
+                        <name xml:lang="en">Al-Waqt</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1418">
+                        <name xml:lang="en">Al-ʿAdl</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1410">
+                        <name xml:lang="en">Al-ʿAṣr al-Jadīd</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r1415">
+                        <name xml:lang="en">Iṭāliyā al-Jadīda</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r41">
+                        <name xml:lang="en">Ṭarābulus al-Gharb</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1place">
+               <placeName>Ṭarābulūs al-Shām</placeName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r3118">
+                        <name xml:lang="en">Al-Bayān</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3117">
+                        <name xml:lang="en">Al-Jāmiʿat al-Funūn</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3116">
+                        <name xml:lang="en">Al-Mabāḥith</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3120">
+                        <name xml:lang="en">Al-Tamaddun al-Islāmī</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3119">
+                        <name xml:lang="en">Al-ʿAṣr al-Dhahabī</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r397">
+                        <name xml:lang="en">Ṭarābulus al-Shām</name>? </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r433">
+                        <name xml:lang="ar-Latn-x-ijmes">Ṭarābulus</name>  then <name xml:lang="ar-Latn-x-ijmes">Ṭarābulus al-Shām</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1place">
                <placeName>Ṭūkh</placeName>
                <list type="secondList">
                   <item>
@@ -22670,7 +23463,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r1070">
-                        <name xml:lang="en">Al-Akhbār </name>
+                        <name xml:lang="en">Al-Akhbār</name>
                      </ref>
                   </item>
                   <item>
@@ -22756,11 +23549,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r1258">
                         <name xml:lang="en">Al-Naṣr</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2034">
-                        <name xml:lang="en">Al-Nibrās</name>
                      </ref>
                   </item>
                   <item>
@@ -23383,16 +24171,16 @@
                         <name xml:lang="en">Al-Istiqlāl</name>
                      </ref>
                   </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Al-Amīr Amīn Arslān /Arsalān</persName>
-               <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r452">
                         <name xml:lang="en">Kashf al-Niqāb</name>
                      </ref>
                   </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Al-Amīr Amīn Arslān /Arsalān</persName>
+               <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r522">
                         <name xml:lang="en">Turkiyā al-Fatāt/La Jeune Turquie</name>
@@ -24291,51 +25079,11 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Al-Muḥāmī Amīr al-Kharrāz</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r2941">
-                        <name xml:lang="en">Al-Nahḍa al-ʿIrāqiyya</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Al-Muḥāmī Nūrī Ṣūfī</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r2516">
-                        <name xml:lang="en">Al-Thurayyā</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Al-Muḥāmī Rufāʾīl Baṭṭī</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r2961">
-                        <name xml:lang="en">Al-Bilād</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
                <persName>Al-Muḥāmī ʿAbd Allāh Bānūn</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r1418">
                         <name xml:lang="en">Al-ʿAdl</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Al-Muḥāmī ʿAlī Maḥmūd</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r2958">
-                        <name xml:lang="en">Al-Ṣawt al-ʿIrāq</name>
                      </ref>
                   </item>
                </list>
@@ -24351,16 +25099,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2177">
                         <name xml:lang="en">Al-Ḥaqq</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Al-Qalqīlī</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r2828">
-                        <name xml:lang="en">Al-Ṣirāṭ al-Mustaqīm</name>
                      </ref>
                   </item>
                </list>
@@ -25760,6 +26498,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Amīr al-Kharrāz</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2941">
+                        <name xml:lang="en">Al-Nahḍa al-ʿIrāqiyya</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>André Būrdīnī</persName>
                <list type="secondList">
                   <item>
@@ -25970,6 +26718,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Anṭūn Saʿāda</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2335">
+                        <name xml:lang="en">Al-Majalla</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Anṭūn Shakkūr</persName>
                <list type="secondList">
                   <item>
@@ -26003,6 +26761,11 @@
                <persName>Anṭūn al-Jumayyil</persName>
                <list type="secondList">
                   <item>
+                     <ref target="pages/chrono.html#t1r58">
+                        <name xml:lang="en">Al-Bashīr</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r1668">
                         <name xml:lang="en">Al-Zuhūr</name>
                      </ref>
@@ -26015,6 +26778,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r533">
                         <name xml:lang="en">Al-Barāzil</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Anṭūn al-Ṣāliḥānī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r58">
+                        <name xml:lang="en">Al-Bashīr</name>
                      </ref>
                   </item>
                </list>
@@ -27467,6 +28240,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Aḥmad Ḥasan Ṭabbāra</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r98">
+                        <name xml:lang="en">Thamarāt al-Funūn</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Aḥmad Ḥasan Ṭabbārah</persName>
                <list type="secondList">
                   <item>
@@ -27657,6 +28440,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Badr al-Dīn al-Nuʿsānī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2622">
+                        <name xml:lang="en">Al-Sharq</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Badr al-Dīn Ṣafadī</persName>
                <list type="secondList">
                   <item>
@@ -27762,7 +28555,7 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Bandalī Gharābī</persName>
+               <persName>Bandalī Ghurābī</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2819">
@@ -28306,11 +29099,11 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Būlus Shaḥḥāda</persName>
+               <persName>Būlus Shaḥāda</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2801">
-                        <name xml:lang="en">Mirāt al-Sharq</name>
+                        <name xml:lang="en">Mirʾāt al-Sharq</name>
                      </ref>
                   </item>
                </list>
@@ -28451,7 +29244,9 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r15">
-                        <name xml:lang="en">Doresh Tov le-ʿAmmo/ Ṭālib al-Khayr li-Qawmi-hi/The Hebrew Gazette</name>
+                        <name xml:lang="he-Latn">Doresh Tov le-ʿAmmo</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Ṭālib al-Khayr li-Qawmihi</name>
+                        <name xml:lang="en">The Hebrew Gazette</name>
                      </ref>
                   </item>
                </list>
@@ -28567,11 +29362,6 @@
                      <ref target="pages/chrono.html#t1r246">
                         <name xml:lang="en">Akhbār Ṭibbiyya</name>? Reappearing? </ref>
                   </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Dr. George Post/Jūrj Būst</persName>
-               <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r134">
                         <name xml:lang="en">Al-Ṭabīb</name>
@@ -28780,11 +29570,11 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Dār al-Kutub al-Miṣriyya</persName>
+               <persName>Dāwud Barakāt</persName>
                <list type="secondList">
                   <item>
-                     <ref target="pages/chrono.html#t1r1870">
-                        <name xml:lang="en">Al-Nashra al-Dawriyya</name>
+                     <ref target="pages/chrono.html#t1r113">
+                        <name xml:lang="en">Al-Maḥrūsa</name>
                      </ref>
                   </item>
                </list>
@@ -28875,16 +29665,21 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Dāwud Ṣidqī al-Mārdīnī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2617">
+                        <name xml:lang="en">Al-Ṣārikh</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Dāwud Ṣidqī al-Māridīnī</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2615">
                         <name xml:lang="en">Al-Ḍamīr</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2617">
-                        <name xml:lang="en">Al-Ṣārikh</name>
                      </ref>
                   </item>
                </list>
@@ -29940,7 +30735,7 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r212">
-                        <name xml:lang="en">Najm al-Mashriq/L’Astre d’Orient</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Najm al-Mashriq</name> / <name xml:lang="fr">L’Astre d’Orient</name>
                      </ref>
                   </item>
                </list>
@@ -30569,7 +31364,7 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2784">
-                        <name xml:lang="en">Al-Nafīr al-ʿUthmānī</name>
+                        <name xml:lang="en">Al-Nafīr al-ʿUthmānī</name>, later <name xml:lang="en">al-Nafīr</name>
                      </ref>
                   </item>
                </list>
@@ -31694,6 +32489,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Iskandar al-Marḥālā</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2588">
+                        <name xml:lang="en">Al-ʿAṣr al-Jadīd</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Iskandar al-Riyāshī</persName>
                <list type="secondList">
                   <item>
@@ -31979,6 +32784,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Jabar Ḍūmaṭ</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r113">
+                        <name xml:lang="en">Al-Maḥrūsa</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Jabbūr ʿArīḍa</persName>
                <list type="secondList">
                   <item>
@@ -32062,8 +32877,8 @@
                   <item>
                      <ref target="pages/chrono.html#t1r202">
                         <name xml:lang="en">Abou-Naddara Zarka</name> - conceived as the continuation of
-                        <name xml:lang="en">Abou-Naddara/Abū Naẓẓāra/Abū Naẓẓāra Zarqā </name>from the sixth
-                     volume, no. 8 </ref>
+                        <name xml:lang="en">Abou-Naddara/Abū Naẓẓāra/Abū Naẓẓāra Zarqā</name>from the sixth
+                     volume, no. 8</ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r108">
@@ -32181,7 +32996,7 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Jamīl Dakdānyān</persName>
+               <persName>Jamīl Dikdānyān (Digdanian)</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2286">
@@ -32196,6 +33011,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2539">
                         <name xml:lang="en">Al-Jamīl</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Jamīl Massawaḥ</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r3197">
+                        <name xml:lang="en">Al-Ikhāʾ</name>
                      </ref>
                   </item>
                </list>
@@ -32224,11 +33049,6 @@
                <persName>Jamīl al-Baḥarī</persName>
                <list type="secondList">
                   <item>
-                     <ref target="pages/chrono.html#t1r3237">
-                        <name xml:lang="en">Al-Zahra</name>
-                     </ref>
-                  </item>
-                  <item>
                      <ref target="pages/chrono.html#t1r2839">
                         <name xml:lang="en">Al-Zuhūr</name>
                      </ref>
@@ -32236,6 +33056,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r3236">
                         <name xml:lang="en">Zahrat al-Jamīl</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Jamīl al-Baḥrī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r3237">
+                        <name xml:lang="en">Al-Zahra</name>
                      </ref>
                   </item>
                </list>
@@ -32456,26 +33286,6 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Jarīda rasmīya (French government)</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r1520">
-                        <name xml:lang="en">Al-Saʿāda</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Jarīda rasmīya (Spanish governmennt)</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r1524">
-                        <name xml:lang="en">Al-Ḥaqq</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
                <persName>Jarīdat Wādī al-Nīl</persName>
                <list type="secondList">
                   <item>
@@ -32486,17 +33296,7 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Jibrān Massūḥ</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r2344">
-                        <name xml:lang="en">Al-Tamaddun</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Jibrān Masūḥ</persName>
+               <persName>Jibrān Massawaḥ</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2701">
@@ -32506,6 +33306,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r3197">
                         <name xml:lang="en">Al-Ikhāʾ</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Jibrān Massūḥ</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2344">
+                        <name xml:lang="en">Al-Tamaddun</name>
                      </ref>
                   </item>
                </list>
@@ -32646,6 +33456,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Jirjis Mikhāʾīl Naḥḥās</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r113">
+                        <name xml:lang="en">Al-Maḥrūsa</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Jirjis Rufāʾīl Kuḥayl</persName>
                <list type="secondList">
                   <item>
@@ -32676,11 +33496,31 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Jirjī al-Ḥaddād</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2588">
+                        <name xml:lang="en">Al-ʿAṣr al-Jadīd</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Jujri Qiṣāṣ</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2210">
                         <name xml:lang="en">Al-Ikhlāṣ</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Julio Aṭlas</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2322">
+                        <name xml:lang="en">Al-Karma</name>
                      </ref>
                   </item>
                </list>
@@ -32755,7 +33595,7 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r3042">
-                        <name xml:lang="en">Al-Ḥusnāʾ</name>
+                        <name xml:lang="en">Al-Ḥasnāʾ</name>
                      </ref>
                   </item>
                </list>
@@ -33086,6 +33926,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Jūrj Būst</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r134">
+                        <name xml:lang="en">Al-Ṭabīb</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Jūrj Faraḥ</persName>
                <list type="secondList">
                   <item>
@@ -33246,6 +34096,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Jūrj Samān</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r837">
+                        <name xml:lang="en">Al-Shams</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Jūrj Samʿān</persName>
                <list type="secondList">
                   <item>
@@ -33316,6 +34176,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2293">
                         <name xml:lang="en">Al-Ḥayāt</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Jūrj ʿĀzār</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2838">
+                        <name xml:lang="en">Al-Iqdām</name>
                      </ref>
                   </item>
                </list>
@@ -33526,6 +34396,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r63">
                         <name xml:lang="en">Al-Mihmāz</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Khalīl Badawī al-Dimashqī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r58">
+                        <name xml:lang="en">Al-Bashīr</name>
                      </ref>
                   </item>
                </list>
@@ -33971,7 +34851,7 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Khālid Kārṣilī</persName>
+               <persName>Khālid Qārṣilī</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2591">
@@ -34121,6 +35001,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Kāẓim al-Dujaylī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r3250">
+                        <name xml:lang="en">Lughat al-ʿArab</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Kāẓim al-Shammāʿ</persName>
                <list type="secondList">
                   <item>
@@ -34241,16 +35131,6 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Lisān al-Shaʿb al-Miṣrī</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r1720">
-                        <name xml:lang="en">Abū al-Hūl</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
                <persName>Liyūn Naʿīmās</persName>
                <list type="secondList">
                   <item>
@@ -34296,6 +35176,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r3068">
                         <name xml:lang="en">Al-Maḥāsin</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Luwīs Maʿlūf</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r58">
+                        <name xml:lang="en">Al-Bashīr</name>
                      </ref>
                   </item>
                </list>
@@ -34415,6 +35305,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2877">
                         <name xml:lang="en">Karma wa-Narma</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Luṭfī al-ʿAsalī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2616">
+                        <name xml:lang="en" resp="#pTG">al-Qabas</name>
                      </ref>
                   </item>
                </list>
@@ -35038,13 +35938,13 @@
                <persName>Maḥmūd Fahmī</persName>
                <list type="secondList">
                   <item>
-                     <ref target="pages/chrono.html#t1r1320">
-                        <name xml:lang="en">Al-Ḥurriyya</name>
+                     <ref target="pages/chrono.html#t1r900">
+                        <name>Al-Ḥurriyya</name>
                      </ref>
                   </item>
                   <item>
-                     <ref target="pages/chrono.html#t1r900">
-                        <name>Al-Ḥurrīya</name>
+                     <ref target="pages/chrono.html#t1r1320">
+                        <name xml:lang="en">Al-Ḥurriyya</name>
                      </ref>
                   </item>
                </list>
@@ -36215,7 +37115,7 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Musallim ʿĀbidīn</persName>
+               <persName>Musallam ʿĀbidīn</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2592">
@@ -36924,17 +37824,20 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2590">
-                        <name xml:lang="en">Al-Muqtabas</name>
-                     </ref>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Muqtabas</name> (jarīda) </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r3154">
-                        <name xml:lang="en">Al-Muqtabas</name>
-                     </ref>
+                        <name xml:lang="en">Al-Muqtabas</name> (journal) </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r2620">
                         <name xml:lang="en">Al-Qabas</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2622">
+                        <name xml:lang="en">Al-Sharq</name>
                      </ref>
                   </item>
                </list>
@@ -36984,7 +37887,7 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r433">
-                        <name xml:lang="en">Ṭarābulus / then Ṭarābulus al-Shām</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Ṭarābulus</name>  then <name xml:lang="ar-Latn-x-ijmes">Ṭarābulus al-Shām</name>
                      </ref>
                   </item>
                </list>
@@ -38288,13 +39191,18 @@
                <persName>Muḥammad al-Tihāmī Shaṭṭa</persName>
                <list type="secondList">
                   <item>
-                     <ref target="pages/chrono.html#t1r2621">
-                        <name xml:lang="en">Al-Ittiḥād al-Islāmī</name>
-                     </ref>
-                  </item>
-                  <item>
                      <ref target="pages/chrono.html#t1r2611">
                         <name xml:lang="en">Al-Muhājir</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Muḥammad al-Tuhāmī Shaṭṭa (al-Jazāʾirī)</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2621">
+                        <name xml:lang="en">Al-Ittiḥād al-Islāmī</name>
                      </ref>
                   </item>
                </list>
@@ -39475,6 +40383,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Muḥiyī al-Dīn al-Qalībī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r68">
+                        <name xml:lang="en">Al-Zahra</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Muḥsin Ẓāhir al-Madanī</persName>
                <list type="secondList">
                   <item>
@@ -39589,12 +40507,12 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r1091">
-                        <name xml:lang="en">Abū al-Hūl</name>
+                        <name xml:lang="en">Abū al-Hawl</name>
                      </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r1900">
-                        <name xml:lang="en">Abū al-Hūl</name>
+                        <name xml:lang="en">Abū al-Hawl</name>
                      </ref>
                   </item>
                   <item>
@@ -39765,6 +40683,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r691">
                         <name xml:lang="en">Al-Nīl</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Muṣṭafā al-Ghalāyīnī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2034">
+                        <name xml:lang="en">Al-Nibrās</name>
                      </ref>
                   </item>
                </list>
@@ -40649,7 +41577,7 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Najīb Mūsā Diyyāb</persName>
+               <persName>Najīb Mūsā Diyāb</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r754">
@@ -40988,7 +41916,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r432">
-                        <name xml:lang="en">Silsilat al-Fukāhāt (continuation of Beiruti edition 1884)</name>
+                        <name xml:lang="en">Silsilat al-Fukāhāt</name>
                      </ref>
                   </item>
                   <item>
@@ -41544,6 +42472,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Niqūlā Ḥaddād</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r113">
+                        <name xml:lang="en">Al-Maḥrūsa</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Niqūlā Ḥubayqa</persName>
                <list type="secondList">
                   <item>
@@ -41619,16 +42557,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2266">
                         <name xml:lang="en">Lubnān al-Kabīr</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Nādī Dār al-ʿUlūm</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r1656">
-                        <name xml:lang="en">Ṣaḥīfat Nādī Dār al-ʿUlūm</name>
                      </ref>
                   </item>
                </list>
@@ -41759,6 +42687,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r3288">
                         <name xml:lang="en">Al-Ḥadīth</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Nūrī Ṣūfī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2516">
+                        <name xml:lang="en">Al-Thurayyā</name>
                      </ref>
                   </item>
                </list>
@@ -42011,6 +42949,11 @@
                         <name xml:lang="en">Dalīl Ḥumṣ</name>
                      </ref>
                   </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r2682">
+                        <name xml:lang="en">Ḥumṣ</name>
+                     </ref>
+                  </item>
                </list>
             </item>
             <item n="1person">
@@ -42232,6 +43175,11 @@
                <persName>Rashīd al-Khūrī</persName>
                <list type="secondList">
                   <item>
+                     <ref target="pages/chrono.html#t1r2225">
+                        <name xml:lang="en">Abū al-Hawl</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r2223">
                         <name xml:lang="en">Al-Rumūz</name>
                      </ref>
@@ -42264,6 +43212,11 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2236">
                         <name xml:lang="en">Fatā Lubnān</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r112">
+                        <name xml:lang="en">Lisān al-Ḥāl</name>
                      </ref>
                   </item>
                </list>
@@ -42506,6 +43459,11 @@
             <item n="1person">
                <persName>Rufāʾīl Baṭṭī</persName>
                <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2961">
+                        <name xml:lang="en">Al-Bilād</name>
+                     </ref>
+                  </item>
                   <item>
                      <ref target="pages/chrono.html#t1r2920">
                         <name xml:lang="en">Al-Rabīʿ</name>
@@ -42753,7 +43711,7 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2172">
-                        <name xml:lang="en">Al-Majalla al-Tijāriyya</name>
+                        <name xml:lang="en">Al-Majalla al-Tijāriyya al-Sūriyya al-Amīrkiyya</name>
                      </ref>
                   </item>
                   <item>
@@ -42849,7 +43807,7 @@
                </list>
             </item>
             <item n="1person">
-               <persName>Salwā Salāma</persName>
+               <persName>Salwā Salāma Aṭlas</persName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2322">
@@ -42909,16 +43867,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2575">
                         <name xml:lang="en">Al-Zahra</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Salīm Baddūr</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r2113">
-                        <name xml:lang="en">Al-Bayān</name>
                      </ref>
                   </item>
                </list>
@@ -43217,7 +44165,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r463">
-                        <name xml:lang="en">Al-Mushīr/ The Counsellor</name>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mushīr</name>/ <name xml:lang="en">The Counsellor</name>
                      </ref>
                   </item>
                   <item>
@@ -43346,6 +44294,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r61">
+                        <name xml:lang="en">Al-Jinān</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r70">
                         <name xml:lang="en">al-Junayna</name>
                      </ref>
@@ -43388,6 +44341,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r3057">
                         <name xml:lang="en">Al-Riwāyāt al-ʿAṣriyya</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Salīm al-ʿAnḥūrī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2588">
+                        <name xml:lang="en">Al-ʿAṣr al-Jadīd</name>
                      </ref>
                   </item>
                </list>
@@ -43857,6 +44820,11 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2556">
                         <name xml:lang="en">Al-Bayraq</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r112">
+                        <name xml:lang="en">Lisān al-Ḥāl</name>
                      </ref>
                   </item>
                </list>
@@ -44456,7 +45424,7 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2225">
-                        <name xml:lang="en">Abū al-Hūl</name>
+                        <name xml:lang="en">Abū al-Hawl</name>
                      </ref>
                   </item>
                   <item>
@@ -44481,7 +45449,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r2616">
-                        <name xml:lang="en">Qabas</name>
+                        <name xml:lang="en" resp="#pTG">al-Qabas</name>
                      </ref>
                   </item>
                </list>
@@ -44813,6 +45781,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r1038">
                         <name xml:lang="en">Al-ʿAfāf</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Sulaymān Baddūr</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2113">
+                        <name xml:lang="en">Al-Bayān</name>
                      </ref>
                   </item>
                </list>
@@ -45653,6 +46631,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Wadīʿ al-Khūrī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r21">
+                        <name xml:lang="en">Ḥadīqat al-Akhbār</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Wadīʿ ʿAql</persName>
                <list type="secondList">
                   <item>
@@ -45673,6 +46661,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r3026">
                         <name xml:lang="en">Al-ʿIffa</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Wadīʿ Ṣanbar</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2840">
+                        <name xml:lang="en">Al-Nahḍa</name>
                      </ref>
                   </item>
                </list>
@@ -46446,7 +47444,7 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r2158">
-                        <name xml:lang="en">Al-Ghirbāl</name>
+                        <name xml:lang="en">Al-Ghurbāl</name>
                      </ref>
                   </item>
                </list>
@@ -46906,6 +47904,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r911">
                         <name>Ḍidd al-Khalāʿa</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>Yūsuf ʿIzz al-Dīn</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2601">
+                        <name xml:lang="en">Al-Naffākha</name>
                      </ref>
                   </item>
                </list>
@@ -47415,588 +48423,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r1861">
                         <name xml:lang="en">Al-Ṭalba al-Miṣriyyūn</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>unknown</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r90">
-                        <name xml:lang="en">Akhbār Ṭibbiyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r640">
-                        <name xml:lang="en">Al-Afkār</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2039">
-                        <name xml:lang="en">Al-Awfūrūk</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r439">
-                        <name xml:lang="en">Al-Aḥkām</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r177">
-                        <name xml:lang="en">Al-Aḥkām al-ʿAdliyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2787">
-                        <name xml:lang="en">Al-Aḥlām</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r368">
-                        <name xml:lang="en">Al-Aḥwāl</name>? </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r443">
-                        <name xml:lang="en">Al-Bashīr</name>? </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2791">
-                        <name xml:lang="en">Al-Bulbul</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r125">
-                        <name xml:lang="en">Al-Bākūra li-Aʿmāl Jamʿiyyat Musāʿadat al-Marḍā al-Ūrthūdhūksiyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2144">
-                        <name xml:lang="en">Al-Būmbā</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r594">
-                        <name xml:lang="en">Al-Būsta</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2430">
-                        <name xml:lang="en">Al-Dabbūs</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r650">
-                        <name xml:lang="en">Al-Dābba</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2788">
-                        <name xml:lang="en">Al-Dīk al-Ṣayyāḥ</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r319">
-                        <name xml:lang="en">Al-Firdaws</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t2r849">
-                        <name xml:lang="en">Al-Fānūs</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r595">
-                        <name xml:lang="en">Al-Ghirbāl</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2198">
-                        <name xml:lang="en">Al-Ghirbāl</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2362">
-                        <name xml:lang="en">Al-Habbat</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r598">
-                        <name xml:lang="en">Al-Hidāya al-ʿĀmma</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r739">
-                        <name xml:lang="en">Al-Iṣlāḥ</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2315">
-                        <name xml:lang="en">Al-Iṣlāḥ</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3274">
-                        <name xml:lang="en">Al-Kashshāf al-ʿIrāqī</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r667">
-                        <name xml:lang="en">Al-Khayla al-Kadhdhāba</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r669">
-                        <name xml:lang="en">Al-Lijām</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r749">
-                        <name xml:lang="en">Al-Maghrib</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r457">
-                        <name xml:lang="en">Al-Maktab</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r415">
-                        <name xml:lang="en">Al-Marʾa</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r680">
-                        <name xml:lang="en">Al-Masīḥ al-Dajjāl</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r672">
-                        <name xml:lang="en">Al-Maʿhadī</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r460">
-                        <name xml:lang="en">Al-Minbar</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r684">
-                        <name xml:lang="en">Al-Minkhās</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r815">
-                        <name xml:lang="en">Al-Minshar</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2213">
-                        <name xml:lang="en">Al-Mubarrid</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r192">
-                        <name xml:lang="en">Al-Mukhayyir</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r556">
-                        <name xml:lang="en">Al-Murshid</name>? </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r557">
-                        <name xml:lang="en">Al-Murṣid</name>? </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r48">
-                        <name xml:lang="en">Al-Mushtarī</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r757">
-                        <name xml:lang="en">Al-Mushīr</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r421">
-                        <name xml:lang="en">Al-Mutanaffidh</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2207">
-                        <name xml:lang="en">Al-Māshiṭa</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r424">
-                        <name xml:lang="en">Al-Nashra al-Dīniyya al-Usbūʿiyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t2r854">
-                        <name xml:lang="en">Al-Nashra al-Tijāriyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2397">
-                        <name xml:lang="en">Al-Nashra al-Ūlā</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r117">
-                        <name xml:lang="en">Al-Naḥla al-Adabiyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r361">
-                        <name xml:lang="en">Al-Qamra / La Lune/El-Qamra</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r27">
-                        <name xml:lang="en">Al-Rāʾid al-Tūnisī</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r699">
-                        <name xml:lang="en">Al-Saʿāda</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r430">
-                        <name xml:lang="en">Al-Shahbāʾ</name>?? </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r238">
-                        <name xml:lang="en">Al-Shams</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r347">
-                        <name xml:lang="en">Al-Sharaf</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r121">
-                        <name xml:lang="en">Al-Shāṭir al-Kaslān wa’l-Nāʾim al-Yaqẓān</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2361">
-                        <name xml:lang="en">Al-Shāṭīʾ</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r832">
-                        <name xml:lang="en">Al-Sihām</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r712">
-                        <name xml:lang="en">Al-Taʾrīkh al-Qawmī</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r474">
-                        <name xml:lang="en">Al-Tilighrāfāt al-Ḥaqīqiyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r476">
-                        <name xml:lang="en">Al-Urjul</name>??? </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r1075">
-                        <name xml:lang="en">Al-Wafd al-Miṣrī</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r775">
-                        <name xml:lang="en">Al-Wakīl</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r577">
-                        <name xml:lang="en">Al-Waṭan</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2436">
-                        <name xml:lang="en">Al-Yamiyya al-Sūriyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t2r860">
-                        <name xml:lang="en">Al-Yaʿsūb</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r784">
-                        <name xml:lang="en">Al-ʿArab</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2890">
-                        <name xml:lang="en">Al-ʿArab</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2378">
-                        <name xml:lang="en">Al-ʿĪwāẓ</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r797">
-                        <name xml:lang="en">Al-Ḥammāra</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3003">
-                        <name xml:lang="en">Al-Ḥijāz</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3013">
-                        <name xml:lang="en">Al-Ḥusām</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r338">
-                        <name xml:lang="en">Al-Ḥākim</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2073">
-                        <name xml:lang="en">Al-Ṣabāḥ</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r519">
-                        <name xml:lang="en">Al-Ṭabīb</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2792">
-                        <name xml:lang="en">Al-Ṭāʾir</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r14">
-                        <name xml:lang="en">Aʿmāl al-Rayy</name>? </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2596">
-                        <name xml:lang="en">Aʿṭihi Jamalah??</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2845">
-                        <name xml:lang="en">Baghdād</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r351">
-                        <name xml:lang="en">Bêt Yisra’el / Le Peuple d’Israël</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2892">
-                        <name xml:lang="en">Dār al-Salām</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3256">
-                        <name xml:lang="en">Dār al-Salām</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r79">
-                        <name xml:lang="en">Fars</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r731">
-                        <name xml:lang="en">Ghazl al-Banāt</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r601">
-                        <name xml:lang="en">Iqdām</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2603">
-                        <name xml:lang="en">Ismaʿ wa-Saṭṭiḥ</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r451">
-                        <name xml:lang="en">Jarīda ʿAskariyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2936">
-                        <name xml:lang="en">Jarīdat Ḥāsīn</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r274">
-                        <name xml:lang="en">L-Wahrani / L’Oranais</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r340">
-                        <name xml:lang="en">La Jeunesse Israélite</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r273">
-                        <name xml:lang="en">La Vigie Israëlite</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r390">
-                        <name xml:lang="en">Le Peuple d’Israël</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r849">
-                        <name xml:lang="en">Le Réveil</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3007">
-                        <name xml:lang="en">Liwāʾ Bayn al-Bahrayn</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r548">
-                        <name xml:lang="en">Maguid Micharim</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2096">
-                        <name xml:lang="en">Majallat Ṣanāʾiʿ Almān wa-Sharq</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r676">
-                        <name xml:lang="en">Majmūʿat Qibrīs</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2979">
-                        <name xml:lang="en">Mirāt al-ʿIrāq</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r190">
-                        <name xml:lang="en">Mufarriḥ al-Qulūb</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2790">
-                        <name xml:lang="en">Munabbih al-Amwāt</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r195">
-                        <name xml:lang="en">Muntakhabāt al-Rāʾid al-Tūnisī al-Rasmiyya</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r344">
-                        <name xml:lang="en">Nahḍat Isrāʾīl</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r388">
-                        <name xml:lang="en">Nukhbat al-Akhbār</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t2r855">
-                        <name xml:lang="en">Nūr al-Sharq</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t2r856">
-                        <name xml:lang="en">Qarāqūz</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r333">
-                        <name xml:lang="en">Qôl Yisráel / La Voix d’Israël</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r29">
-                        <name xml:lang="en">Risālat Qalb Yasūʿ al-Mālṭiyya / Il Messaggier</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r473">
-                        <name xml:lang="en">Suriyā</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r200">
-                        <name xml:lang="en">Tawfīq</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r336">
-                        <name xml:lang="en">Tôv-le-Yisra’el</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2393">
-                        <name xml:lang="en">Yājūj wa-Mājūj</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2560">
-                        <name xml:lang="en">Zahrat al-Shabība</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r96">
-                        <name xml:lang="en">Ḥadīqat al-Abṣār</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2065">
-                        <name xml:lang="en">Ṣadā Al-Islām</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r830">
-                        <name xml:lang="en">Ṣadā Lubnān</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2891">
-                        <name xml:lang="en">Ṣadā al-Ḥaqīqa</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r569">
-                        <name xml:lang="en">Ṭabīb al-ʿĀʾila wa-Murshid al-Labīb ʿind Ghaybat al-Ṭabīb</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r631">
-                        <name xml:lang="en">Ṭanṭā</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r397">
-                        <name xml:lang="en">Ṭarābulus al-Shām</name>? </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2593">
-                        <name xml:lang="en">Ẓahrak Bālak</name>
                      </ref>
                   </item>
                </list>
@@ -50117,6 +50543,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>ʿAbdallah al-Qalqīlī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2828">
+                        <name xml:lang="en">Al-Ṣirāṭ al-Mustaqīm</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>ʿAbduh Badrān</persName>
                <list type="secondList">
                   <item>
@@ -50397,6 +50833,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2782">
                         <name xml:lang="en">Ṣadā al-ʿArab</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
+               <persName>ʿAlī Maḥmūd</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2958">
+                        <name xml:lang="en">Al-Ṣawt al-ʿIrāq</name>
                      </ref>
                   </item>
                </list>
@@ -52052,6 +52498,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Ḥanā al-Khūrī</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r21">
+                        <name xml:lang="en">Ḥadīqat al-Akhbār</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Ḥarfūsh</persName>
                <list type="secondList">
                   <item>
@@ -52607,16 +53063,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r782">
                         <name xml:lang="en">Al-Afkār</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1person">
-               <persName>Ḥizb al-Iṣlāḥ al-Waṭanī</persName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r1416">
-                        <name xml:lang="en">Al-Liwāʾ al-Ṭarābulusī</name>
                      </ref>
                   </item>
                </list>
@@ -53507,6 +53953,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>Ṭaniyūs Naṣr</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2838">
+                        <name xml:lang="en">Al-Iqdām</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Ṭanyūs ʿAbduh</persName>
                <list type="secondList">
                   <item>
@@ -53621,6 +54077,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2092">
                         <name xml:lang="en">Al-Sharq al-Adnā</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1organization">
+               <orgName>4th Ottoman Army</orgName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2622">
+                        <name xml:lang="en">Al-Sharq</name>
                      </ref>
                   </item>
                </list>
@@ -54066,6 +54532,16 @@
                </list>
             </item>
             <item n="1organization">
+               <orgName>Al-Ḥukūma al-ʿArabiyya</orgName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2634">
+                        <name xml:lang="en">Al-ʿĀṣima</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1organization">
                <orgName>American missionaries</orgName>
                <list type="secondList">
                   <item>
@@ -54146,6 +54622,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r3219">
                         <name xml:lang="en">Al-Nashra al-Iqtiṣādiyya</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1organization">
+               <orgName>Dār al-Kutub al-Miṣriyya</orgName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r1870">
+                        <name xml:lang="en">Al-Nashra al-Dawriyya</name>
                      </ref>
                   </item>
                </list>
@@ -54256,7 +54742,17 @@
                </list>
             </item>
             <item n="1organization">
-               <orgName>Ghurfat Tijārat Yāfā</orgName>
+               <orgName>French government</orgName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r1520">
+                        <name xml:lang="en">Al-Saʿāda</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1organization">
+               <orgName>Ghurfat Tijārat Yāfā al-Waṭaniyya</orgName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r3244">
@@ -54827,6 +55323,16 @@
                </list>
             </item>
             <item n="1organization">
+               <orgName>Lisān al-Shaʿb al-Miṣrī</orgName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r1720">
+                        <name xml:lang="en">Abū al-Hawl</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1organization">
                <orgName>Lisān Ḥāl al-ʿUmmāl fī Filasṭīn</orgName>
                <list type="secondList">
                   <item>
@@ -54987,7 +55493,7 @@
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r213">
-                        <name xml:lang="en">Al-Nashra al-Sanawiyya ʿan al-Tijāra al-Khārijiyya / Le Commerce
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Nashra al-Sanawiyya ʿan al-Tijāra al-Khārijiyya</name> / <name xml:lang="fr">Le Commerce
                         Extérieur de l’Égypte</name>
                      </ref>
                   </item>
@@ -55074,6 +55580,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r3258">
                         <name xml:lang="en">Majallat al-ʿAdliyya</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1organization">
+               <orgName>Nādī Dār al-ʿUlūm</orgName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r1656">
+                        <name xml:lang="en">Ṣaḥīfat Nādī Dār al-ʿUlūm</name>
                      </ref>
                   </item>
                </list>
@@ -55194,6 +55710,16 @@
                   <item>
                      <ref target="pages/chrono.html#t1r280">
                         <name xml:lang="en">Fāḍiḥ al-Asrār</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1organization">
+               <orgName>Spanish governmennt</orgName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r1524">
+                        <name xml:lang="en">Al-Ḥaqq</name>
                      </ref>
                   </item>
                </list>
@@ -55338,6 +55864,11 @@
                      </ref>
                   </item>
                   <item>
+                     <ref target="pages/chrono.html#t1r3324">
+                        <name xml:lang="en">Al-Jarīda al-Rasmiyya</name>
+                     </ref>
+                  </item>
+                  <item>
                      <ref target="pages/chrono.html#t1r2061">
                         <name xml:lang="en">Al-Jihād</name>
                      </ref>
@@ -55349,8 +55880,7 @@
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r97">
-                        <name xml:lang="en">Al-Mawṣil (Musul)</name>
-                     </ref>
+                        <name xml:lang="ar-Latn-x-ijmes">Al-Mawṣil</name> (<name>Musul</name>) </ref>
                   </item>
                   <item>
                      <ref target="pages/chrono.html#t1r2985">
@@ -55415,11 +55945,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r55">
                         <name xml:lang="en">Al-Zawrāʾ</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r2634">
-                        <name xml:lang="en">Al-ʿĀṣima</name>
                      </ref>
                   </item>
                   <item>
@@ -55556,6 +56081,16 @@
                </list>
             </item>
             <item n="1organization">
+               <orgName>Ḥizb al-Iṣlāḥ al-Waṭanī</orgName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r1416">
+                        <name xml:lang="en">Al-Liwāʾ al-Ṭarābulusī</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1organization">
                <orgName>Ḥukūma mutaṣarrifa, Jabal Lubnān</orgName>
                <list type="secondList">
                   <item>
@@ -55599,3 +56134,5 @@
       </body>
    </text>
 </TEI>
+
+
