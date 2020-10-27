@@ -8,7 +8,7 @@
   <script src="../js/CETEI.js"></script>
   <script>
     let c = new CETEI();
-    c.getHTML5('../jaraid_master.TEIP5.xml', function(data) {
+    c.getHTML5('https://projectjaraid.github.io/jaraid_source/tei/jaraid_master.TEIP5.xml', function(data) {
       document.getElementsByTagName("body")[0].appendChild(data);
     });</script>
 
