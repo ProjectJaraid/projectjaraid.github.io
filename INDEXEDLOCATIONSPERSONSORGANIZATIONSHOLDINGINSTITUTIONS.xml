@@ -16,10 +16,6 @@
                <persName xml:lang="en">Adam Mestyan</persName>
             </respStmt>
             <respStmt xml:lang="en">
-               <resp xml:lang="en">With a major contribution from</resp>
-               <persName xml:lang="en">Philip Sadgrove</persName>
-            </respStmt>
-            <respStmt xml:lang="en">
                <resp xml:lang="en">and contributions from</resp>
                <persName xml:lang="en">Hala Auji</persName>
                <persName xml:lang="en">Philippe Chevrant</persName>
@@ -27,6 +23,7 @@
                <persName xml:lang="en">Till Grallert</persName>
                <persName xml:lang="en">Adam Mestyan</persName>
                <persName xml:lang="en">Christian Meier</persName>
+               <persName xml:lang="en">Philip Sadgrove</persName>
                <persName xml:lang="en">Daniel Newman</persName>
                <persName xml:lang="en">Geoffrey Roper</persName>
                <persName xml:lang="en">Ola Seif</persName>
@@ -136,7 +133,6 @@
             <respStmt xml:lang="en">
                <resp xml:lang="en">The 2020 edition's digital production: XML mark-up, corrections and additions</resp>
                <persName resp="#pAM" xml:lang="en">Adam Mestyan</persName>
-               <persName resp="#pHC" xml:lang="en">Hugh Cayless</persName>
                <persName resp="#pTG" xml:lang="en">Till Grallert</persName>
             </respStmt>
             <respStmt xml:lang="en">
@@ -146,7 +142,7 @@
                <persName resp="#pTG" xml:lang="en">Till Grallert</persName>
             </respStmt>
             <respStmt xml:lang="en">
-               <resp xml:lang="en">XML and CETEICean advisor</resp>
+               <resp xml:lang="en">XML, Javascript, and CETEICean advisor</resp>
                <persName resp="#pHC" xml:lang="en">Hugh Cayless</persName>
             </respStmt>
          </editionStmt>
@@ -4406,7 +4402,7 @@
                <orgName>
                   <ref target="pages/abbrev.html#hMKAD">MKAD</ref>
                </orgName>
-           
+              
             </item>
             <item n="1institutions">
                <orgName>
@@ -5628,7 +5624,7 @@
                </list>
             </item>
          </list>
-   
+         
          <list xml:id="locations" type="firstList">
             <head xml:id="headLocations">Locations</head>
             <item n="1place">
@@ -18987,18 +18983,13 @@
                      </ref>
                   </item>
                   <item>
-                     <ref target="pages/chrono.html#t1r3147">
-                        <name xml:lang="en">Ṣadā Lubnān</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1place">
-               <placeName>Jounieh / Jūniyya</placeName>
-               <list type="secondList">
-                  <item>
                      <ref target="pages/chrono.html#t1r870">
                         <name>Ṣadā Lubnān</name>
+                     </ref>
+                  </item>
+                  <item>
+                     <ref target="pages/chrono.html#t1r3147">
+                        <name xml:lang="en">Ṣadā Lubnān</name>
                      </ref>
                   </item>
                </list>
@@ -19009,26 +19000,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r2530">
                         <name xml:lang="en">Al-Ḥikma</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1place">
-               <placeName>Jūniyya</placeName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r484">
-                        <name xml:lang="en">Al-Arz</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r824">
-                        <name xml:lang="en">Al-Raʾīs</name>
-                     </ref>
-                  </item>
-                  <item>
-                     <ref target="pages/chrono.html#t1r3147">
-                        <name xml:lang="en">Ṣadā Lubnān</name>
                      </ref>
                   </item>
                </list>
@@ -22641,18 +22612,13 @@
                </list>
             </item>
             <item n="1place">
-               <placeName>Zanjibār (Zanzibar)</placeName>
+               <placeName>Zanzibar</placeName>
                <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r1533">
                         <name xml:lang="en">Al-Falaq</name>
                      </ref>
                   </item>
-               </list>
-            </item>
-            <item n="1place">
-               <placeName>Zanzibar</placeName>
-               <list type="secondList">
                   <item>
                      <ref target="pages/chrono.html#t1r605">
                         <name xml:lang="en">Al-Jāzit al-Muʾlin bi’l-Bashāʾir wa’l-Asrār</name>
@@ -23450,7 +23416,7 @@
                </list>
             </item>
          </list>
-      
+     
          <list xml:id="persons" type="firstList">
             <head xml:id="headPersons">Persons</head>
             <item n="1person">
@@ -48428,6 +48394,16 @@
                </list>
             </item>
             <item n="1person">
+               <persName>unknown</persName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2092">
+                        <name xml:lang="en">Al-Sharq al-Adnā</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1person">
                <persName>Émile Barriére Bey</persName>
                <list type="secondList">
                   <item>
@@ -54068,19 +54044,9 @@
                </list>
             </item>
          </list>
-      
+
          <list xml:id="organizations" type="firstList">
             <head xml:id="headOrg">Organizations</head>
-            <item n="1organization">
-               <orgName/>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r2092">
-                        <name xml:lang="en">Al-Sharq al-Adnā</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
             <item n="1organization">
                <orgName>4th Ottoman Army</orgName>
                <list type="secondList">
@@ -55213,6 +55179,16 @@
                </list>
             </item>
             <item n="1organization">
+               <orgName>Jamʿiyyat al-Taḥāluf al-Lubnānī</orgName>
+               <list type="secondList">
+                  <item>
+                     <ref target="pages/chrono.html#t1r2287">
+                        <name xml:lang="en">Al-Taḥāluf al-Lubnānī</name>
+                     </ref>
+                  </item>
+               </list>
+            </item>
+            <item n="1organization">
                <orgName>Jamʿiyyat al-Thamra bi-l-Madrasa al-Waṭaniyya</orgName>
                <list type="secondList">
                   <item>
@@ -55238,16 +55214,6 @@
                   <item>
                      <ref target="pages/chrono.html#t1r813">
                         <name xml:lang="en">Al-Manār</name>
-                     </ref>
-                  </item>
-               </list>
-            </item>
-            <item n="1organization">
-               <orgName>Jam…iyyat al-Taḥāluf al-Lubnānī</orgName>
-               <list type="secondList">
-                  <item>
-                     <ref target="pages/chrono.html#t1r2287">
-                        <name xml:lang="en">Al-Taḥāluf al-Lubnānī</name>
                      </ref>
                   </item>
                </list>
@@ -56134,5 +56100,3 @@
       </body>
    </text>
 </TEI>
-
-
