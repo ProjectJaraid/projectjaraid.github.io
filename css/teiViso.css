@@ -116,3 +116,9 @@ div#d1 {
   text-align: center;
   font-size: 30px;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
