@@ -1,13 +1,13 @@
-body#maps {
+body#viso {
   margin: 30px 30px 10px 30px;
   padding-bottom: 20px;
   font-family: Georgia,serif;
   background-color: #EFEFEF;
 }
 
-body#maps tei-div#dRef, tei-div#t1head, tei-div#dAgen, tei-div#dAppendix, tei-div#dTrans, tei-div#dTables, tei-div#dPer, tei-div#dAvail, tei-div#dFut, tei-div#dDef, tei-div#dCopyright, tei-div#dCetei, tei-div#dIntro, tei-div#dVersionHist, tei-div#dBibl, tei-div#dAgLeg, tei-div#dLinks, tei-div#dTitle {display: none;}
+body#viso tei-div#dRef, tei-div#t1head, tei-div#dAgen, tei-div#dAppendix, tei-div#dTrans, tei-div#dTables, tei-div#dPer, tei-div#dAvail, tei-div#dFut, tei-div#dDef, tei-div#dCopyright, tei-div#dCetei, tei-div#dIntro, tei-div#dVersionHist, tei-div#dBibl, tei-div#dAgLeg, tei-div#dLinks, tei-div#dTitle {display: none;}
 
-body#maps::after {
+body#viso::after {
   background: url("../img/HadiqatAlAkhbar.jpg");
   content: "";
   opacity: 0.2;
