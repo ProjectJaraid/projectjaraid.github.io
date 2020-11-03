@@ -108,6 +108,12 @@ padding:
 
 }
 
+#div1 {
+    float: left;
+    }
+#div2 {
+    margin-left: 108px;  
+}
 
 
 #viso1 {
