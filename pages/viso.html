@@ -77,20 +77,27 @@
     </div>
   </nav>
 
-<div id="d1">
-  <p> Coming soon!</p>
-</div>
-
 <div>
 
     <img id="viso1" src="../img/YearCNTJournals.png" alt="New Arabic Journals Per Year, 1800-1929" width="300" height="200">
-  
+
   <p id="visocaption1">New Arabic Journals Per Year, 1800-1929</p>
 </div>
   <div id="Modal1" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
-  <div id="caption"></div>
+  <div id="caption1"></div>
+
+  <div>
+
+      <img id="viso2" src="../img/CitiesWithMoreThan20Titles.png" alt="Cities with More Than 20 Arabic Journal Titles, 1800-1929" width="300" height="200">
+
+    <p id="visocaption2">Cities with More Than 20 Arabic Journal Titles, 1800-1929</p>
+  </div>
+    <div id="Modal2" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img02">
+    <div id="caption2"></div>
 </div>
   <table>
   </table>
@@ -103,7 +110,30 @@ var modal = document.getElementById('Modal1');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('viso1');
 var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
+var captionText = document.getElementById("caption1");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('Modal2');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('viso2');
+var modalImg = document.getElementById("img02");
+var captionText = document.getElementById("caption2");
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
