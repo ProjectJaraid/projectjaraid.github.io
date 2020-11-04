@@ -188,7 +188,7 @@ p.desc {
 }
 
 /* The Close Button */
-.close {
+#close1 {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -198,8 +198,25 @@ p.desc {
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+#close1:hover,
+#close1:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#close2 {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#close2:hover,
+#close2:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
