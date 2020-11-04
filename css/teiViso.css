@@ -108,7 +108,12 @@ padding:
 
 }
 
+#div1 {
+  display: block;
+  position: static;
+  padding-top: 30 px;
 
+}
 
 #viso1 {
   border-radius: 5px;
