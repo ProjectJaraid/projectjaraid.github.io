@@ -156,7 +156,7 @@ div.gallery img {
   height: auto;
 }
 
-div.desc {
+p.desc {
   padding: 15px;
   text-align: center;
 }
