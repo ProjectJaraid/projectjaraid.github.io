@@ -109,9 +109,15 @@ padding:
 }
 
 #h2 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+      text-align: center;
+      display: block;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 20px;
 }
 
 #div1 {
