@@ -160,7 +160,7 @@ p.desc {
   height: 150px;
 }
 
- /* #caption2 {
+ #caption2 {
    margin: auto;
    display: block;
    width: 80%;
@@ -169,10 +169,15 @@ p.desc {
    color: #ccc;
    padding: 10px 0;
    height: 150px;
- } */
+ }
 
 /* Add Animation */
 .modal-content, #caption1 {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+.modal-content, #caption2 {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
