@@ -33,80 +33,6 @@ body#viso::after {
   font-size: 30px;
 }
 
-tei-div {
-  display: block;
-}
-tei-p {
-  display: block;
-  margin-top: .5em;
-  margin-bottom: .5em;
-}
-tei-hi[rend=italic] {
-  font-style: italic;
-}
-tei-table {
-
-border-top:
-thin solid
-black;
-
-border-left:
-thin solid
-black;
-
-font-size:
-85%;
-
-}
-
-tei-row {
-
-display:
-grid;
-
-grid-auto-flow:
-column;
-
-grid-auto-columns:
-1fr;
-
-}
-
-tei-row[role=label] {
-
-font-weight:
-bold;
-
-}
-
-tei-row:nth-child(even) {
-
-background-color:
-silver;
-
-}
-
-tei-row:nth-child(odd) {
-
-background-color:
-#eeeeee;
-
-}
-
-tei-cell {
-
-border-right:
-thin solid
-black;
-
-border-bottom:
-thin solid
-black;
-
-padding:
-2px;
-
-}
 
 #h2 {
       text-align: center;
@@ -121,6 +47,13 @@ padding:
 }
 
 #div1 {
+  display: block;
+  position: static;
+  padding-top: 60 px;
+
+}
+
+#div2 {
   display: block;
   position: static;
   padding-top: 60 px;
