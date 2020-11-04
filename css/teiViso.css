@@ -74,7 +74,7 @@ body#viso::after {
 
 
 #viso1:hover {opacity: 0.7;}
-/* #viso2:hover {opacity: 0.7;} */
+#viso2:hover {opacity: 0.7;}
 
 div.gallery {
   border: 1px solid #ccc;
