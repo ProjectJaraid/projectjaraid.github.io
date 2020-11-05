@@ -60,21 +60,13 @@ body#viso::after {
 
 }
 
-#viso1 {
+.visoImage {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-#viso2 {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-
-#viso1:hover {opacity: 0.7;}
-#viso2:hover {opacity: 0.7;}
+.visoImage:hover {opacity: 0.7;}
 
 div.gallery {
   border: 1px solid #ccc;
@@ -149,7 +141,7 @@ p.desc {
 }
 
 /* Caption of Modal Image */
-#caption1 {
+#caption {
   margin: auto;
   display: block;
   width: 80%;
@@ -160,24 +152,9 @@ p.desc {
   height: 150px;
 }
 
- #caption2 {
-   margin: auto;
-   display: block;
-   width: 80%;
-   max-width: 700px;
-   text-align: center;
-   color: #ccc;
-   padding: 10px 0;
-   height: 150px;
- }
 
 /* Add Animation */
-.modal-content, #caption1 {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-.modal-content, #caption2 {
+.modal-content, #caption {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
