@@ -49,14 +49,14 @@ body#viso::after {
 #div1 {
   display: block;
   position: static;
-  padding-top: 100 px;
+  padding-top: 150 px;
 
 }
 
 #div2 {
   display: block;
   position: static;
-  padding-top: 100 px;
+  padding-top: 150 px;
 
 }
 
@@ -136,7 +136,7 @@ p.desc {
 .modal-content {
   margin: auto;
   display: block;
-  width: 90%;
+  width: 100%;
   max-width: 700px;
 }
 
