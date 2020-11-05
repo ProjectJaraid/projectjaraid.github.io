@@ -105,7 +105,7 @@
     <div id="modal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="img01">
-    <div class="caption"></div>
+    <div id="caption"></div>
   </div>
 
 
@@ -122,7 +122,7 @@ var modal = document.getElementById('modal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var images = document.getElementsByClassName('visoImage');
 var modalImg = document.getElementById("img01");
-var captionText = document.getElementByClassName("caption");
+var captionText = document.getElementById("caption");
 
 for (var i = 0; i < images.length; i++) {
   var img = images[i];
