@@ -48,14 +48,14 @@ body#viso::after {
 
 #div1 {
   display: block;
-  position: static;
+  position: relative;
   padding-top: 150 px;
 
 }
 
 #div2 {
   display: block;
-  position: static;
+  position: relative;
   padding-top: 150 px;
 
 }
