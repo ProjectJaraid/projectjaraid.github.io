@@ -5,7 +5,8 @@ body#fihris {
   background-color: #EFEFEF;
 }
 
-body#fihris tei-div#dRef, tei-div#dAgen, tei-div#t1head, tei-div#dTrans, tei-div#dTables, tei-div#dPer, tei-div#dAvail, tei-div#dFut, tei-div#dDef, tei-div#dCopyright, tei-div#dCetei, tei-div#dIntro, tei-div#dVersionHist, tei-div#dBibl, tei-div#dLinks, tei-div#dTitle, tei-div#dAgLeg, tei-div#dAppendix, tei-div#dAbbr {display: none;}
+body#fihris tei-div#dRef, tei-div#t1head, tei-table#t2, tei-div#dTrans, tei-div#dPer, tei-div#dAvail, tei-div#dFut, tei-div#dDef, tei-div#dCopyright, tei-div#dCetei, tei-div#dIntro, tei-div#dVersionHist, tei-div#dAgen, tei-div#dBibl, tei-div#dAppendix, tei-div#dAgLeg, tei-div#dLinks, tei-div#dTitle {display: none;}
+
 
 
 body#fihris::after {
