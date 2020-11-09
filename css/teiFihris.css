@@ -52,3 +52,20 @@ tei-hi[rend=italic] {
   text-align: center;
   font-size: 20px;
 }
+
+tei-table#t1 {
+  margin-top: 30px;
+  display:table;
+  border-collapse:separate;
+  border-spacing: 60px;
+  font-size: 12px;
+}
+
+td:nth-child(1) {
+  display: none;
+}
+
+td:nth-child(10) {
+  color: black;
+  font-weight:bold;
+}
