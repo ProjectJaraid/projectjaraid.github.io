@@ -54,6 +54,20 @@ tei-hi[rend=italic] {
   font-size: 20px;
 }
 
+tei-rs:hover .tip {
+  display: block;
+}
+
+.tip {
+  position:absolute;
+  z-index: 1;
+  display: none;
+  width: 120px;
+  background-color: black;
+  padding: 5px 0;
+}
+
+
 tei-table#t1 {
   margin-top: 30px;
   display:table;
@@ -62,8 +76,52 @@ tei-table#t1 {
   font-size: 12px;
 }
 
-td:nth-child(1) {
-  display: none;
+
+td {
+  border-bottom: thin solid black;
+}
+
+th {
+  position: sticky;
+  top: 0;
+}
+
+tr[role="label"] {
+  cursor: pointer;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: black;
+  font-style: oblique;
+}
+
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+tr[role="data"]:hover {background-color: #A9A9A9;}
+
+td[type=tei-name] {
+  color: black;
+  font-style: oblique;
+}
+
+td:nth-child(4) {
+  color: black;
+  font-style: oblique;
+  font-weight:bold;
+}
+
+tei-rs {
+  position: relative;
+  color: #FF3B3F;
+  border-bottom: 1px dotted black;
+}
+
+#divOnChrono {
+  margin-top: 30px;
+  display: block;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 td:nth-child(10) {
