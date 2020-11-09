@@ -132,3 +132,10 @@ td:nth-child(10) {
 td:nth-child(2) {
   display: none;
 }
+
+td:nth-child(5) {
+  display: none;
+}
+td:nth-child(6) {
+  display: none;
+}
