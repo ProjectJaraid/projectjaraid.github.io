@@ -174,7 +174,3 @@ td:nth-child(10) {
   color: black;
   font-weight:bold;
 }
-
-:lang(ar) {
-  font-size: 20px;
-}
