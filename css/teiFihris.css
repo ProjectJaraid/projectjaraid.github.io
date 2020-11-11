@@ -149,3 +149,7 @@ td:nth-child(7) {
 :lang(ar) {
   font-size: 18px;
 }
+
+#div1 {
+  text-align: right;
+}
