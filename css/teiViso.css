@@ -46,6 +46,13 @@ body#viso::after {
     font-size: 30px;
 }
 
+
+#div0 {
+display: block;
+position: relative;
+padding-top: 200 px;
+}
+
 #div1 {
   display: block;
   position: relative;
