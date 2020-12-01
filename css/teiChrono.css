@@ -171,6 +171,13 @@ tei-rs {
 }
 
 td:nth-child(10) {
-  color: black;
-  font-weight:bold;
+  display: none;
+}
+
+td:nth-child(11) {
+  display: none;
+}
+
+td:nth-child(12) {
+  display: none;
 }
