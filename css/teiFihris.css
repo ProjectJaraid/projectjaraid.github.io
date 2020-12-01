@@ -29,10 +29,10 @@ body#fihris::after {
 
 .sidenav {
   width: 50px;
-  float: right;
+  right:10px;
+  position: fixed;
   z-index: 1;
   top: 200px;
-  left: 10px;
   background-color: black;
   overflow-x: hidden;
   padding: 5px 0;
