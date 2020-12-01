@@ -191,5 +191,5 @@ td:nth-child(7) {
 
 #div1 {
   font-size: 18px;
-   text-align: right;
+   direction: rtl;
 }
