@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
 <html>
 <head>
   <link rel="icon" href="../img/lisanalhal.jpg"/>
@@ -10,14 +9,6 @@
   <script src="../js/sortTableChronologically.js"></script>
   <script src="../js/displayId_new.js"></script>
   <script src="../js/behaviors.js"></script>
-  <script>
-    let c = new CETEI();
-    c.addBehaviors(behaviors);
-    c.getHTML5('https://projectjaraid.github.io/jaraid_source/tei/jaraid_master.TEIP5.xml', function(data) {
-      document.getElementsByTagName("body")[0].appendChild(data);
-      sortTableChronologically(); displayId();
-    });
-  </script>
 
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -41,7 +32,7 @@
   </style>
   </head>
   <body id="chrono">
-<h1 id="h1">Jara'id: A Chronology of Arabic Periodicals (1800-1929)</h1>
+    <h1 id="h1">Jara'id: A Chronology of Arabic Periodicals (1800-1929)</h1>
     <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -79,36 +70,40 @@
       </div>
     </nav>
     <div class="sidenav">
-  <a href="#t1r2">1800</a>
-  <a href="#t1r843">1830</a>
-  <a href="#t1r11">1850</a>
-  <a href="#t1r27">1860</a>
-  <a href="#t1r57">1870</a>
-  <a href="#t1r96">1875</a>
-  <a href="#t1r157">1880</a>
-  <a href="#t1r248">1885</a>
-  <a href="#t1r338">1890</a>
-  <a href="#t1r481">1895</a>
-  <a href="#t1r781">1900</a>
-  <a href="#t1r941">1905</a>
-  <a href="#t1r1412">1910</a>
-  <a href="#t1r1061">1915</a>
-  <a href="#t1r861">1920</a>
-  <a href="#t1r1129">1923</a>
-  <a href="#t1r1183">1925</a>
-  <a href="#t1r1230">1927</a>
-  <a href="#t1r1246">1929</a>
-</div>
-<div id="divOnChrono">
-  <p>To search the table, simply use Ctrl-F for Windows and Cmd-F for Mac OS.
-  </p>
-</div>
-    <div>
-      <table>
-      </table>
+      <a href="#t1r2">1800</a>
+      <a href="#t1r843">1830</a>
+      <a href="#t1r11">1850</a>
+      <a href="#t1r27">1860</a>
+      <a href="#t1r57">1870</a>
+      <a href="#t1r96">1875</a>
+      <a href="#t1r157">1880</a>
+      <a href="#t1r248">1885</a>
+      <a href="#t1r338">1890</a>
+      <a href="#t1r481">1895</a>
+      <a href="#t1r781">1900</a>
+      <a href="#t1r941">1905</a>
+      <a href="#t1r1412">1910</a>
+      <a href="#t1r1061">1915</a>
+      <a href="#t1r861">1920</a>
+      <a href="#t1r1129">1923</a>
+      <a href="#t1r1183">1925</a>
+      <a href="#t1r1230">1927</a>
+      <a href="#t1r1246">1929</a>
     </div>
+    <div id="divOnChrono">
+      <p>To search the table, simply use Ctrl-F for Windows and Cmd-F for Mac OS.
+      </p>
+    </div>
+    <div id="TEI"></div>
+    
+    <script>
+      let c = new CETEI();
+      c.addBehaviors(behaviors);
+      c.processPage();
+      displayId();
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    </body>
-    </html>
+  </body>
+</html>
