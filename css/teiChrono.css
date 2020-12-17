@@ -104,6 +104,12 @@ body#chrono::after {
   .sidenav a {font-size: 10px;}
 }
 
+
+tei-teiheader {
+  display: none;
+}
+
+
 tei-rs:hover .tip {
   display: block;
 }
