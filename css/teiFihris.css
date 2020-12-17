@@ -66,6 +66,10 @@ body#fihris::after {
 }
 
 
+tei-teiheader {
+  display: none;
+}
+
 tei-div {
   display: block;
 }
