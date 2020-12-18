@@ -194,9 +194,8 @@ td:nth-child(7) {
 
 
 #div1 {
-  /* float:right; */
+  position: absolute;
+  right: 60px;
   font-size: 18px;
   direction: rtl;
-  right-margin: 120px;
-  display: block;
 }
