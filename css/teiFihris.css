@@ -196,4 +196,5 @@ td:nth-child(7) {
 #div1 {
   font-size: 18px;
    direction: rtl;
+   border-spacing: 60px;
 }
