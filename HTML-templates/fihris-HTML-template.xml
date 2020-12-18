@@ -37,9 +37,9 @@
 
   </head>
 
-  <body id="fihris" dir="rtl">
-    <h1 id="h1" dir="ltr">Jara'id: A Chronology of Arabic Periodicals (1800-1929)</h1>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" dir="ltr">
+  <body id="fihris">
+    <h1 id="h1">Jara'id: A Chronology of Arabic Periodicals (1800-1929)</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -102,7 +102,7 @@
     </div>
 
 
-    <div id="div1" lang="ar"> للبحث استخدم Ctrl-C او Cmd-F.
+    <div id="div1" lang="ar" dir="rtl" style="float:right"> للبحث استخدم Ctrl-C او Cmd-F.
     </div>
 
     <div id="TEI"></div>
