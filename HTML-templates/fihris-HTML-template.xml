@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<html>
+<html dir="rtl">
   <head>
     <link rel="icon" href="../img/lisanalhal.jpg"/>
     <title>Jara'id: A Chronology Of Arabic Periodicals (1800-1929)</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/teiFihris.css"/>
     <script src="../js/CETEI.js"></script>
-  
+
     <script src="../js/sortTableChronologically.js"></script>
     <script src="../js/displayID_ArabicTable.js"></script>
     <script src="../js/behaviors.js"></script>
-  
+
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  
+
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet"/>
-  
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -27,19 +27,19 @@
         -ms-user-select: none;
         user-select: none;
       }
-  
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
     </style>
-  
+
   </head>
 
   <body id="fihris">
-    <h1 id="h1">Jara'id: A Chronology of Arabic Periodicals (1800-1929)</h1>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <h1 id="h1" dir="ltr">Jara'id: A Chronology of Arabic Periodicals (1800-1929)</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" dir="ltr">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -104,8 +104,8 @@
 
     <div id="div1" dir="rtl" lang="ar"> للبحث استخدم Ctrl-C او Cmd-F.
     </div>
-    
-    <div id="TEI"></div>
+
+    <div id="TEI" dir="ltr"></div>
 
     <script>
       let c = new CETEI();
