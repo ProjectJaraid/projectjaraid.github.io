@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<html dir="rtl">
+<html>
   <head>
     <link rel="icon" href="../img/lisanalhal.jpg"/>
     <title>Jara'id: A Chronology Of Arabic Periodicals (1800-1929)</title>
@@ -37,7 +37,7 @@
 
   </head>
 
-  <body id="fihris">
+  <body id="fihris" dir="rtl">
     <h1 id="h1" dir="ltr">Jara'id: A Chronology of Arabic Periodicals (1800-1929)</h1>
     <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" dir="ltr">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,7 +77,7 @@
       </div>
     </nav>
 
-    <h2 id="h2" dir="rtl" lang="ar">الفهرس الزمني</h2>
+    <h2 id="h2" lang="ar">الفهرس الزمني</h2>
 
     <div class="sidenav">
       <a href="#t1r2">١٨٠٠</a>
@@ -102,10 +102,10 @@
     </div>
 
 
-    <div id="div1" dir="rtl" lang="ar"> للبحث استخدم Ctrl-C او Cmd-F.
+    <div id="div1" lang="ar"> للبحث استخدم Ctrl-C او Cmd-F.
     </div>
 
-    <div id="TEI" dir="ltr"></div>
+    <div id="TEI"></div>
 
     <script>
       let c = new CETEI();
