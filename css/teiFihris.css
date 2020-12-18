@@ -195,5 +195,6 @@ td:nth-child(7) {
 
 #div1 {
   margin: auto;
+  width: 50%;
   font-size: 18px;
 }
