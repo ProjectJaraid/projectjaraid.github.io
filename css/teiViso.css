@@ -48,7 +48,7 @@ body#viso::after {
 
 
 section {
-  padding-top: 50px;
+  padding-top: 100px;
   display: -webkit-flex;
   display: flex;
 }
