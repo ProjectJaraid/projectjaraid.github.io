@@ -48,7 +48,7 @@ body#viso::after {
 
 
 section {
-  margin-top: 50 px;
+  margin-top: 50px;
   display: -webkit-flex;
   display: flex;
 }
@@ -57,20 +57,20 @@ section {
 #div0 {
 display: block;
 position: relative;
-padding-top: 200 px;
+padding-top: 200px;
 }
 
 #div1 {
   display: block;
   position: relative;
-  padding-top: 200 px;
+  padding-top: 200px;
 
 }
 
 #div2 {
   display: block;
   position: relative;
-  padding-top: 200 px;
+  padding-top: 200px;
 
 }
 
