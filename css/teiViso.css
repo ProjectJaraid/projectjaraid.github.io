@@ -48,11 +48,10 @@ body#viso::after {
 
 
 section {
-  margin-top: 50px;
+  padding-top: 50px;
   display: -webkit-flex;
   display: flex;
 }
-
 
 #div0 {
 display: block;
@@ -69,6 +68,11 @@ position: relative;
   display: block;
   position: relative;
 
+}
+
+#div3 {
+  display: block;
+  position: relative;
 }
 
 .visoImage {
