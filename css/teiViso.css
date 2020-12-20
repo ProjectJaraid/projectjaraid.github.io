@@ -47,6 +47,13 @@ body#viso::after {
 }
 
 
+section {
+  margin-top: 20 px;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
 #div0 {
 display: block;
 position: relative;
