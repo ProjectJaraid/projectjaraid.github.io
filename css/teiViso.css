@@ -75,6 +75,11 @@ position: relative;
   position: relative;
 }
 
+#div4 {
+  display: block;
+  position: relative;
+}
+
 .visoImage {
   border-radius: 5px;
   cursor: pointer;
