@@ -78,11 +78,13 @@ position: relative;
 #div4 {
   display: block;
   position: relative;
+  padding-top: 50px;
 }
 
 #div5 {
   display: block;
   position: relative;
+  padding-top: 50px;
 }
 
 .visoImage {
