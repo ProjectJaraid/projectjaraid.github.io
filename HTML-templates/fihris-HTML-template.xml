@@ -24,12 +24,16 @@
           -ms-user-select: none;
           user-select: none;
       }
-      
+
       @media (min-width : 768px) {
           .bd-placeholder-img-lg {
               font-size: 3.5rem;
           }
-      }</style>
+          .navbar-nav {
+            font-size: 1.5rem;
+          }
+      }
+    </style>
   </head>
   <body id="fihris">
     <h1 id="h1">Jara'id: A Chronology of Arabic Periodicals (1800-1929)</h1>
