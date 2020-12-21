@@ -80,6 +80,11 @@ position: relative;
   position: relative;
 }
 
+#div5 {
+  display: block;
+  position: relative;
+}
+
 .visoImage {
   border-radius: 5px;
   cursor: pointer;
