@@ -8,7 +8,7 @@ body#home {
 body#home tei-div#t1head, tei-div#dTables, tei-div#dTrans, tei-div#dAgen, tei-div#dBibl, tei-div#dAppendix, tei-div#dAgLeg, tei-div#dLinks {display: none;}
 
 body#home::after {
-  background: url("../img/HadiqatAlAkhbar.jpg");
+  background: url("../img/AlQuds.png");
   content: "";
   opacity: 0.2;
   position: absolute;
