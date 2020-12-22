@@ -10,7 +10,7 @@ body#home tei-div#t1head, tei-div#dTables, tei-div#dTrans, tei-div#dAgen, tei-di
 body#home::after {
   background: url("../img/AlQuds.png");
   content: "";
-  opacity: 0.2;
+  opacity: 0.3;
   position: absolute;
   top: 0;
   bottom: -150%;
