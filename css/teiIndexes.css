@@ -8,13 +8,13 @@ body#indexes {
 body#indexes tei-div#dRef, tei-div#t1head, tei-div#dAgen, tei-div#dAppendix, tei-div#dTrans, tei-div#dTables, tei-div#dPer, tei-div#dAvail, tei-div#dFut, tei-div#dDef, tei-div#dCopyright, tei-div#dCetei, tei-div#dIntro, tei-div#dVersionHist, tei-div#dBibl, tei-div#dAgLeg, tei-div#dLinks, tei-div#dTitle {display: none;}
 
 body#indexes::after {
-  background: url("../img/HadiqatAlAkhbar.jpg");
+  background: url("../img/AlQuds.png");
   content: "";
-  opacity: 0.2;
+  opacity: 0.07;
   position: absolute;
   top: 0;
   bottom: -9500%;
-  right: 0;
+  right: 15px;
   left: 0;
   height: auto;
   z-index: -1;
