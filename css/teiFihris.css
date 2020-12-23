@@ -15,7 +15,7 @@ body#fihris::after {
   opacity: 0.07;
   position: absolute;
   top: 0;
-  bottom: -20000%;
+  bottom: -30000%;
   right: 15px;
   left: 0;
   height: auto;
