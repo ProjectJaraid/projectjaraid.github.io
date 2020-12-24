@@ -93,30 +93,38 @@
 The basis of this website is one single TEI XML document, available at <a href="https://github.com/ProjectJaraid/jaraid_source/tree/master/tei" target="_blank">the ProjectJaraid site at Github</a>. This TEI document contains both introductory text and the data in a table format. The HTML pages of this site display the TEI document through CETEICean with a few exceptions (like this text, and of course the Indexes page which operates with XSLT transformations of the original data). <a href="https://github.com/TEIC/CETEIcean" target="_blank">CETEICean</a> is a code specifically written for transforming a TEI XML document into a pseudo-HTML format dynamically.
 Here are some basic remarks about formatting and managing the data through CSS and JS for beginners with the version of CETEICean that is used here (careful! this is not the latest version!).
 </p>
-<p> 1. The unnecessary parts of the TEI document are hidden in each HTML page by their id in CSS. Tei-div#ID works perfectly. In this way, we could "distribute" the parts of one TEI XML document to several pages.
-</p>
-<p>2. In CSS, the basic formatting instructions work with adding the tei- tag to divs. The CETEICean version we use transformes a TEI XML table into a pseudo-HTML table. Thus in this case, there is no need to use tei-row to style our table in CSS but simply tr works as if the table would be a static HTML.
-</p>
-<p>
-  3. We re-organize the TEI XML (table) data chronologically through a JS function. In order that that function work automatically, it is not enough to link the JS as a script in the HTML head but the JS itself also has to be inserted next to the CETEICean JS code in the head, following the code. Check the code in the Chronology page by "inspect page" function.
-</p>
-<p>
-4. Specifically for formatting the TEI XML table in this version of CETEICean one does NOT need tei- tags for the table cells and rows. The usual HTML th, td, and tr work perfectly.
-</p>
-<p>
-5. Element within element CSS formatting needs tei-div and tei-elementName.
-</p>
-<p>
-6. There are two ways in which the TEI XML data is displayed on HTML:
-    6.A. In many HTML pages on this site, the XML data is not received in CETEICean directly from the TEI XML file in a repostory next to the index HTML file but it is linked through its location in Github as a "published" code (good trick to centralize and automatize updates).
-    6.B. In the two pages which display the core dataset in transliteration and in Arabic we had to pre-create the HTML pages since the linked data would have taken for a long time to be loaded. In this case, Hugh Cayless suggested a GitHub Action to automatically create HTML pages. In general, this means that a change in the master file triggers a GitHub Action, which, through an XSLT code containing elements of CETEICean, creates two HTML pages with the XML data already written in them.
-</p>
-<p>
+<ol>
+<li>The unnecessary parts of the TEI document are hidden in each HTML page by their id in CSS. Tei-div#ID works perfectly. In this way, we could "distribute" the parts of one TEI XML document to several pages.
+</li>
+<li>In CSS, the basic formatting instructions work with adding the tei- tag to divs. The CETEICean version we use transformes a TEI XML table into a pseudo-HTML table. Thus in this case, there is no need to use tei-row to style our table in CSS but simply tr works as if the table would be a static HTML.
+</li>
+<li>
+We re-organize the TEI XML (table) data chronologically through a JS function. In order that that function work automatically, it is not enough to link the JS as a script in the HTML head but the JS itself also has to be inserted next to the CETEICean JS code in the head, following the code. Check the code in the Chronology page by "inspect page" function.
+</li>
+<li>
+Specifically for formatting the TEI XML table in this version of CETEICean one does NOT need tei- tags for the table cells and rows. The usual HTML th, td, and tr work perfectly.
+</li>
+<li>
+Element within element CSS formatting needs tei-div and tei-elementName.
+</li>
+<li>
+There are two ways in which the TEI XML data is displayed on HTML:
+  <ul>
+    <li>
+     In many HTML pages on this site, the XML data is not received in CETEICean directly from the TEI XML file in a repostory next to the index HTML file but it is linked through its location in Github as a "published" code (good trick to centralize and automatize updates).
+  </li>
+  <li>
+    In the two pages which display the core dataset in transliteration and in Arabic we had to pre-create the HTML pages since the linked data would have taken for a long time to be loaded. In this case, Hugh Cayless suggested a GitHub Action to automatically create HTML pages. In general, this means that a change in the master file triggers a GitHub Action, which, through an XSLT code containing elements of CETEICean, creates two HTML pages with the XML data already written in them.
+  </li>
+  </ul>
+</li>
+<li>
 7. We created a TEI XML authority file which contains lists of persNames, orgNames, and places in various transcriptions with geolocations. Till Grallert created this file using an XSLT which transliterated into the Arabic script the transliterated data in the master file.
-</p>
-<p>
+</li>
+<li>
 8. We use a GitHub Action, again containing an XSLT action, to populate the master file with the Arabic data from the authority file.
-</p>
+</li>
+</ol>
 </div>
 
 
