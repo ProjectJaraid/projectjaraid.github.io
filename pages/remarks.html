@@ -107,7 +107,15 @@ Here are some basic remarks about formatting and managing the data through CSS a
 5. Element within element CSS formatting needs tei-div and tei-elementName.
 </p>
 <p>
-6. In our display, the data is not received in CETEICean directly from the TEI XML file in a repostory next to the index HTML file but it is linked through its location in Github as a "published" code (good trick to centralize and automatize updates).
+6. There are two ways in which the TEI XML data is displayed on HTML:
+    6.A. In many HTML pages on this site, the XML data is not received in CETEICean directly from the TEI XML file in a repostory next to the index HTML file but it is linked through its location in Github as a "published" code (good trick to centralize and automatize updates).
+    6.B. In the two pages which display the core dataset in transliteration and in Arabic we had to pre-create the HTML pages since the linked data would have taken for a long time to be loaded. In this case, Hugh Cayless suggested a GitHub Action to automatically create HTML pages. In general, this means that a change in the master file triggers a GitHub Action, which, through an XSLT code containing elements of CETEICean, creates two HTML pages with the XML data already written in them.
+</p>
+<p>
+7. We created a TEI XML authority file which contains lists of persNames, orgNames, and places in various transcriptions with geolocations. Till Grallert created this file using an XSLT which transliterated into the Arabic script the transliterated data in the master file.
+</p>
+<p>
+8. We use a GitHub Action, again containing an XSLT action, to populate the master file with the Arabic data from the authority file.
 </p>
 </div>
 
