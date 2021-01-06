@@ -31,8 +31,8 @@
               <list type="holdings">
                 <!-- Go and get each cell 9 where xml:id of institution is and display the name in cell 4-->
                 <xsl:for-each select="$context//t:rs[@ref=$ref]">
-                  <xsl:sort select="normalize-space(ancestor::t:row/t:cell[@n='4'])"/>
-                  <item><ref target="pages/chrono.html#{ancestor::t:row[1]/@xml:id}"><xsl:apply-templates select="ancestor::t:row/t:cell[@n='4']/node()"/></ref></item>
+                  <xsl:sort select="normalize-space(ancestor::t:row/t:cell[@n='9'])"/>
+                  <item><ref target="pages/chrono.html#{ancestor::t:row[1]/@xml:id}"><xsl:apply-templates select="ancestor::t:row/t:cell[@n='9']/node()"/></ref></item>
                 </xsl:for-each>
               </list>
             </item>
