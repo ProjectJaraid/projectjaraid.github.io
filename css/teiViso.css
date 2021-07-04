@@ -46,6 +46,15 @@ body#viso::after {
     font-size: 30px;
 }
 
+#h3 {
+      text-align: center;
+      display: block;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 
 section {
   padding-top: 100px;
