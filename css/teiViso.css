@@ -101,6 +101,19 @@ position: relative;
   padding-top: 70px;
 }
 
+
+#div6 {
+  display: block;
+  position: relative;
+  padding-top: 70px;
+}
+
+#div7 {
+  display: block;
+  position: relative;
+  padding-top: 70px;
+}
+
 .visoImage {
   border-radius: 5px;
   cursor: pointer;
