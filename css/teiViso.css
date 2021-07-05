@@ -53,6 +53,8 @@ body#viso::after {
     margin-bottom: 1.33em;
     margin-left: 0;
     margin-right: 0;
+    font-family: serif;
+    font-size: 25px;
 }
 
 
