@@ -55,6 +55,7 @@ body#viso::after {
     margin-right: 0;
     font-family: serif;
     font-size: 20px;
+    text-decoration: underline;
 }
 
 #h4 {
@@ -66,6 +67,7 @@ body#viso::after {
     margin-right: 0;
     font-family: serif;
     font-size: 20px;
+    text-decoration: underline;
 }
 
 section {
