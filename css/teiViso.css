@@ -262,4 +262,5 @@ p.desc {
 .floatingLi {
   float: left;
   clear: left;
+  list-style-type: none;
 }
