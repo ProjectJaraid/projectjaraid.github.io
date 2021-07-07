@@ -258,3 +258,8 @@ p.desc {
   text-decoration: none;
   cursor: pointer;
 }
+
+.floatingLi {
+  float: left;
+  clear: left;
+}
