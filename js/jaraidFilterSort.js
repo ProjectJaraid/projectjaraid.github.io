@@ -88,6 +88,17 @@
         var table = wrapper.querySelector("table");
            if (!table) return;
 
+             // Wrap the real <table> in its own horizontally-scrollable box so a
+             // very wide table (many columns) never forces the whole page to
+             // scroll sideways on a phone; only the table itself scrolls, while
+             // the toolbar above stays full-width and fully reachable.
+             if (!table.parentNode.classList || !table.parentNode.classList.contains("jaraid-table-scroll")) {
+                         var scrollBox = document.createElement("div");
+                         scrollBox.className = "jaraid-table-scroll";
+                         table.parentNode.insertBefore(scrollBox, table);
+                         scrollBox.appendChild(table);
+             }
+
         var allRows = Array.prototype.slice.call(table.querySelectorAll("tr"));
            if (allRows.length < 2) return;
 
