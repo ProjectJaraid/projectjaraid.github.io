@@ -144,20 +144,54 @@
 }
 
 #jaraidToolbar .jaraid-field-reset {
-    justify-content: flex-end;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 8px;
 }
 
-#jaraidToolbar #jaraidReset {
-    padding: 6px 12px;
-    border: 1px solid #888;
-    border-radius: 4px;
-    background: #f2f2f2;
-    cursor: pointer;
-    font-size: 13px;
+#jaraidToolbar .jaraid-btn {
+        padding: 6px 12px;
+        border: 1px solid #888;
+        border-radius: 4px;
+        background: #f2f2f2;
+        cursor: pointer;
+        font-size: 13px;
+        white-space: nowrap;
 }
 
-#jaraidToolbar #jaraidReset:hover {
-    background: #e2e2e2;
+#jaraidToolbar .jaraid-btn:hover {
+        background: #e2e2e2;
+}
+
+/* Per-row expand/collapse toggle (title/place/date shown by default;
+   click to reveal owners, comments, source and holdings for that
+   entry). Placed at the very start of the Year cell. */
+.jaraid-row-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+        border: 1px solid #999;
+        border-radius: 3px;
+        background: #fafafa;
+        color: #333;
+        font-family: monospace;
+        font-size: 12px;
+        line-height: 1;
+        cursor: pointer;
+        user-select: none;
+        vertical-align: middle;
+}
+
+.jaraid-row-toggle:hover {
+        background: #e8e8e8;
+}
+
+.jaraid-row-toggle:focus {
+        outline: 2px solid #6ab0f3;
+        outline-offset: 1px;
 }
 
 #jaraidToolbar .jaraid-status {
