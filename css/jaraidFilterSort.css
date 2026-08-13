@@ -1,0 +1,174 @@
+/*
+ * jaraidFilterSort.css
+ * Styling for the filter/sort toolbar injected by jaraidFilterSort.js
+ * above the chronology table (#t1). Kept self-contained so it can be
+ * dropped into chrono.html and fihris.html without touching the
+ * existing teiChrono.css / teiFihris.css rules.
+ */
+
+#jaraidToolbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 20px 0 10px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+#jaraidToolbar .jaraid-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+#jaraidToolbar .jaraid-row:last-child {
+    margin-bottom: 0;
+}
+
+#jaraidToolbar .jaraid-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+}
+
+#jaraidToolbar .jaraid-field-search {
+    flex: 1 1 260px;
+}
+
+#jaraidToolbar label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+#jaraidToolbar input[type="text"],
+#jaraidToolbar input[type="number"],
+#jaraidToolbar select {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 5px 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background: #fff;
+}
+
+#jaraidToolbar input[type="number"] {
+    width: 90px;
+}
+
+#jaraidToolbar .jaraid-field-lang {
+    min-width: 160px;
+}
+
+#jaraidToolbar details {
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background: #fff;
+}
+
+#jaraidToolbar summary {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 0;
+}
+
+#jaraidToolbar .jaraid-lang-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+    gap: 2px 10px;
+    padding-top: 6px;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+#jaraidToolbar .jaraid-lang-list label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #222;
+    font-weight: normal;
+    margin: 0;
+}
+
+#jaraidToolbar .jaraid-field-reset {
+    justify-content: flex-end;
+}
+
+#jaraidToolbar #jaraidReset {
+    padding: 6px 12px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background: #f2f2f2;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#jaraidToolbar #jaraidReset:hover {
+    background: #e2e2e2;
+}
+
+#jaraidToolbar .jaraid-status {
+    font-size: 12px;
+    color: #444;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+#jaraidToolbar .jaraid-hint {
+    color: #888;
+    font-style: italic;
+}
+
+/* Sortable column headers */
+tr[role="label"] td.jaraid-sortable {
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    background: #efefef;
+    z-index: 10;
+    user-select: none;
+}
+
+tr[role="label"] td.jaraid-sortable:hover {
+    background: #e0e0e0;
+}
+
+tr[role="label"] td.jaraid-sortable::after {
+    content: "sort";
+    opacity: 0.35;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+tr[role="label"] td.jaraid-sort-asc::after {
+    content: "asc";
+    opacity: 1;
+}
+
+tr[role="label"] td.jaraid-sort-desc::after {
+    content: "desc";
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    #jaraidToolbar .jaraid-row {
+          flex-direction: column;
+          align-items: stretch;
+    }
+    #jaraidToolbar .jaraid-field-reset {
+          justify-content: flex-start;
+    }
+}
