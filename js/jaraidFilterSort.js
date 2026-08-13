@@ -197,7 +197,9 @@
                          "</details>" +
                        "</div>" +
                        '<div class="jaraid-field jaraid-field-reset">' +
-                         '<button type="button" id="jaraidReset">Reset filters</button>' +
+                         '<button type="button" id="jaraidExpandAll" class="jaraid-btn">Expand all rows</button>' +
+                           '<button type="button" id="jaraidCollapseAll" class="jaraid-btn">Collapse all rows</button>' +
+                           '<button type="button" id="jaraidReset" class="jaraid-btn">Reset filters</button>' +
                        "</div>" +
                      "</div>" +
                      '<div class="jaraid-row jaraid-status">' +
@@ -230,7 +232,62 @@
              decadesRow.parentNode.removeChild(decadesRow);
            }
 
-        // ---- Wire up header cells for click-to-sort ----
+        // ---- Collapsible rows: show title/place/date by default, ----
+             // ---- expand a row to reveal owners, comments, source, holdings ----
+             // Cells with no counterpart in the compact view (day/month, owners,
+             // comments, source, holdings). Year, last-issue date, title and
+             // place (English or Arabic, whichever the page shows) stay visible
+             // at all times so the row is still identifiable when collapsed.
+             var COLLAPSIBLE_CELLS = ["2", "6", "7", "8", "9"];
+         
+             function setRowCollapsed(row, collapsed) {
+                         COLLAPSIBLE_CELLS.forEach(function (n) {
+                                       var td = cellEl(row.el, n);
+                                       if (td) td.style.display = collapsed ? "none" : "";
+                         });
+                         row.collapsed = collapsed;
+                         if (row.toggleEl) {
+                                       row.toggleEl.textContent = collapsed ? "+" : "-";
+                                       row.toggleEl.setAttribute("aria-expanded", collapsed ? "false" : "true");
+                                       row.toggleEl.setAttribute(
+                                                       "title",
+                                                       collapsed ? "Show full entry (owners, comments, source, holdings)" : "Show summary only"
+                                                     );
+                         }
+             }
+         
+             index.forEach(function (row) {
+                         var anchorCell = cellEl(row.el, "1");
+                         if (!anchorCell) return;
+                         var toggle = document.createElement("span");
+                         toggle.className = "jaraid-row-toggle";
+                         toggle.setAttribute("role", "button");
+                         toggle.setAttribute("tabindex", "0");
+                         toggle.addEventListener("click", function (e) {
+                                       e.stopPropagation();
+                                       setRowCollapsed(row, !row.collapsed);
+                         });
+                         toggle.addEventListener("keydown", function (e) {
+                                       if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+                                                       e.preventDefault();
+                                                       setRowCollapsed(row, !row.collapsed);
+                                       }
+                         });
+                         anchorCell.insertBefore(toggle, anchorCell.firstChild);
+                         row.toggleEl = toggle;
+                         setRowCollapsed(row, true);
+             });
+         
+             var $expandAll = document.getElementById("jaraidExpandAll");
+             var $collapseAll = document.getElementById("jaraidCollapseAll");
+             $expandAll.addEventListener("click", function () {
+                         index.forEach(function (row) { setRowCollapsed(row, false); });
+             });
+             $collapseAll.addEventListener("click", function () {
+                         index.forEach(function (row) { setRowCollapsed(row, true); });
+             });
+         
+             // ---- Wire up header cells for click-to-sort ----
         var headerCells = Array.prototype.slice.call(headerRow.querySelectorAll("td"));
            var sortState = { n: null, dir: 1 };
 
