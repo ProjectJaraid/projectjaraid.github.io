@@ -237,6 +237,14 @@ tr[role="label"] td.jaraid-sort-desc::after {
     opacity: 1;
 }
 
+/* Table itself scrolls sideways in its own box; the toolbar above stays
+   full width so filters are always reachable without side-scrolling. */
+.jaraid-table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+}
+
 @media (max-width: 700px) {
     #jaraidToolbar .jaraid-row {
           flex-direction: column;
@@ -245,4 +253,37 @@ tr[role="label"] td.jaraid-sort-desc::after {
     #jaraidToolbar .jaraid-field-reset {
           justify-content: flex-start;
     }
+        #jaraidToolbar .jaraid-field-search,
+        #jaraidToolbar .jaraid-field-lang,
+        #jaraidToolbar .jaraid-field {
+                    min-width: 0;
+                    width: 100%;
+        }
+        #jaraidToolbar input[type="text"],
+        #jaraidToolbar input[type="number"],
+        #jaraidToolbar select {
+                    width: 100%;
+                    box-sizing: border-box;
+        }
+        #jaraidToolbar {
+                    padding: 8px 10px;
+                    font-size: 13px;
+        }
+        #jaraidToolbar .jaraid-btn {
+                    padding: 8px 12px;
+                    font-size: 14px;
+        }
+        body#chrono,
+        body#fihris {
+                    margin-left: 10px;
+                    margin-right: 10px;
+        }
+        #t1 table {
+                    font-size: 11px;
+        }
+        .jaraid-row-toggle {
+                    width: 22px;
+                    height: 22px;
+                    font-size: 14px;
+        }
 }
