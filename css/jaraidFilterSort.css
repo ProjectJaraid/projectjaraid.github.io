@@ -38,6 +38,46 @@
     min-width: 120px;
 }
 
+#jaraidToolbar .jaraid-decades-row {
+      align-items: center;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #e5e5e5;
+}
+
+#jaraidToolbar .jaraid-decades-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #555;
+      flex: 0 0 auto;
+}
+
+#jaraidToolbar .jaraid-decades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex: 1 1 auto;
+}
+
+#jaraidToolbar .jaraid-decade-link {
+      display: inline-block;
+      padding: 3px 9px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background: #f7f7f7;
+      color: #333;
+      font-size: 12px;
+      text-decoration: none;
+      line-height: 1.6;
+}
+
+#jaraidToolbar .jaraid-decade-link:hover {
+      background: #333;
+      color: #fff;
+      border-color: #333;
+}
+
 #jaraidToolbar .jaraid-field-search {
     flex: 1 1 260px;
 }
