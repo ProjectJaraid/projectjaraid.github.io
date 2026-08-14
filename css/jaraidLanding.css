@@ -1,0 +1,125 @@
+/*
+ * jaraidLanding.css
+ * Styling for the home-page (index.html) quick-start panel and the
+ * collapsed long-form introduction. See jaraidLanding.js.
+ */
+
+#jaraidQuickStart {
+    max-width: 820px;
+    margin: 20px auto 30px auto;
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    padding: 20px 28px;
+    font-family: Georgia, serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#jaraidQuickStart h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#jaraidQuickStart p.jaraid-lede {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#jaraidQuickStart .jaraid-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+#jaraidQuickStart .jaraid-cta {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#jaraidQuickStart .jaraid-cta:hover {
+    background: #555;
+    color: #fff;
+    text-decoration: none;
+}
+
+#jaraidQuickStart .jaraid-cta.secondary {
+    background: #f2f2f2;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+#jaraidQuickStart .jaraid-cta.secondary:hover {
+    background: #e2e2e2;
+}
+
+#jaraidQuickStart h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+#jaraidQuickStart ul.jaraid-howto {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Collapsed-by-default long-form introduction */
+#jaraidIntroDetails {
+    max-width: 820px;
+    margin: 0 auto 30px auto;
+}
+
+#jaraidIntroDetails > summary {
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 14px;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    list-style: none;
+}
+
+#jaraidIntroDetails > summary::-webkit-details-marker {
+    display: none;
+}
+
+#jaraidIntroDetails > summary::before {
+    content: "+ ";
+}
+
+#jaraidIntroDetails[open] > summary::before {
+    content: "- ";
+}
+
+@media (max-width: 700px) {
+    #jaraidQuickStart {
+          margin-left: 12px;
+          margin-right: 12px;
+          padding: 16px 18px;
+    }
+    #jaraidQuickStart .jaraid-cta {
+          width: 100%;
+          text-align: center;
+          box-sizing: border-box;
+    }
+    #jaraidIntroDetails {
+          margin-left: 12px;
+          margin-right: 12px;
+    }
+}
