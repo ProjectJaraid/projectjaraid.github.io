@@ -77,6 +77,9 @@ body#chrono::after {
 
 
 .sidenav {
+  display: none; /* old fixed decade-jump bar; JS moves its links into
+                    the new toolbar and removes it. Hidden immediately via
+                    CSS so it never flashes on page load. */
   width: 50px;
   position: fixed;
   z-index: 1;
