@@ -3,6 +3,7 @@ body#abbrev {
   padding-bottom: 20px;
   font-family: Georgia,serif;
   background-color: #EFEFEF;
+  position: relative;
 }
 
 body#abbrev tei-div#dRef, tei-div#dAgen, tei-div#t1head, tei-div#dTrans, tei-div#dTables, tei-div#dPer, tei-div#dAvail, tei-div#dFut, tei-div#dDef, tei-div#dCopyright, tei-div#dCetei, tei-div#dIntro, tei-div#dVersionHist, tei-div#dBibl, tei-div#dLinks, tei-div#dTitle {display: none;}
@@ -14,7 +15,7 @@ body#abbrev::after {
   opacity: 0.07;
   position: absolute;
   top: 0;
-  bottom: -300%;
+  bottom: 0;
   right: 15px;
   left: 0;
   height: auto;
