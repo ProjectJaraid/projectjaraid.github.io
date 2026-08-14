@@ -42,7 +42,7 @@ body#viso::after {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
-    font-family: serif;
+    font-family: Georgia, serif;
     font-size: 30px;
 }
 
@@ -53,7 +53,7 @@ body#viso::after {
     margin-bottom: 1.33em;
     margin-left: 0;
     margin-right: 0;
-    font-family: serif;
+    font-family: Georgia, serif;
     font-size: 20px;
     text-decoration: underline;
     padding-top: 70px;
@@ -67,7 +67,7 @@ body#viso::after {
     margin-bottom: 1.33em;
     margin-left: 0;
     margin-right: 0;
-    font-family: serif;
+    font-family: Georgia, serif;
     font-size: 20px;
     text-decoration: underline;
 }
