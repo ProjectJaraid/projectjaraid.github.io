@@ -5,14 +5,17 @@
   <title>Jara'id: A Chronology Of Arabic Periodicals (1800-1929)</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="css/teiIndex.css">
+    <link rel="stylesheet" href="css/jaraidLanding.css">
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/CETEI.js"></script>
   <script src="js/behaviors.js">></script>
+    <script src="js/jaraidLanding.js"></script>
   <script>
     let c = new CETEI();
     c.addBehaviors(behaviors);
     c.getHTML5('https://projectjaraid.github.io/jaraid_source/tei/jaraid_master.TEIP5.xml', function(data) {
       document.getElementsByTagName("body")[0].appendChild(data);
+            if (window.jaraidLandingEnhance) { window.jaraidLandingEnhance(); }
     });</script>
 
   <meta charset="UTF-8">
