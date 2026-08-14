@@ -3,6 +3,7 @@ body#home {
   padding-bottom: 20px;
   font-family: Georgia,serif;
   background-color: #EFEFEF;
+  position: relative;
 }
 
 body#home tei-div#t1head, tei-div#dTables, tei-div#dTrans, tei-div#dAgen, tei-div#dBibl, tei-div#dAppendix, tei-div#dAgLeg, tei-div#dLinks {display: none;}
@@ -13,7 +14,7 @@ body#home::after {
   opacity: 0.07;
   position: absolute;
   top: 0;
-  bottom: -150%;
+  bottom: 0;
   right: 15px;
   left: 0;
   height: auto;
