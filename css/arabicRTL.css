@@ -1,0 +1,85 @@
+/* Shared RTL / Arabic overlay for the parallel Arabic Jara'id site (ar/).
+   Loaded AFTER the page's normal tei*.css so it only overrides direction,
+   alignment, and typeface; the underlying layout (widths, backgrounds,
+   spacing) is inherited from the English stylesheet for that page. */
+
+body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+  font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", Georgia, serif;
+}
+
+body[dir="rtl"] h1,
+body[dir="rtl"] h2,
+body[dir="rtl"] h3,
+body[dir="rtl"] h4,
+body[dir="rtl"] p,
+body[dir="rtl"] li,
+body[dir="rtl"] td,
+body[dir="rtl"] th {
+  font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", Georgia, serif;
+}
+
+/* Navbar: keep it centered but let the toggle sit correctly in RTL flow */
+body[dir="rtl"] .navbar-nav {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* The EN / lang-toggle link should read left-to-right regardless of
+   the surrounding RTL context (it's Latin text). */
+body[dir="rtl"] .lang-toggle {
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+
+/* Quick-start panel and lists */
+body[dir="rtl"] #jaraidQuickStart,
+body[dir="rtl"] .jaraid-cta-row,
+body[dir="rtl"] .jaraid-howto,
+body[dir="rtl"] #dTitle,
+body[dir="rtl"] #dCopyright,
+body[dir="rtl"] #dCetei,
+body[dir="rtl"] #dIntro,
+body[dir="rtl"] #dVersionHist,
+body[dir="rtl"] #dPer,
+body[dir="rtl"] #dDef,
+body[dir="rtl"] #dAvail,
+body[dir="rtl"] #dFut,
+body[dir="rtl"] #dRef,
+body[dir="rtl"] #text1 {
+  text-align: right;
+  direction: rtl;
+}
+
+body[dir="rtl"] ul,
+body[dir="rtl"] ol {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+/* Tables (indexes, abbreviations, bibliography) read right to left too */
+body[dir="rtl"] table,
+body[dir="rtl"] th,
+body[dir="rtl"] td {
+  text-align: right;
+}
+
+/* details/summary used for the collapsible full introduction on ar/index.html */
+body[dir="rtl"] details summary {
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+body[dir="rtl"] .ar-note {
+  font-size: 13px;
+  color: #777;
+  font-style: italic;
+  border-top: 1px dashed #ccc;
+  padding-top: 10px;
+  margin-top: 30px;
+}
