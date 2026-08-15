@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <link rel="icon" href="../../img/lisanalhal.jpg">
+  <title>جرائد: تسلسل زمني للدوريات العربية (1800-1929)</title>
+  <link rel="stylesheet" href="../../css/teiRemarks.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/arabicRTL.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+      .navbar-nav {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
+  </head>
+
+  <body id="remarks" dir="rtl" lang="ar">
+<h1 id="h1">جرائد: تسلسل زمني للدوريات العربية (1800-1929)</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../pages/fihris.html">الفهرس الزمني</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="indexes.html">الفهارس</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="viso.html">التصورات المرئية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="abbrev.html">الاختصارات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="biblio.html">المراجع</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="remarks.html">ملاحظات <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="copyri.html">حقوق النشر</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link lang-toggle" href="../../pages/remarks.html">EN</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+<h3 id="h3">ملاحظات حول استخدام CETEICean لعرض TEI في HTML</h3>
+
+<div id="text1">
+  <p>
+يقوم هذا الموقع على وثيقة XML واحدة بمعيار TEI، متاحة في <a href="https://github.com/ProjectJaraid/jaraid_source/tree/master/tei" target="_blank">مستودع ProjectJaraid على GitHub</a>. تحتوي هذه الوثيقة على النص التمهيدي والبيانات في هيئة جدول معاً. تعرض صفحات HTML لهذا الموقع وثيقة TEI عبر CETEICean، مع بعض الاستثناءات (مثل هذا النص، وبالطبع صفحة الفهارس التي تعمل بتحويلات XSLT للبيانات الأصلية). و<a href="https://github.com/TEIC/CETEIcean" target="_blank">CETEICean</a> هو شيفرة برمجية مكتوبة خصيصاً لتحويل وثيقة TEI XML إلى صيغة شبه-HTML بشكل ديناميكي.
+فيما يلي بعض الملاحظات الأساسية حول التنسيق وإدارة البيانات عبر CSS وJS للمبتدئين، وفق نسخة CETEICean المستخدمة هنا (تنبيه: ليست أحدث نسخة!).
+</p>
+<ol>
+<li>تُخفى الأجزاء غير الضرورية من وثيقة TEI في كل صفحة HTML عبر معرّفها (id) في CSS. الصيغة Tei-div#ID تعمل تماماً. وبهذه الطريقة أمكننا "توزيع" أجزاء وثيقة TEI XML الواحدة على عدة صفحات.
+</li>
+<li>في CSS، تعمل تعليمات التنسيق الأساسية بإضافة اللاحقة tei- إلى العناصر div. والنسخة المستخدمة من CETEICean تحوّل جدول TEI XML إلى جدول شبه-HTML. لذا لا حاجة في هذه الحالة لاستخدام tei-row لتنسيق الجدول في CSS، بل يعمل tr ببساطة كأن الجدول HTML ثابت.
+</li>
+<li>
+نعيد تنظيم بيانات جدول TEI XML زمنياً عبر دالة JS. ولكي تعمل هذه الدالة تلقائياً، لا يكفي ربط JS كسكربت في رأس صفحة HTML، بل يجب أيضاً إدراج شيفرة JS نفسها بجانب شيفرة CETEICean JS في الرأس، بعد تلك الشيفرة مباشرة. يمكن مراجعة الشيفرة في صفحة الفهرس الزمني عبر خاصية "فحص الصفحة" (inspect).
+</li>
+<li>
+لتنسيق جدول TEI XML تحديداً في هذه النسخة من CETEICean، لا حاجة لاستخدام لواحق tei- لخلايا الجدول وصفوفه. عناصر HTML المعتادة th وtd وtr تعمل تماماً.
+</li>
+<li>
+تنسيق CSS للعنصر داخل عنصر آخر يتطلب صيغة tei-div وtei-اسم العنصر.
+</li>
+<li>
+هناك طريقتان لعرض بيانات TEI XML على HTML:
+  <ul>
+    <li>
+     في كثير من صفحات هذا الموقع، لا يستقبل CETEICean بيانات XML مباشرة من ملف TEI XML في مستودع بجانب ملف index HTML، بل تُربط عبر موقعها في GitHub كشيفرة "منشورة" (حيلة جيدة لمركزة التحديثات وأتمتتها).
+  </li>
+  <li>
+    في الصفحتين اللتين تعرضان البيانات الأساسية بالحروف اللاتينية وبالعربية، اضطررنا إلى إنشاء صفحات HTML مسبقاً، إذ كانت البيانات المرتبطة ستستغرق وقتاً طويلاً للتحميل. وفي هذه الحالة، اقترح هيو كايليس استخدام GitHub Action لإنشاء صفحات HTML تلقائياً. وبشكل عام، يعني هذا أن أي تغيير في الملف الرئيسي يُفعّل GitHub Action الذي يُنشئ، عبر شيفرة XSLT تتضمن عناصر من CETEICean، صفحتي HTML تحتويان بيانات XML مكتوبة فيهما مسبقاً.
+  </li>
+  </ul>
+</li>
+<li>
+أنشأنا ملف سلطة مرجعية (authority file) بمعيار TEI XML يضم قوائم بأسماء الأشخاص والمؤسسات والأماكن بصيغ نسخ متعددة مع الإحداثيات الجغرافية. أنشأ تيل غراليرت هذا الملف باستخدام XSLT حوّل البيانات المكتوبة بالحروف اللاتينية في الملف الرئيسي إلى الخط العربي.
+</li>
+<li> نستخدم GitHub Action آخر، يتضمن أيضاً شيفرة XSLT، لتغذية الملف الرئيسي بالبيانات العربية المسترجعة من ملف السلطة المرجعية.
+</li>
+</ol>
+<p class="ar-note">هذه الصفحة ترجمة أولية أعدّها مساعد آلي وستُراجع وتُصحَّح قريباً.</p>
+</div>
+
+
+    <div>
+      <table>
+      </table>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+    </body>
+
+    </html>
