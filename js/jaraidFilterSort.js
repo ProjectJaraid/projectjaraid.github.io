@@ -161,10 +161,10 @@
              }
 
         var allRows = Array.prototype.slice.call(table.querySelectorAll("tr"));
-          if (allRows.length < 2) return;
+           if (allRows.length < 2) return;
          
-         var headerRow = allRows[0];
-           var dataRows = allRows.slice(1);
+                 var headerRow = allRows[0];
+         var dataRows = allRows.slice(1);
 
         // ---- Build an in-memory index for each row (computed once) ----
         var index = dataRows.map(function (tr) {
