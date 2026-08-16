@@ -47,6 +47,67 @@
            "Greek"
          ];
 
+   // UI strings: Arabic on the Arabic chronology page (pages/fihris.html,
+   // <body id="fihris">), English everywhere else (pages/chrono.html).
+   var IS_ARABIC_PAGE = !!(document.body && document.body.id === "fihris");
+   var ARABIC_LANG_NAMES = {
+           "Arabic": "العربية",
+           "English": "الإنجليزية",
+           "French": "الفرنسية",
+           "German": "الألمانية",
+           "Italian": "الإيطالية",
+           "Ottoman Turkish": "التركية العثمانية",
+           "Turkish": "التركية",
+           "Persian": "الفارسية",
+           "Judeo-Arabic": "العربية اليهودية",
+           "Armenian": "الأرمنية",
+           "Hebrew": "العبرية",
+           "Greek": "اليونانية"
+   };
+   var STR = IS_ARABIC_PAGE ? {
+           jumpToYear: "الانتقال إلى سنة",
+           search: "بحث",
+           searchPlaceholder: "العنوان، المكان، الناشر، ملاحظات...",
+           yearFrom: "من سنة",
+           yearTo: "إلى سنة",
+           placeOfPub: "مكان النشر",
+           placeExample: "مثال: القاهرة",
+           holdingInst: "المؤسسة الحافظة",
+           any: "الكل",
+           language: "اللغة",
+           expandAll: "توسيع كل الصفوف",
+           collapseAll: "طي كل الصفوف",
+           resetFilters: "إعادة تعيين عوامل التصفية",
+           sortHint: "انقر على عنوان العمود للترتيب.",
+           showFull: "عرض السجل الكامل (الملاك، الملاحظات، المصدر، المقتنيات)",
+           showSummary: "عرض الملخص فقط",
+           showingOf: function (visible, total) {
+                     return "عرض " + visible + " من " + total + " سجل";
+           },
+           langName: function (l) { return ARABIC_LANG_NAMES[l] || l; }
+   } : {
+           jumpToYear: "Jump to year",
+           search: "Search",
+           searchPlaceholder: "Title, place, editor, comments...",
+           yearFrom: "Year from",
+           yearTo: "Year to",
+           placeOfPub: "Place of publication",
+           placeExample: "e.g. Cairo",
+           holdingInst: "Holding institution",
+           any: "Any",
+           language: "Language",
+           expandAll: "Expand all rows",
+           collapseAll: "Collapse all rows",
+           resetFilters: "Reset filters",
+           sortHint: "Click a column heading to sort.",
+           showFull: "Show full entry (owners, comments, source, holdings)",
+           showSummary: "Show summary only",
+           showingOf: function (visible, total) {
+                     return "Showing " + visible + " of " + total + " entries";
+           },
+           langName: function (l) { return l; }
+   };
+
    function normalize(str) {
            if (!str) return "";
            return str
@@ -100,8 +161,7 @@
              }
 
         var allRows = Array.prototype.slice.call(table.querySelectorAll("tr"));
-           if (allRows.length < 2) return;
-
+           if (!allRows.length) return;
         var headerRow = allRows[0];
            var dataRows = allRows.slice(1);
 
@@ -165,57 +225,57 @@
            panel.setAttribute("role", "search");
            panel.innerHTML =
                      '<div class="jaraid-row jaraid-decades-row">' +
-                       '<span class="jaraid-decades-label">Jump to year</span>' +
+                       '<span class="jaraid-decades-label">' + STR.jumpToYear + "</span>" +
                        '<div id="jaraidDecades" class="jaraid-decades"></div>' +
                      "</div>" +
                      '<div class="jaraid-row">' +
                        '<div class="jaraid-field jaraid-field-search">' +
-                         '<label for="jaraidSearch">Search</label>' +
-                         '<input type="text" id="jaraidSearch" placeholder="Title, place, editor, comments...">' +
+                         '<label for="jaraidSearch">' + STR.search + "</label>" +
+                         '<input type="text" id="jaraidSearch" placeholder="' + STR.searchPlaceholder + '">' +
                        "</div>" +
                        '<div class="jaraid-field">' +
-                         '<label for="jaraidYearMin">Year from</label>' +
+                         '<label for="jaraidYearMin">' + STR.yearFrom + "</label>" +
                          '<input type="number" id="jaraidYearMin" min="' + minYear + '" max="' + maxYear + '" placeholder="' + minYear + '">' +
                        "</div>" +
                        '<div class="jaraid-field">' +
-                         '<label for="jaraidYearMax">Year to</label>' +
+                         '<label for="jaraidYearMax">' + STR.yearTo + "</label>" +
                          '<input type="number" id="jaraidYearMax" min="' + minYear + '" max="' + maxYear + '" placeholder="' + maxYear + '">' +
                        "</div>" +
                      "</div>" +
                      '<div class="jaraid-row">' +
                        '<div class="jaraid-field">' +
-                         '<label for="jaraidPlace">Place of publication</label>' +
-                         '<input type="text" id="jaraidPlace" list="jaraidPlaceList" placeholder="e.g. Cairo">' +
+                         '<label for="jaraidPlace">' + STR.placeOfPub + "</label>" +
+                         '<input type="text" id="jaraidPlace" list="jaraidPlaceList" placeholder="' + STR.placeExample + '">' +
                          '<datalist id="jaraidPlaceList">' +
                            places.map(function (p) { return '<option value="' + p.replace(/"/g, "&quot;") + '">'; }).join("") +
                          "</datalist>" +
                        "</div>" +
                        '<div class="jaraid-field">' +
-                         '<label for="jaraidHolding">Holding institution</label>' +
+                         '<label for="jaraidHolding">' + STR.holdingInst + "</label>" +
                          '<select id="jaraidHolding">' +
-                           '<option value="">Any</option>' +
+                           '<option value="">' + STR.any + "</option>" +
                            holdings.map(function (h) { return '<option value="' + h + '">' + h + "</option>"; }).join("") +
                          "</select>" +
                        "</div>" +
                        '<div class="jaraid-field jaraid-field-lang">' +
                          '<details id="jaraidLangDetails">' +
-                           '<summary>Language <span id="jaraidLangCount"></span></summary>' +
+                           '<summary>' + STR.language + ' <span id="jaraidLangCount"></span></summary>' +
                            '<div class="jaraid-lang-list">' +
                              LANGUAGES.map(function (l, i) {
-                                                 return '<label><input type="checkbox" class="jaraid-lang-cb" value="' + l + '"> ' + l + "</label>";
+                                                 return '<label><input type="checkbox" class="jaraid-lang-cb" value="' + l + '"> ' + STR.langName(l) + "</label>";
                              }).join("") +
                            "</div>" +
                          "</details>" +
                        "</div>" +
                        '<div class="jaraid-field jaraid-field-reset">' +
-                         '<button type="button" id="jaraidExpandAll" class="jaraid-btn">Expand all rows</button>' +
-                           '<button type="button" id="jaraidCollapseAll" class="jaraid-btn">Collapse all rows</button>' +
-                           '<button type="button" id="jaraidReset" class="jaraid-btn">Reset filters</button>' +
+                         '<button type="button" id="jaraidExpandAll" class="jaraid-btn">' + STR.expandAll + "</button>" +
+                           '<button type="button" id="jaraidCollapseAll" class="jaraid-btn">' + STR.collapseAll + "</button>" +
+                           '<button type="button" id="jaraidReset" class="jaraid-btn">' + STR.resetFilters + "</button>" +
                        "</div>" +
                      "</div>" +
                      '<div class="jaraid-row jaraid-status">' +
                        '<span id="jaraidCount"></span>' +
-                       '<span class="jaraid-hint">Click a column heading to sort.</span>' +
+                       '<span class="jaraid-hint">' + STR.sortHint + "</span>" +
                      "</div>";
 
         wrapper.parentNode.insertBefore(panel, wrapper);
@@ -262,7 +322,7 @@
                                        row.toggleEl.setAttribute("aria-expanded", collapsed ? "false" : "true");
                                        row.toggleEl.setAttribute(
                                                        "title",
-                                                       collapsed ? "Show full entry (owners, comments, source, holdings)" : "Show summary only"
+                                                       collapsed ? STR.showFull : STR.showSummary
                                                      );
                          }
              }
@@ -397,7 +457,7 @@
                               if (ok) visible++;
                   });
 
-             $count.textContent = "Showing " + visible + " of " + index.length + " entries";
+             $count.textContent = STR.showingOf(visible, index.length);
         }
 
         var debouncedApply = debounce(applyFilters, 120);
