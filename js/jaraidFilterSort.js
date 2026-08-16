@@ -164,9 +164,9 @@
            if (allRows.length < 2) return;
          
                  var headerRow = allRows[0];
-         var dataRows = allRows.slice(1);
-
-        // ---- Build an in-memory index for each row (computed once) ----
+                    var dataRows = allRows.slice(1);
+         
+         // ---- Build an in-memory index for each row (computed once) ----
         var index = dataRows.map(function (tr) {
                   var holdingsEl = cellEl(tr, "9");
                   var holdingCodes = [];
