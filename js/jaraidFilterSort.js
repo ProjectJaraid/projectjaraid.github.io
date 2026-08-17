@@ -49,7 +49,11 @@
 
    // UI strings: Arabic on the Arabic chronology page (pages/fihris.html,
    // <body id="fihris">), English everywhere else (pages/chrono.html).
-   var IS_ARABIC_PAGE = !!(document.body && document.body.id === "fihris");
+   // NOTE: IS_ARABIC_PAGE/STR are computed inside init() (not here at
+   // module load time) because this script is loaded from <head> and
+   // runs before <body> exists in the DOM — checking document.body.id
+   // at the top level always saw body === null and silently fell back
+   // to the English strings, even on pages/fihris.html.
    var ARABIC_LANG_NAMES = {
            "Arabic": "العربية",
            "English": "الإنجليزية",
@@ -64,50 +68,6 @@
            "Hebrew": "العبرية",
            "Greek": "اليونانية"
    };
-   var STR = IS_ARABIC_PAGE ? {
-           jumpToYear: "الانتقال إلى سنة",
-           search: "بحث",
-           searchPlaceholder: "العنوان، المكان، الناشر، ملاحظات...",
-           yearFrom: "من سنة",
-           yearTo: "إلى سنة",
-           placeOfPub: "مكان النشر",
-           placeExample: "مثال: القاهرة",
-           holdingInst: "المؤسسة الحافظة",
-           any: "الكل",
-           language: "اللغة",
-           expandAll: "توسيع كل الصفوف",
-           collapseAll: "طي كل الصفوف",
-           resetFilters: "إعادة تعيين عوامل التصفية",
-           sortHint: "انقر على عنوان العمود للترتيب.",
-           showFull: "عرض السجل الكامل (الملاك، الملاحظات، المصدر، المقتنيات)",
-           showSummary: "عرض الملخص فقط",
-           showingOf: function (visible, total) {
-                     return "عرض " + visible + " من " + total + " سجل";
-           },
-           langName: function (l) { return ARABIC_LANG_NAMES[l] || l; }
-   } : {
-           jumpToYear: "Jump to year",
-           search: "Search",
-           searchPlaceholder: "Title, place, editor, comments...",
-           yearFrom: "Year from",
-           yearTo: "Year to",
-           placeOfPub: "Place of publication",
-           placeExample: "e.g. Cairo",
-           holdingInst: "Holding institution",
-           any: "Any",
-           language: "Language",
-           expandAll: "Expand all rows",
-           collapseAll: "Collapse all rows",
-           resetFilters: "Reset filters",
-           sortHint: "Click a column heading to sort.",
-           showFull: "Show full entry (owners, comments, source, holdings)",
-           showSummary: "Show summary only",
-           showingOf: function (visible, total) {
-                     return "Showing " + visible + " of " + total + " entries";
-           },
-           langName: function (l) { return l; }
-   };
-
    function normalize(str) {
            if (!str) return "";
            return str
@@ -144,6 +104,53 @@
    }
 
    function init() {
+           // Computed here (not at module load time) so document.body
+           // and its id are reliably available — see note above.
+           var IS_ARABIC_PAGE = !!(document.body && document.body.id === "fihris");
+           var STR = IS_ARABIC_PAGE ? {
+                     jumpToYear: "الانتقال إلى سنة",
+                     search: "بحث",
+                     searchPlaceholder: "العنوان، المكان، الناشر، ملاحظات...",
+                     yearFrom: "من سنة",
+                     yearTo: "إلى سنة",
+                     placeOfPub: "مكان النشر",
+                     placeExample: "مثال: القاهرة",
+                     holdingInst: "المؤسسة الحافظة",
+                     any: "الكل",
+                     language: "اللغة",
+                     expandAll: "توسيع كل الصفوف",
+                     collapseAll: "طي كل الصفوف",
+                     resetFilters: "إعادة تعيين عوامل التصفية",
+                     sortHint: "انقر على عنوان العمود للترتيب.",
+                     showFull: "عرض السجل الكامل (الملاك، الملاحظات، المصدر، المقتنيات)",
+                     showSummary: "عرض الملخص فقط",
+                     showingOf: function (visible, total) {
+                               return "عرض " + visible + " من " + total + " سجل";
+                     },
+                     langName: function (l) { return ARABIC_LANG_NAMES[l] || l; }
+           } : {
+                     jumpToYear: "Jump to year",
+                     search: "Search",
+                     searchPlaceholder: "Title, place, editor, comments...",
+                     yearFrom: "Year from",
+                     yearTo: "Year to",
+                     placeOfPub: "Place of publication",
+                     placeExample: "e.g. Cairo",
+                     holdingInst: "Holding institution",
+                     any: "Any",
+                     language: "Language",
+                     expandAll: "Expand all rows",
+                     collapseAll: "Collapse all rows",
+                     resetFilters: "Reset filters",
+                     sortHint: "Click a column heading to sort.",
+                     showFull: "Show full entry (owners, comments, source, holdings)",
+                     showSummary: "Show summary only",
+                     showingOf: function (visible, total) {
+                               return "Showing " + visible + " of " + total + " entries";
+                     },
+                     langName: function (l) { return l; }
+           };
+
            var wrapper = document.getElementById("t1");
            if (!wrapper) return; // not a page with the chronology table
         var table = wrapper.querySelector("table");
