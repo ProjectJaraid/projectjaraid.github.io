@@ -269,9 +269,7 @@
                          "</details>" +
                        "</div>" +
                        '<div class="jaraid-field jaraid-field-reset">' +
-                         '<button type="button" id="jaraidExpandAll" class="jaraid-btn">' + STR.expandAll + "</button>" +
-                           '<button type="button" id="jaraidCollapseAll" class="jaraid-btn">' + STR.collapseAll + "</button>" +
-                           '<button type="button" id="jaraidReset" class="jaraid-btn">' + STR.resetFilters + "</button>" +
+                         '<button type="button" id="jaraidReset" class="jaraid-btn">' + STR.resetFilters + "</button>" +
                        "</div>" +
                      "</div>" +
                      '<div class="jaraid-row jaraid-status">' +
@@ -279,6 +277,21 @@
                        '<span class="jaraid-hint">' + STR.sortHint + "</span>" +
                      "</div>";
 
+        // ---- Expand/Collapse-all controls: a separate, more prominent ----
+        // bar placed between the page's nav menu and the filter/search
+        // panel (rather than buried among the filter fields), so the
+        // most commonly used row-display toggle is easy to find.
+        var rowControls = document.createElement("div");
+           rowControls.id = "jaraidRowControls";
+           rowControls.innerHTML =
+                     '<button type="button" id="jaraidExpandAll" class="jaraid-btn-prominent">' +
+                       '<span class="jaraid-btn-icon" aria-hidden="true">+</span>' + STR.expandAll +
+                     "</button>" +
+                     '<button type="button" id="jaraidCollapseAll" class="jaraid-btn-prominent">' +
+                       '<span class="jaraid-btn-icon" aria-hidden="true">−</span>' + STR.collapseAll +
+                     "</button>";
+
+        wrapper.parentNode.insertBefore(rowControls, wrapper);
         wrapper.parentNode.insertBefore(panel, wrapper);
 
         // ---- Fold the old fixed decade sidebar into the toolbar ----
