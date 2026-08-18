@@ -118,12 +118,10 @@
                      holdingInst: "المؤسسة الحافظة",
                      any: "الكل",
                      language: "اللغة",
-                     expandAll: "توسيع كل الصفوف",
-                     collapseAll: "طي كل الصفوف",
                      resetFilters: "إعادة تعيين عوامل التصفية",
-                     sortHint: "انقر على عنوان العمود للترتيب.",
-                     showFull: "عرض السجل الكامل (الملاك، الملاحظات، المصدر، المقتنيات)",
-                     showSummary: "عرض الملخص فقط",
+                     sortHint: "انقر على أي صف لعرض السجل الكامل.",
+                     viewDetails: "عرض السجل الكامل",
+                     closeModal: "إغلاق",
                      showingOf: function (visible, total) {
                                return "عرض " + visible + " من " + total + " سجل";
                      },
@@ -139,12 +137,10 @@
                      holdingInst: "Holding institution",
                      any: "Any",
                      language: "Language",
-                     expandAll: "Expand all rows",
-                     collapseAll: "Collapse all rows",
                      resetFilters: "Reset filters",
-                     sortHint: "Click a column heading to sort.",
-                     showFull: "Show full entry (owners, comments, source, holdings)",
-                     showSummary: "Show summary only",
+                     sortHint: "Click any row to view the full entry.",
+                     viewDetails: "View full entry",
+                     closeModal: "Close",
                      showingOf: function (visible, total) {
                                return "Showing " + visible + " of " + total + " entries";
                      },
@@ -284,21 +280,6 @@
                        '<span class="jaraid-hint">' + STR.sortHint + "</span>" +
                      "</div>";
 
-        // ---- Expand/Collapse-all controls: a separate, more prominent ----
-        // bar placed between the page's nav menu and the filter/search
-        // panel (rather than buried among the filter fields), so the
-        // most commonly used row-display toggle is easy to find.
-        var rowControls = document.createElement("div");
-           rowControls.id = "jaraidRowControls";
-           rowControls.innerHTML =
-                     '<button type="button" id="jaraidExpandAll" class="jaraid-btn-prominent">' +
-                       '<span class="jaraid-btn-icon" aria-hidden="true">+</span>' + STR.expandAll +
-                     "</button>" +
-                     '<button type="button" id="jaraidCollapseAll" class="jaraid-btn-prominent">' +
-                       '<span class="jaraid-btn-icon" aria-hidden="true">−</span>' + STR.collapseAll +
-                     "</button>";
-
-        wrapper.parentNode.insertBefore(rowControls, wrapper);
         wrapper.parentNode.insertBefore(panel, wrapper);
 
         // ---- Fold the old fixed decade sidebar into the toolbar ----
@@ -324,88 +305,98 @@
              decadesRow.parentNode.removeChild(decadesRow);
            }
 
-        // ---- Collapsible rows: show title/place/date by default, ----
-             // ---- expand a row to reveal owners, comments, source, holdings ----
-             // Cells with no counterpart in the compact view (day/month, owners,
-             // comments, source, holdings). Year, last-issue date, title and
-             // place (English or Arabic, whichever the page shows) stay visible
-             // at all times so the row is still identifiable when collapsed.
-             //
-             // These same columns' HEADER cells are hidden permanently by CSS
-             // (see tr[role="label"] td[n="..."] rules) rather than toggled —
-             // a single shared <table> can't keep a header aligned with a
-             // column that's only populated for some rows, so instead each
-             // detail cell gets its own inline label (reusing that column's
-             // own header text below) and the rows lay out as a compact
-             // flexbox summary line, with the detail fields wrapping onto
-             // their own line underneath when a row is expanded.
-             var COLLAPSIBLE_CELLS = ["2", "6", "7", "8", "9"];
+        // ---- Row detail modal ----
+        // Clicking a row (or its small view-details button) opens a modal
+        // listing every non-empty field for that entry, each labeled with
+        // that column's own header text (so it reads correctly in either
+        // language without hand-translated labels). This replaces the old
+        // per-row +/- inline expand: clicking through 3000+ rows one at a
+        // time to peek at a single field was slow, and each expand/collapse
+        // reflowed the list around it. A modal keeps the list itself
+        // static and scannable while still surfacing the full record
+        // (day/month, owners, comments, source, holdings, Arabic fields,
+        // etc.) on demand, and works the same way on mobile and desktop.
+        var ALL_COLUMNS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
-             var FIELD_LABEL = {};
-             COLLAPSIBLE_CELLS.forEach(function (n) {
-                         FIELD_LABEL[n] = cellText(headerRow, n);
-             });
-         
-             function setRowCollapsed(row, collapsed) {
-                         COLLAPSIBLE_CELLS.forEach(function (n) {
-                                       var td = cellEl(row.el, n);
-                                       if (td) td.style.display = collapsed ? "none" : "";
-                         });
-                         row.collapsed = collapsed;
-                         if (row.toggleEl) {
-                                       row.toggleEl.textContent = collapsed ? "+" : "-";
-                                       row.toggleEl.setAttribute("aria-expanded", collapsed ? "false" : "true");
-                                       row.toggleEl.setAttribute(
-                                                       "title",
-                                                       collapsed ? STR.showFull : STR.showSummary
-                                                     );
-                         }
-             }
-         
-             index.forEach(function (row) {
-                         var anchorCell = cellEl(row.el, "1");
-                         if (!anchorCell) return;
-                         var toggle = document.createElement("span");
-                         toggle.className = "jaraid-row-toggle";
-                         toggle.setAttribute("role", "button");
-                         toggle.setAttribute("tabindex", "0");
-                         toggle.addEventListener("click", function (e) {
-                                       e.stopPropagation();
-                                       setRowCollapsed(row, !row.collapsed);
-                         });
-                         toggle.addEventListener("keydown", function (e) {
-                                       if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
-                                                       e.preventDefault();
-                                                       setRowCollapsed(row, !row.collapsed);
-                                       }
-                         });
-                         anchorCell.insertBefore(toggle, anchorCell.firstChild);
-                         row.toggleEl = toggle;
+        var FIELD_LABEL = {};
+        ALL_COLUMNS.forEach(function (n) {
+                  FIELD_LABEL[n] = cellText(headerRow, n);
+        });
 
-                         // Label each detail field once (not on every toggle) so an
-                         // expanded row reads like "Comments: ..." instead of a bare
-                         // value with no header above it to explain what it is.
-                         COLLAPSIBLE_CELLS.forEach(function (n) {
-                                       var td = cellEl(row.el, n);
-                                       if (!td || td.querySelector(".jaraid-field-label")) return;
-                                       var label = document.createElement("span");
-                                       label.className = "jaraid-field-label";
-                                       label.textContent = FIELD_LABEL[n] ? FIELD_LABEL[n] + ": " : "";
-                                       td.insertBefore(label, td.firstChild);
-                         });
+        var modalOverlay = document.createElement("div");
+        modalOverlay.id = "jaraidModal";
+        modalOverlay.className = "jaraid-modal-overlay";
+        modalOverlay.hidden = true;
+        modalOverlay.innerHTML =
+                  '<div class="jaraid-modal" role="dialog" aria-modal="true">' +
+                    '<button type="button" class="jaraid-modal-close" aria-label="' + STR.closeModal + '">×</button>' +
+                    '<div class="jaraid-modal-body"></div>' +
+                  "</div>";
+        document.body.appendChild(modalOverlay);
 
-                         setRowCollapsed(row, true);
-             });
-         
-             var $expandAll = document.getElementById("jaraidExpandAll");
-             var $collapseAll = document.getElementById("jaraidCollapseAll");
-             $expandAll.addEventListener("click", function () {
-                         index.forEach(function (row) { setRowCollapsed(row, false); });
-             });
-             $collapseAll.addEventListener("click", function () {
-                         index.forEach(function (row) { setRowCollapsed(row, true); });
-             });
-         
+        var $modalBody = modalOverlay.querySelector(".jaraid-modal-body");
+        var $modalClose = modalOverlay.querySelector(".jaraid-modal-close");
+        var lastTrigger = null;
+
+        function openModal(row) {
+                  var headingN = null;
+                  if (cellText(row.el, "4")) headingN = "4";
+                  else if (cellText(row.el, "10")) headingN = "10";
+
+                  var html = "";
+                  if (headingN) {
+                            html += '<h2 class="jaraid-modal-title">' + cellEl(row.el, headingN).innerHTML + "</h2>";
+                  }
+                  ALL_COLUMNS.forEach(function (n) {
+                            if (n === headingN) return;
+                            var td = cellEl(row.el, n);
+                            if (!td || !cellText(row.el, n)) return;
+                            html +=
+                                      '<div class="jaraid-modal-field">' +
+                                        '<span class="jaraid-field-label">' + (FIELD_LABEL[n] || "") + "</span>" +
+                                        '<div class="jaraid-modal-value">' + td.innerHTML + "</div>" +
+                                      "</div>";
+                  });
+                  $modalBody.innerHTML = html;
+                  modalOverlay.hidden = false;
+                  $modalClose.focus();
+        }
+
+        function closeModal() {
+                  modalOverlay.hidden = true;
+                  if (lastTrigger) lastTrigger.focus();
+        }
+
+        $modalClose.addEventListener("click", closeModal);
+        modalOverlay.addEventListener("click", function (e) {
+                  if (e.target === modalOverlay) closeModal();
+        });
+        document.addEventListener("keydown", function (e) {
+                  if (e.key === "Escape" && !modalOverlay.hidden) closeModal();
+        });
+
+        index.forEach(function (row) {
+                  var anchorCell = cellEl(row.el, "1");
+                  if (!anchorCell) return;
+                  var viewBtn = document.createElement("button");
+                  viewBtn.type = "button";
+                  viewBtn.className = "jaraid-row-view-btn";
+                  viewBtn.setAttribute("aria-label", STR.viewDetails);
+                  viewBtn.textContent = "›";
+                  viewBtn.addEventListener("click", function (e) {
+                            e.stopPropagation();
+                            lastTrigger = viewBtn;
+                            openModal(row);
+                  });
+                  anchorCell.insertBefore(viewBtn, anchorCell.firstChild);
+
+                  row.el.addEventListener("click", function (e) {
+                            if (e.target.closest("a")) return;
+                            lastTrigger = viewBtn;
+                            openModal(row);
+                  });
+        });
+
              // ---- Wire up header cells for click-to-sort ----
         var headerCells = Array.prototype.slice.call(headerRow.querySelectorAll("td"));
            var sortState = { n: null, dir: 1 };
