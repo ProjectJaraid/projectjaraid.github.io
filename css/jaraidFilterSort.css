@@ -39,16 +39,16 @@
     border: none;
     border-radius: 6px;
     background: #333;
-    color: #ffffff;
-    font-family: Georgia, serif;
-    font-size: 14px;
-    font-weight: bold;
+    color: #fff;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 #jaraidRowControls .jaraid-btn-prominent:hover {
-    background: #111;
+    background: #555;
 }
 
 #jaraidRowControls .jaraid-btn-prominent:focus {
@@ -63,7 +63,7 @@
     width: 18px;
     height: 18px;
     border-radius: 3px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.18);
     font-family: monospace;
     font-size: 13px;
     line-height: 1;
@@ -73,7 +73,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    gap: 10px 16px;
+    gap: 14px;
     margin-bottom: 8px;
 }
 
@@ -81,109 +81,121 @@
     margin-bottom: 0;
 }
 
-#jaraidToolbar .jaraid-decades-row {
-    align-items: center;
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-#jaraidToolbar .jaraid-decades-label {
-    font-weight: bold;
-    font-size: 12px;
-    white-space: nowrap;
-}
-
-#jaraidToolbar .jaraid-decades {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 8px;
-}
-
-#jaraidToolbar .jaraid-decade-link {
-    font-size: 12px;
-    padding: 2px 6px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    text-decoration: none;
-    color: #333;
-    background: #f7f7f7;
-}
-
-#jaraidToolbar .jaraid-decade-link:hover {
-    background: #e8e8e8;
-}
-
 #jaraidToolbar .jaraid-field {
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    min-width: 140px;
+    min-width: 120px;
+}
+
+#jaraidToolbar .jaraid-decades-row {
+      align-items: center;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #e5e5e5;
+}
+
+#jaraidToolbar .jaraid-decades-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #555;
+      flex: 0 0 auto;
+}
+
+#jaraidToolbar .jaraid-decades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex: 1 1 auto;
+}
+
+#jaraidToolbar .jaraid-decade-link {
+      display: inline-block;
+      padding: 3px 9px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background: #f7f7f7;
+      color: #333;
+      font-size: 12px;
+      text-decoration: none;
+      line-height: 1.6;
+}
+
+#jaraidToolbar .jaraid-decade-link:hover {
+      background: #333;
+      color: #fff;
+      border-color: #333;
 }
 
 #jaraidToolbar .jaraid-field-search {
-    flex: 2 1 240px;
-    min-width: 200px;
+    flex: 1 1 260px;
+}
+
+#jaraidToolbar label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+#jaraidToolbar input[type="text"],
+#jaraidToolbar input[type="number"],
+#jaraidToolbar select {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 5px 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background: #fff;
+}
+
+#jaraidToolbar input[type="number"] {
+    width: 90px;
 }
 
 #jaraidToolbar .jaraid-field-lang {
     min-width: 160px;
 }
 
-#jaraidToolbar .jaraid-field-reset {
-    justify-content: flex-end;
-}
-
-#jaraidToolbar label {
-    font-size: 12px;
-    font-weight: bold;
-    color: #333;
-}
-
-#jaraidToolbar input[type="text"],
-#jaraidToolbar input[type="number"],
-#jaraidToolbar select {
-    padding: 6px 8px;
+#jaraidToolbar details {
     border: 1px solid #bbb;
     border-radius: 4px;
-    font-size: 13px;
-    font-family: inherit;
-}
-
-#jaraidToolbar details {
-    font-size: 13px;
+    padding: 4px 8px;
+    background: #fff;
 }
 
 #jaraidToolbar summary {
     cursor: pointer;
-    padding: 6px 8px;
-    border: 1px solid #bbb;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #333;
-    list-style: none;
-}
-
-#jaraidToolbar summary::-webkit-details-marker {
-    display: none;
+    font-size: 14px;
+    padding: 2px 0;
 }
 
 #jaraidToolbar .jaraid-lang-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 14px;
-    padding: 8px 4px 2px 4px;
-    max-width: 420px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+    gap: 2px 10px;
+    padding-top: 6px;
+    max-height: 160px;
+    overflow-y: auto;
 }
 
 #jaraidToolbar .jaraid-lang-list label {
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-weight: normal;
+    gap: 5px;
     font-size: 13px;
-    white-space: nowrap;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #222;
+    font-weight: normal;
+    margin: 0;
+}
+
+#jaraidToolbar .jaraid-field-reset {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 8px;
 }
 
 #jaraidToolbar .jaraid-btn {
@@ -359,6 +371,7 @@ tr[role="data"] td[n="9"] {
         font-weight: 600;
         color: #555;
 }
+
 
 @media (max-width: 700px) {
     #jaraidRowControls {
