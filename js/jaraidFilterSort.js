@@ -330,7 +330,21 @@
              // comments, source, holdings). Year, last-issue date, title and
              // place (English or Arabic, whichever the page shows) stay visible
              // at all times so the row is still identifiable when collapsed.
+             //
+             // These same columns' HEADER cells are hidden permanently by CSS
+             // (see tr[role="label"] td[n="..."] rules) rather than toggled —
+             // a single shared <table> can't keep a header aligned with a
+             // column that's only populated for some rows, so instead each
+             // detail cell gets its own inline label (reusing that column's
+             // own header text below) and the rows lay out as a compact
+             // flexbox summary line, with the detail fields wrapping onto
+             // their own line underneath when a row is expanded.
              var COLLAPSIBLE_CELLS = ["2", "6", "7", "8", "9"];
+
+             var FIELD_LABEL = {};
+             COLLAPSIBLE_CELLS.forEach(function (n) {
+                         FIELD_LABEL[n] = cellText(headerRow, n);
+             });
          
              function setRowCollapsed(row, collapsed) {
                          COLLAPSIBLE_CELLS.forEach(function (n) {
@@ -367,6 +381,19 @@
                          });
                          anchorCell.insertBefore(toggle, anchorCell.firstChild);
                          row.toggleEl = toggle;
+
+                         // Label each detail field once (not on every toggle) so an
+                         // expanded row reads like "Comments: ..." instead of a bare
+                         // value with no header above it to explain what it is.
+                         COLLAPSIBLE_CELLS.forEach(function (n) {
+                                       var td = cellEl(row.el, n);
+                                       if (!td || td.querySelector(".jaraid-field-label")) return;
+                                       var label = document.createElement("span");
+                                       label.className = "jaraid-field-label";
+                                       label.textContent = FIELD_LABEL[n] ? FIELD_LABEL[n] + ": " : "";
+                                       td.insertBefore(label, td.firstChild);
+                         });
+
                          setRowCollapsed(row, true);
              });
          
