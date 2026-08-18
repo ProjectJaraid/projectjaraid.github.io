@@ -338,6 +338,17 @@
         var $modalClose = modalOverlay.querySelector(".jaraid-modal-close");
         var lastTrigger = null;
 
+        // The Year cell (n=1) carries the "view details" button as its
+        // first child (see below) -- strip it out of a clone before
+        // reusing that cell's markup inside the modal, so the "›" icon
+        // doesn't end up embedded in the displayed value.
+        function cellHtml(td) {
+                  var clone = td.cloneNode(true);
+                  var btn = clone.querySelector(".jaraid-row-view-btn");
+                  if (btn) btn.parentNode.removeChild(btn);
+                  return clone.innerHTML;
+        }
+
         function openModal(row) {
                   var headingN = null;
                   if (cellText(row.el, "4")) headingN = "4";
@@ -345,7 +356,7 @@
 
                   var html = "";
                   if (headingN) {
-                            html += '<h2 class="jaraid-modal-title">' + cellEl(row.el, headingN).innerHTML + "</h2>";
+                            html += '<h2 class="jaraid-modal-title">' + cellHtml(cellEl(row.el, headingN)) + "</h2>";
                   }
                   ALL_COLUMNS.forEach(function (n) {
                             if (n === headingN) return;
@@ -354,7 +365,7 @@
                             html +=
                                       '<div class="jaraid-modal-field">' +
                                         '<span class="jaraid-field-label">' + (FIELD_LABEL[n] || "") + "</span>" +
-                                        '<div class="jaraid-modal-value">' + td.innerHTML + "</div>" +
+                                        '<div class="jaraid-modal-value">' + cellHtml(td) + "</div>" +
                                       "</div>";
                   });
                   $modalBody.innerHTML = html;
