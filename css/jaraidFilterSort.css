@@ -20,55 +20,6 @@
     font-size: 14px;
 }
 
-/* Expand/Collapse-all controls: a separate, prominent bar placed
- * between the page nav menu and the filter/search panel
- * (#jaraidToolbar), rather than buried among the filter fields.
- */
-#jaraidRowControls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 18px 0 0 0;
-}
-
-#jaraidRowControls .jaraid-btn-prominent {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 6px;
-    background: #333;
-    color: #fff;
-    cursor: pointer;
-    font-family: Georgia, serif;
-    font-size: 15px;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-
-#jaraidRowControls .jaraid-btn-prominent:hover {
-    background: #555;
-}
-
-#jaraidRowControls .jaraid-btn-prominent:focus {
-    outline: 2px solid #6ab0f3;
-    outline-offset: 2px;
-}
-
-#jaraidRowControls .jaraid-btn-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    border-radius: 3px;
-    background: rgba(255, 255, 255, 0.18);
-    font-family: monospace;
-    font-size: 13px;
-    line-height: 1;
-}
-
 #jaraidToolbar .jaraid-row {
     display: flex;
     flex-wrap: wrap;
@@ -212,35 +163,38 @@
         background: #e2e2e2;
 }
 
-/* Per-row expand/collapse toggle (title/place/date shown by default;
-   click to reveal owners, comments, source and holdings for that
-   entry). Placed at the very start of the Year cell. */
-.jaraid-row-toggle {
+/* Small "view details" button at the start of each row's Year cell --
+   opens the modal for that entry. The row itself is also clickable (see
+   jaraidFilterSort.js), but this button gives keyboard/screen-reader
+   users an explicit, focusable target. */
+.jaraid-row-view-btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
         margin-right: 6px;
         border: 1px solid #999;
         border-radius: 3px;
         background: #fafafa;
         color: #333;
-        font-family: monospace;
-        font-size: 12px;
+        font-size: 13px;
         line-height: 1;
         cursor: pointer;
-        user-select: none;
         vertical-align: middle;
 }
 
-.jaraid-row-toggle:hover {
+.jaraid-row-view-btn:hover {
         background: #e8e8e8;
 }
 
-.jaraid-row-toggle:focus {
+.jaraid-row-view-btn:focus {
         outline: 2px solid #6ab0f3;
         outline-offset: 1px;
+}
+
+tr[role="data"] {
+        cursor: pointer;
 }
 
 #jaraidToolbar .jaraid-status {
@@ -294,23 +248,13 @@ tr[role="label"] td.jaraid-sort-desc::after {
         -webkit-overflow-scrolling: touch;
 }
 
-/* ---- Compact chronological summary/detail layout ----
- * Previously each row's day/month, owners, comments, source and
- * holdings cells were toggled display:none/table-cell while the
- * header row kept showing all 9 column titles regardless -- since a
- * single <table> can't have a header aligned to a column only some
- * rows populate, the header ended up claiming a wide strip of columns
- * with nothing underneath them, and every row's "collapsed" state
- * looked like a table with random gaps.
- *
- * Instead, both the header row and each data row now lay out as a
- * flexbox line rather than rigid table columns. The header only shows
- * labels for the fields that stay visible when collapsed (year,
- * last-issue date, title, place); the detail fields (day/month,
- * owners, comments, source, holdings) have no header cell at all --
- * jaraidFilterSort.js gives each of them its own inline label instead
- * (reusing that column's original header text) -- and they wrap onto
- * their own line below the summary only once a row is expanded.
+/* ---- Compact chronological summary line ----
+ * Each row (and the header above it) lays out as a flexbox line rather
+ * than rigid table columns, showing only year / last-issue date / title
+ * / place at a glance. Day/month, owners, comments, source and holdings
+ * have no header cell and are never rendered in the row at all -- click
+ * the row (or its small view-details button) to see them, along with
+ * everything else, in the modal below.
  */
 tr[role="label"] {
         display: flex;
@@ -328,15 +272,6 @@ tr[role="label"] td {
         padding: 0 !important;
 }
 
-/* No header cell for the detail-only fields -- see note above. */
-tr[role="label"] td[n="2"],
-tr[role="label"] td[n="6"],
-tr[role="label"] td[n="7"],
-tr[role="label"] td[n="8"],
-tr[role="label"] td[n="9"] {
-        display: none !important;
-}
-
 tr[role="data"] {
         display: flex;
         flex-wrap: wrap;
@@ -352,36 +287,103 @@ tr[role="data"] td {
         padding: 0 !important;
 }
 
-/* Detail fields: full-width so each wraps onto its own line below the
-   summary line, only visible once a row is expanded. */
+tr[role="label"] td[n="2"],
+tr[role="label"] td[n="6"],
+tr[role="label"] td[n="7"],
+tr[role="label"] td[n="8"],
+tr[role="label"] td[n="9"],
 tr[role="data"] td[n="2"],
 tr[role="data"] td[n="6"],
 tr[role="data"] td[n="7"],
 tr[role="data"] td[n="8"],
 tr[role="data"] td[n="9"] {
-        flex-basis: 100%;
-        margin-top: 4px;
-        padding-top: 6px !important;
-        border-top: 1px dashed #ccc;
-        font-size: 0.95em;
-        color: #333;
+        display: none !important;
+}
+
+/* ---- Row detail modal ---- */
+.jaraid-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        z-index: 1000;
+}
+
+.jaraid-modal-overlay[hidden] {
+        display: none;
+}
+
+.jaraid-modal {
+        position: relative;
+        background: #ffffff;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 640px;
+        max-height: 85vh;
+        overflow-y: auto;
+        padding: 28px 30px 24px 30px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        font-family: Georgia, serif;
+}
+
+.jaraid-modal-close {
+        position: absolute;
+        top: 10px;
+        inset-inline-end: 12px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 4px;
+        background: transparent;
+        color: #555;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+}
+
+.jaraid-modal-close:hover {
+        background: #eee;
+}
+
+.jaraid-modal-close:focus {
+        outline: 2px solid #6ab0f3;
+        outline-offset: 1px;
+}
+
+.jaraid-modal-title {
+        margin: 0 30px 16px 0;
+        font-size: 20px;
+        line-height: 1.4;
+}
+
+.jaraid-modal-field {
+        margin-bottom: 14px;
+        line-height: 1.5;
+        font-size: 14px;
+}
+
+.jaraid-modal-field:last-child {
+        margin-bottom: 0;
+}
+
+.jaraid-modal-value {
+        margin-top: 2px;
 }
 
 .jaraid-field-label {
+        display: block;
         font-weight: 600;
-        color: #555;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: #777;
 }
 
 
 @media (max-width: 700px) {
-    #jaraidRowControls {
-                flex-direction: column;
-    }
-    #jaraidRowControls .jaraid-btn-prominent {
-                width: 100%;
-                justify-content: center;
-                box-sizing: border-box;
-    }
     #jaraidToolbar .jaraid-row {
           flex-direction: column;
           align-items: stretch;
@@ -417,10 +419,13 @@ tr[role="data"] td[n="9"] {
         #t1 table {
                     font-size: 11px;
         }
-        .jaraid-row-toggle {
-                    width: 22px;
-                    height: 22px;
-                    font-size: 14px;
+        .jaraid-row-view-btn {
+                    width: 24px;
+                    height: 24px;
+                    font-size: 15px;
+        }
+        .jaraid-modal {
+                    padding: 22px 20px 18px 20px;
         }
         tr[role="label"],
         tr[role="data"] {
