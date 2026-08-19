@@ -248,20 +248,36 @@ tr[role="label"] td.jaraid-sort-desc::after {
         -webkit-overflow-scrolling: touch;
 }
 
-/* ---- Compact chronological summary line ----
- * Each row (and the header above it) lays out as a flexbox line rather
- * than rigid table columns, showing only year / last-issue date / title
- * / place at a glance. Day/month, owners, comments, source and holdings
- * have no header cell and are never rendered in the row at all -- click
- * the row (or its small view-details button) to see them, along with
- * everything else, in the modal below.
+/* ---- Compact chronological summary row ----
+ * Each row (and the header above it) lays out on a shared CSS Grid
+ * template -- year / last-issue date / title / place -- rather than a
+ * flexbox line whose items size to their own content. Flex left every
+ * row's columns starting at a different x position depending on how
+ * long the previous cell's text happened to be, so nothing lined up
+ * and it read as loose fragments rather than a table. Grid gives every
+ * row the same four column tracks, so values line up vertically like
+ * an actual table again while the underlying markup stays a real
+ * <table> (sortable, filterable, accessible).
+ *
+ * Day/month, owners/editors (English n=6 and Arabic n=11), comments,
+ * source and holdings have no header cell and are never rendered in
+ * the row at all -- click the row (or its small view-details button)
+ * to see them, along with everything else, in the modal below. Only
+ * one of title/place's English (n=4/5) or Arabic (n=10/12) columns is
+ * ever visible at a time -- the other is hidden by this page's base
+ * stylesheet (teiChrono.css / teiFihris.css) -- so exactly four
+ * columns show on both pages.
  */
-tr[role="label"] {
-        display: flex;
-        flex-wrap: wrap;
+tr[role="label"],
+tr[role="data"] {
+        display: grid;
+        grid-template-columns: 90px 150px minmax(240px, 2fr) minmax(140px, 1fr);
         align-items: baseline;
-        column-gap: 22px;
-        row-gap: 4px;
+        column-gap: 20px;
+        row-gap: 2px;
+}
+
+tr[role="label"] {
         padding: 10px 12px !important;
         background: #efefef;
         border-bottom: 2px solid #999;
@@ -273,11 +289,6 @@ tr[role="label"] td {
 }
 
 tr[role="data"] {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        column-gap: 22px;
-        row-gap: 4px;
         padding: 10px 12px;
         border-bottom: 1px solid #ddd;
 }
@@ -292,12 +303,24 @@ tr[role="label"] td[n="6"],
 tr[role="label"] td[n="7"],
 tr[role="label"] td[n="8"],
 tr[role="label"] td[n="9"],
+tr[role="label"] td[n="11"],
 tr[role="data"] td[n="2"],
 tr[role="data"] td[n="6"],
 tr[role="data"] td[n="7"],
 tr[role="data"] td[n="8"],
-tr[role="data"] td[n="9"] {
+tr[role="data"] td[n="9"],
+tr[role="data"] td[n="11"] {
         display: none !important;
+}
+
+/* The trailing " ID:t1r123" fragment jaraidFilterSort.js wraps in a
+   span (see tagIdSuffix()) -- hidden from the row itself so a title
+   doesn't force a second line for what's really reference metadata,
+   but this selector only matches inside an actual table row, so the
+   same span still shows normally inside the modal. */
+tr[role="label"] .jaraid-id-tag,
+tr[role="data"] .jaraid-id-tag {
+        display: none;
 }
 
 /* ---- Row detail modal ---- */
@@ -429,7 +452,8 @@ tr[role="data"] td[n="9"] {
         }
         tr[role="label"],
         tr[role="data"] {
-                    column-gap: 12px;
+                    grid-template-columns: 55px 90px minmax(140px, 2fr) minmax(100px, 1fr);
+                    column-gap: 10px;
                     padding: 8px !important;
         }
 }
