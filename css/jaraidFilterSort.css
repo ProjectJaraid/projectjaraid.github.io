@@ -248,33 +248,39 @@ tr[role="label"] td.jaraid-sort-desc::after {
         -webkit-overflow-scrolling: touch;
 }
 
-/* ---- Compact chronological summary row ----
- * Each row (and the header above it) lays out on a shared CSS Grid
- * template -- year / last-issue date / title / place -- rather than a
- * flexbox line whose items size to their own content. Flex left every
- * row's columns starting at a different x position depending on how
- * long the previous cell's text happened to be, so nothing lined up
- * and it read as loose fragments rather than a table. Grid gives every
- * row the same four column tracks, so values line up vertically like
- * an actual table again while the underlying markup stays a real
- * <table> (sortable, filterable, accessible).
+/* ---- Full data table, laid out for comfortable reading ----
+ * Every column that this page's base stylesheet (teiChrono.css /
+ * teiFihris.css) already renders for its language is shown directly in
+ * the row -- so links to online holdings, comments, source notes, etc.
+ * are all one glance away instead of hidden behind a click. Each row
+ * (and the header above it) lays out on a shared CSS Grid template so
+ * values line up into true vertical columns like a real table, rather
+ * than a flexbox line whose items size to their own content and never
+ * align from row to row.
  *
- * Day/month, owners/editors (English n=6 and Arabic n=11), comments,
- * source and holdings have no header cell and are never rendered in
- * the row at all -- click the row (or its small view-details button)
- * to see them, along with everything else, in the modal below. Only
- * one of title/place's English (n=4/5) or Arabic (n=10/12) columns is
- * ever visible at a time -- the other is hidden by this page's base
- * stylesheet (teiChrono.css / teiFihris.css) -- so exactly four
- * columns show on both pages.
+ * The two languages don't expose the same columns (teiFihris.css hides
+ * the English fields 4/5/6/7 (Title/Place/Owners/Comments), keeping
+ * Comments off the Arabic page entirely; teiChrono.css hides the
+ * Arabic-only fields 10/11/12) and their natural DOM order puts
+ * Source/Holdings ahead of the Arabic title/editor/place cells --
+ * visually backwards compared to the English row's Title-first
+ * reading order. The "order" rules below reshuffle the Arabic page's
+ * columns into the same conceptual sequence as the English page
+ * (chronology, then title/place/editor, then source/holdings) without
+ * touching the underlying markup, which stays in its original TEI
+ * column order for the modal and for screen readers.
+ *
+ * Clicking a row (or its small view-details button) still opens the
+ * full-entry popup -- handy for a large-type, single-record view or
+ * for copying a citation -- it's just no longer the only way to see a
+ * field.
  */
 tr[role="label"],
 tr[role="data"] {
         display: grid;
-        grid-template-columns: 90px 150px minmax(240px, 2fr) minmax(140px, 1fr);
-        align-items: baseline;
-        column-gap: 20px;
-        row-gap: 2px;
+        align-items: start;
+        column-gap: 18px;
+        row-gap: 3px;
 }
 
 tr[role="label"] {
@@ -283,35 +289,56 @@ tr[role="label"] {
         border-bottom: 2px solid #999;
 }
 
-tr[role="label"] td {
-        border: none !important;
-        padding: 0 !important;
-}
-
 tr[role="data"] {
-        padding: 10px 12px;
+        padding: 9px 12px;
         border-bottom: 1px solid #ddd;
+        font-size: 13px;
+        line-height: 1.5;
 }
 
+/* A light divider on the trailing edge of every visible cell reads as
+   column separation without needing to single out "the last column" --
+   DOM order (used by :last-of-type) doesn't match the visual order
+   after the Arabic reorder below, and hidden n=10-12 (English) /
+   n=4-7 (Arabic) cells never paint a border anyway since they're
+   display:none, so this never produces a stray line past the real
+   edge of the row. */
+tr[role="label"] td,
 tr[role="data"] td {
+        min-width: 0;
         border: none !important;
-        padding: 0 !important;
+        border-inline-end: 1px solid #e4e4e4 !important;
+        padding: 0 12px 0 0 !important;
+        overflow-wrap: break-word;
 }
 
-tr[role="label"] td[n="2"],
-tr[role="label"] td[n="6"],
-tr[role="label"] td[n="7"],
-tr[role="label"] td[n="8"],
-tr[role="label"] td[n="9"],
-tr[role="label"] td[n="11"],
-tr[role="data"] td[n="2"],
-tr[role="data"] td[n="6"],
-tr[role="data"] td[n="7"],
-tr[role="data"] td[n="8"],
-tr[role="data"] td[n="9"],
-tr[role="data"] td[n="11"] {
-        display: none !important;
+/* English page (pages/chrono.html): teiChrono.css already hides n=10-12,
+   so the 9 remaining columns are in the desired reading order as-is. */
+body#chrono tr[role="label"],
+body#chrono tr[role="data"] {
+        grid-template-columns:
+                64px 84px 84px
+                minmax(200px, 2.1fr) minmax(100px, 1fr) minmax(140px, 1.3fr)
+                minmax(170px, 1.6fr) minmax(100px, 1fr) minmax(120px, 1.1fr);
 }
+
+/* Arabic page (pages/fihris.html): teiFihris.css hides n=4-7, leaving
+   Source (8) and Holdings (9) ahead of the Arabic title/editor/place
+   cells (10/11/12) in raw DOM order -- reorder them here so the row
+   still reads chronology, then title/place/editor, then source/holdings. */
+body#fihris tr[role="label"],
+body#fihris tr[role="data"] {
+        grid-template-columns:
+                64px 84px 84px
+                minmax(200px, 2.1fr) minmax(100px, 1fr) minmax(140px, 1.3fr)
+                minmax(100px, 1fr) minmax(120px, 1.1fr);
+}
+
+body#fihris td[n="10"] { order: 4; } /* Arabic title */
+body#fihris td[n="12"] { order: 5; } /* Arabic place */
+body#fihris td[n="11"] { order: 6; } /* Arabic editor/publisher */
+body#fihris td[n="8"]  { order: 7; } /* Source */
+body#fihris td[n="9"]  { order: 8; } /* Holdings */
 
 /* The trailing " ID:t1r123" fragment jaraidFilterSort.js wraps in a
    span (see tagIdSuffix()) -- hidden from the row itself so a title
@@ -452,8 +479,22 @@ tr[role="data"] .jaraid-id-tag {
         }
         tr[role="label"],
         tr[role="data"] {
-                    grid-template-columns: 55px 90px minmax(140px, 2fr) minmax(100px, 1fr);
-                    column-gap: 10px;
+                    column-gap: 8px;
                     padding: 8px !important;
+                    font-size: 12px;
+        }
+        body#chrono tr[role="label"],
+        body#chrono tr[role="data"] {
+                    grid-template-columns:
+                                44px 60px 60px
+                                minmax(120px, 2.1fr) minmax(70px, 1fr) minmax(90px, 1.3fr)
+                                minmax(100px, 1.6fr) minmax(70px, 1fr) minmax(80px, 1.1fr);
+        }
+        body#fihris tr[role="label"],
+        body#fihris tr[role="data"] {
+                    grid-template-columns:
+                                44px 60px 60px
+                                minmax(120px, 2.1fr) minmax(70px, 1fr) minmax(90px, 1.3fr)
+                                minmax(70px, 1fr) minmax(80px, 1.1fr);
         }
 }
