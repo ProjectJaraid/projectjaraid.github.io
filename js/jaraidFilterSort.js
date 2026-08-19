@@ -187,8 +187,23 @@
                   var lastCell = cellEl(tr, "3");
                   var commentsText = cellText(tr, "7");
                   var ownersText = cellText(tr, "6");
-                  var titleText = cellText(tr, "4") || cellText(tr, "10");
-                  var placeText = cellText(tr, "5") || cellText(tr, "12");
+                  // On the Arabic page (fihris.html), prefer each row's
+                  // Arabic-script title/place (n=10/12) over its English
+                  // one (n=4/5) -- previously this always tried English
+                  // first, so the "Place of publication" search field's
+                  // autocomplete list (built from these place values just
+                  // below) surfaced Latin-script city names like "Cairo"
+                  // even on the Arabic page, since most rows have an
+                  // English place filled in even when it isn't displayed
+                  // there. Search text matching (searchBlob below) uses
+                  // the same value, so this also makes free-text search
+                  // match against the Arabic place/title on that page.
+                  var titleText = IS_ARABIC_PAGE
+                            ? (cellText(tr, "10") || cellText(tr, "4"))
+                            : (cellText(tr, "4") || cellText(tr, "10"));
+                  var placeText = IS_ARABIC_PAGE
+                            ? (cellText(tr, "12") || cellText(tr, "5"))
+                            : (cellText(tr, "5") || cellText(tr, "12"));
 
                                        var langHay = normalize(commentsText + " " + ownersText);
                   var langs = LANGUAGES.filter(function (l) {
