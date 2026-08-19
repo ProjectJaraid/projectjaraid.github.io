@@ -232,7 +232,26 @@
 
         var placeSet = {};
            index.forEach(function (r) { if (r.place) placeSet[r.place] = true; });
-           var places = Object.keys(placeSet).sort(function (a, b) { return a.localeCompare(b); });
+           // On the Arabic page most place names are now Arabic script
+           // (see the n=12-first fix above), but a handful of rows still
+           // fall back to a Latin-script place because that row has no
+           // Arabic place recorded. A single localeCompare() pass doesn't
+           // reliably interleave the two scripts in a sensible order, so
+           // split the list in two: Arabic-script names sorted by Arabic
+           // collation (locale "ar", so ا ب ت ث ... sorts the way an
+           // Arabic-alphabet list actually should), followed by whatever
+           // Latin-script names remain, sorted separately. On the English
+           // page this is a no-op -- arabicPlaces stays empty since none
+           // of its place names contain Arabic-script characters.
+           var ARABIC_CHAR_RE = /[؀-ۿ]/;
+           var arabicPlaces = [];
+           var otherPlaces = [];
+           Object.keys(placeSet).forEach(function (p) {
+                     (ARABIC_CHAR_RE.test(p) ? arabicPlaces : otherPlaces).push(p);
+           });
+           arabicPlaces.sort(function (a, b) { return a.localeCompare(b, "ar"); });
+           otherPlaces.sort(function (a, b) { return a.localeCompare(b, "en"); });
+           var places = arabicPlaces.concat(otherPlaces);
 
         var holdingSet = {};
            index.forEach(function (r) { r.holdingCodes.forEach(function (c) { holdingSet[c] = true; }); });
