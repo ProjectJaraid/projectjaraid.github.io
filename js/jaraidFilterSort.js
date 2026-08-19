@@ -386,7 +386,42 @@
                   if (e.key === "Escape" && !modalOverlay.hidden) closeModal();
         });
 
+        // The title cell (whichever of n=4 English / n=10 Arabic is the
+        // one actually populated on this page) carries a trailing
+        // " ID:t1r123" text node after two <br>s, straight from the TEI
+        // source. Left in place it forces every compact row onto two
+        // lines for a fragment that's really reference metadata, not
+        // part of the title -- wrap it in a span so it can be hidden
+        // from the row (CSS below, scoped so it still shows inside the
+        // modal, which clones this same cell).
+        function tagIdSuffix(td) {
+                  if (!td) return;
+                  var nodes = Array.prototype.slice.call(td.childNodes);
+                  for (var i = nodes.length - 1; i >= 0; i--) {
+                            var node = nodes[i];
+                            if (node.nodeType === 3 && /^\s*ID\s*:/.test(node.textContent)) {
+                                          var span = document.createElement("span");
+                                          span.className = "jaraid-id-tag";
+                                          td.insertBefore(span, node);
+                                          var toMove = [node];
+                                          var prev = node.previousSibling;
+                                          while (prev && prev.tagName === "BR") {
+                                                            toMove.unshift(prev);
+                                                            prev = prev.previousSibling;
+                                          }
+                                          toMove.forEach(function (n) { span.appendChild(n); });
+                                          return;
+                            }
+                  }
+        }
+
+        tagIdSuffix(cellEl(headerRow, "4"));
+        tagIdSuffix(cellEl(headerRow, "10"));
+
         index.forEach(function (row) {
+                  tagIdSuffix(cellEl(row.el, "4"));
+                  tagIdSuffix(cellEl(row.el, "10"));
+
                   var anchorCell = cellEl(row.el, "1");
                   if (!anchorCell) return;
                   var viewBtn = document.createElement("button");
